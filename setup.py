@@ -17,7 +17,7 @@ setup(
   version = '0.0.1',
   packages=find_packages(),
   package_data={
-    'neurodynex': ['data/*'],
+    'neurodynex3': ['data/*'],
   },
   description='Python exercises accompanying the book Neuronal Dynamics by Wulfram Gerstner, Werner M. Kistler, Richard Naud and Liam Paninski.',
   author='LCN-EPFL',
