@@ -1,0 +1,9 @@
+.DS_Store
+LICENSE.txt
+README.rst
+requirements.txt
+setup.py
+example_pkg_YOUR_USERNAME_HERE.egg-info/PKG-INFO
+example_pkg_YOUR_USERNAME_HERE.egg-info/SOURCES.txt
+example_pkg_YOUR_USERNAME_HERE.egg-info/dependency_links.txt
+example_pkg_YOUR_USERNAME_HERE.egg-info/top_level.txt

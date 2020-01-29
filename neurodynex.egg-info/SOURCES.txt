@@ -1,0 +1,10 @@
+.DS_Store
+LICENSE.txt
+README.rst
+requirements.txt
+setup.py
+neurodynex.egg-info/PKG-INFO
+neurodynex.egg-info/SOURCES.txt
+neurodynex.egg-info/dependency_links.txt
+neurodynex.egg-info/requires.txt
+neurodynex.egg-info/top_level.txt
