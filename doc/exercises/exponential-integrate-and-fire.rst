@@ -25,8 +25,8 @@ To get started, copy the following code into a Jupyter notebook. It follows a co
     % matplotlib inline
     import brian2 as b2
     import matplotlib.pyplot as plt
-    import neurodynex.exponential_integrate_fire.exp_IF as exp_IF
-    from neurodynex.tools import plot_tools, input_factory
+    import neurodynex3.exponential_integrate_fire.exp_IF as exp_IF
+    from neurodynex3.tools import plot_tools, input_factory
 
 
     input_current = input_factory.get_step_current(
@@ -91,8 +91,8 @@ At the end of the script, the strength-duration curve is plotted. Discuss it. Yo
     % matplotlib inline
     import brian2 as b2
     import matplotlib.pyplot as plt
-    import neurodynex.exponential_integrate_fire.exp_IF as exp_IF
-    from neurodynex.tools import plot_tools, input_factory
+    import neurodynex3.exponential_integrate_fire.exp_IF as exp_IF
+    from neurodynex3.tools import plot_tools, input_factory
 
     i=1  #change i and find the value that goes into min_amp
     durations = [1,   2,    5,  10,   20,   50, 100]
