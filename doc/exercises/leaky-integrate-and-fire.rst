@@ -22,8 +22,8 @@ A typical Jupyter notebook looks like this:
     import brian2 as b2
     import matplotlib.pyplot as plt
     import numpy as np
-    from neurodynex.leaky_integrate_and_fire import LIF
-    from neurodynex.tools import input_factory, plot_tools
+    from neurodynex3.leaky_integrate_and_fire import LIF
+    from neurodynex3.tools import input_factory, plot_tools
 
 
     LIF.getting_started()
@@ -58,7 +58,7 @@ For the default neuron parameters (see above) compute the minimal amplitude **i_
 
 .. code-block:: py
 
-    from neurodynex.leaky_integrate_and_fire import LIF
+    from neurodynex3.leaky_integrate_and_fire import LIF
     print("resting potential: {}".format(LIF.V_REST))
 
 
@@ -69,8 +69,8 @@ Use the value **i_min** you've computed and verify your result: inject a step cu
 .. code-block:: py
 
     import brian2 as b2
-    from neurodynex.leaky_integrate_and_fire import LIF
-    from neurodynex.tools import input_factory
+    from neurodynex3.leaky_integrate_and_fire import LIF
+    from neurodynex3.tools import input_factory
 
     # create a step current with amplitude= i_min
     step_current = input_factory.get_step_current(
