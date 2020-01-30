@@ -1,5 +1,3 @@
-include RELEASE-VERSION
-include version.py
 
 recursive-exclude doc *
 recursive-include doc/_build *

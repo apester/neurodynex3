@@ -1,5 +1,4 @@
 from setuptools import setup, find_packages
-from version import get_git_version
 
 try: # for pip >= 10
     from pip._internal.req import parse_requirements
@@ -16,7 +15,7 @@ packages_pre = ["%s.%s" % (prefix, s) for s in packages]
 
 setup(
   name='neurodynex3',
-  version = get_git_version(),
+  version = '0.0.3a',
   packages=find_packages(),
   package_data={
     'neurodynex3': ['data/*'],

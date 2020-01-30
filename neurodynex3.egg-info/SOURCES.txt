@@ -3,11 +3,10 @@ LICENSE.txt
 MANIFEST.in
 Makefile
 README.rst
-RELEASE-VERSION
 requirements.txt
 setup.py
 setup.py~
-version.py
+__pycache__/version.cpython-37.pyc
 dist/.DS_Store
 doc/_build/.DS_Store
 doc/_build/doctrees/contents.doctree
@@ -239,10 +238,6 @@ doc/_build/html/modules/neurodynex.phase_plane_analysis.html
 doc/_build/html/modules/neurodynex.test.html
 doc/_build/html/modules/neurodynex.tools.html
 doc/_build/html/modules/neurodynex.working_memory_network.html
-example_pkg_YOUR_USERNAME_HERE.egg-info/PKG-INFO
-example_pkg_YOUR_USERNAME_HERE.egg-info/SOURCES.txt
-example_pkg_YOUR_USERNAME_HERE.egg-info/dependency_links.txt
-example_pkg_YOUR_USERNAME_HERE.egg-info/top_level.txt
 neurodynex.egg-info/PKG-INFO
 neurodynex.egg-info/SOURCES.txt
 neurodynex.egg-info/dependency_links.txt
