@@ -1,7 +1,7 @@
-neurodynex3
-===========
+neurodynex
+==========
 
 .. toctree::
    :maxdepth: 4
 
-   neurodynex3
+   neurodynex
