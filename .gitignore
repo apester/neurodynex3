@@ -1,3 +1,5 @@
 neurodynex3/*/__pycache__/*
 neurodynex3/__pycache__/*
 neurodynex3/*.py~
+*.egg-info
+dist/
