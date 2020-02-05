@@ -20,18 +20,12 @@ Requirements
 
 The following requirements should be met:
 
--  Either Python 2.7 or 3.4
--  `Brian2 Simulator <https://github.com/brian-team/brian2>`__ 2.0b4
+-  Python 3 or higher
+-  `Brian2 Simulator <https://github.com/brian-team/brian2>`__ 
 -  Numpy
 -  Matplotlib
 -  Scipy (only required in some exercises)
 
-
-If you are not using anaconda/miniconda, you can install all requirements by running:
-
-.. code-block:: bash
-
-   pip install -r requirements.txt
 
 
 Disclaimer
@@ -43,5 +37,5 @@ Disclaimer
 
 Bug reports
 -----------
-Did you find a bug? Open an issue on `github <https://github.com/EPFL-LCN/neuronaldynamics-exercises/issues>`_ . Thank you!
+Did you find a bug? Open an issue on `github <https://github.com/martinbarry59/neurodynex3/issues>`_ . Thank you!
 
