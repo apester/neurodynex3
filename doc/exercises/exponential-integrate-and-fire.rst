@@ -25,7 +25,7 @@ To get started, copy the following code into a Jupyter notebook. It follows a co
     % matplotlib inline
     import brian2 as b2
     import matplotlib.pyplot as plt
-    import neurodynex3.exponential_integrate_fire.exp_IF as exp_IF
+    import neurodynex33.exponential_integrate_fire.exp_IF as exp_IF
     from neurodynex3.tools import plot_tools, input_factory
 
 

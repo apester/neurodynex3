@@ -24,7 +24,7 @@ Run the following code. Read the inline comments and check the documentation. Th
 .. code-block:: python
 
     %matplotlib inline
-    from neurodynex.hopfield_network import network, pattern_tools, plot_tools
+    from neurodynex3.hopfield_network import network, pattern_tools, plot_tools
 
     pattern_size = 5
 
@@ -193,7 +193,7 @@ Run the following code. Read the inline comments and look up the doc of function
 
     %matplotlib inline
     import matplotlib.pyplot as plt
-    from neurodynex.hopfield_network import network, pattern_tools, plot_tools
+    from neurodynex3.hopfield_network import network, pattern_tools, plot_tools
     import numpy
 
     # the letters we want to store in the hopfield network

@@ -26,8 +26,8 @@ The module :mod:`.working_memory_network.wm_model` implements a working memory c
 .. code-block:: py
 
     %matplotlib inline
-    from neurodynex.working_memory_network import wm_model
-    from neurodynex.tools import plot_tools
+    from neurodynex3.working_memory_network import wm_model
+    from neurodynex3.tools import plot_tools
     import brian2 as b2
 
     wm_model.getting_started()
@@ -65,8 +65,8 @@ Run the following code to simulate a network that receives unstructured poisson 
 
     %matplotlib inline
     import brian2 as b2
-    from neurodynex.working_memory_network import wm_model
-    from neurodynex.tools import plot_tools
+    from neurodynex3.working_memory_network import wm_model
+    from neurodynex3.tools import plot_tools
 
     rate_monitor_excit, spike_monitor_excit, voltage_monitor_excit, idx_monitored_neurons_excit, rate_monitor_inhib, spike_monitor_inhib, voltage_monitor_inhib, idx_monitored_neurons_inhib, w_profile = wm_model.simulate_wm(sim_time=800. * b2.ms, poisson_firing_rate=1.3 * b2.Hz, sigma_weight_profile=20., Jpos_excit2excit=1.6)
     plot_tools.plot_network_activity(rate_monitor_excit, spike_monitor_excit, voltage_monitor_excit, t_min=0. * b2.ms)
@@ -90,8 +90,8 @@ The function :func:`.simulate_wm` takes two parameters to define the weight prof
 
     %matplotlib inline
     import brian2 as b2
-    from neurodynex.working_memory_network import wm_model
-    from neurodynex.tools import plot_tools
+    from neurodynex3.working_memory_network import wm_model
+    from neurodynex3.tools import plot_tools
     import matplotlib.pyplot as plt
 
     rate_monitor_excit, spike_monitor_excit, voltage_monitor_excit, idx_monitored_neurons_excit, rate_monitor_inhib, spike_monitor_inhib, voltage_monitor_inhib, idx_monitored_neurons_inhib, weight_profile_45 = wm_model.simulate_wm(sim_time=800. * b2.ms, poisson_firing_rate=1.3 * b2.Hz, sigma_weight_profile=20., Jpos_excit2excit=1.6)
@@ -107,8 +107,8 @@ We now apply a stimulus to a subset of the excitatory population. The network ha
 .. code-block:: py
 
     import brian2 as b2
-    from neurodynex.working_memory_network import wm_model
-    from neurodynex.tools import plot_tools
+    from neurodynex3.working_memory_network import wm_model
+    from neurodynex3.tools import plot_tools
     import matplotlib.pyplot as plt
 
 

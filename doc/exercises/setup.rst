@@ -3,7 +3,7 @@
 Setting up Python and Brian
 ===========================
 
-To solve the exercises you need to install Python, Brian2 and the neurodynex package. The installation procedure we described here focuses on the tools we use in the classroom sessions at EPFL. For that reason we additionally set up a **conda environment** (which we call bmnn below) and install `Jupyter <http://jupyter.readthedocs.io/en/latest/install.html>`__ .
+To solve the exercises you need to install Python, Brian2 and the neurodynex3 package. The installation procedure we described here focuses on the tools we use in the classroom sessions at EPFL. For that reason we additionally set up a **conda environment** (which we call bmnn below) and install `Jupyter <http://jupyter.readthedocs.io/en/latest/install.html>`__ .
 
 
 
@@ -23,7 +23,7 @@ Now execute the following commands to **install** the exercise package as well a
 
     >> conda create --name bmnn python=2.7
     >> source activate bmnn
-    >> conda install -c brian-team -c epfl-lcn neurodynex
+    >> conda install -c brian-team -c epfl-lcn neurodynex3
     >> conda install jupyter
 
 
@@ -32,7 +32,7 @@ If you need to  **update** the exercise package, call:
 .. code-block:: bash
 
     >> source activate bmnn
-    >> conda update -c brian-team -c epfl-lcn neurodynex
+    >> conda update -c brian-team -c epfl-lcn neurodynex3
 
 
 You now have the tools you need to solve the python exercises. To get started, open a terminal, move to the folder where you want your code being stored and start a Jupyter notebook:
@@ -58,7 +58,7 @@ We recommend you to create one notebook per exercise.
 
 .. note::
 
-   	**Trouble shooting:** You may get errors like 'No module named 'neurodynex'. This is the case when your jupyter notebook does not see the packages you've just installed. As a solution, try to re-install jupyter **within** the environment:
+   	**Trouble shooting:** You may get errors like 'No module named 'neurodynex3'. This is the case when your jupyter notebook does not see the packages you've just installed. As a solution, try to re-install jupyter **within** the environment:
    	.. code-block::
 
    	   	>> source activate bmnn

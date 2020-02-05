@@ -25,8 +25,8 @@ To get started, call the function  :func:`.brunel_model.LIF_spiking_network.gett
 .. code-block:: py
 
     %matplotlib inline
-    from neurodynex.brunel_model import LIF_spiking_network
-    from neurodynex.tools import plot_tools
+    from neurodynex3.brunel_model import LIF_spiking_network
+    from neurodynex3.tools import plot_tools
     import brian2 as b2
 
     rate_monitor, spike_monitor, voltage_monitor, monitored_spike_idx = LIF_spiking_network.simulate_brunel_network(sim_time=250. * b2.ms)
@@ -121,8 +121,8 @@ Before answering the questions, make sure you understand the notions ISI and CV.
 .. code-block:: py
 
     %matplotlib inline
-    from neurodynex.brunel_model import LIF_spiking_network
-    from neurodynex.tools import plot_tools, spike_tools
+    from neurodynex3.brunel_model import LIF_spiking_network
+    from neurodynex3.tools import plot_tools, spike_tools
     import brian2 as b2
 
     poisson_rate = ??? *b2.Hz
@@ -215,8 +215,8 @@ We can now compute and plot the power spectrum.
 .. code-block:: py
 
     %matplotlib inline
-    from neurodynex.brunel_model import LIF_spiking_network
-    from neurodynex.tools import plot_tools, spike_tools
+    from neurodynex3.brunel_model import LIF_spiking_network
+    from neurodynex3.tools import plot_tools, spike_tools
     import brian2 as b2
 
     # Specify the parameters of the desired network state (e.g. SI fast)

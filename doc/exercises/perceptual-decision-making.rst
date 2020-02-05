@@ -33,7 +33,7 @@ The module :mod:`.competing_populations.decision_making` implements the network 
 .. code-block:: py
 
     %matplotlib inline
-    from neurodynex.competing_populations import decision_making
+    from neurodynex3.competing_populations import decision_making
 
     decision_making.getting_started()
 
@@ -83,8 +83,8 @@ The monitors are returned in a `Python dictionary <https://docs.python.org/3/tut
  .. code-block:: py
 
     import brian2 as b2
-    from neurodynex.tools import plot_tools
-    from neurodynex.competing_populations import decision_making
+    from neurodynex3.tools import plot_tools
+    from neurodynex3.competing_populations import decision_making
     import matplotlib.pyplot as plt
 
     results = decision_making.sim_decision_making_network(t_stimulus_start= 50. * b2.ms,
@@ -228,7 +228,7 @@ Using :func:`.run_multiple_simulations`, run at least 20 simulations for each of
 .. code-block:: py
 
     import brian2 as b2
-    from neurodynex.competing_populations import decision_making
+    from neurodynex3.competing_populations import decision_making
 
     coherence_levels = [0.15, -0.8]
     nr_repetitions = 20
