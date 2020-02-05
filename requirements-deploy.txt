@@ -1,0 +1,7 @@
+mpmath
+nose
+setuptools
+setuptools_scm
+sphinx
+twine
+mock

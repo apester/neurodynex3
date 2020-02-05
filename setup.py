@@ -15,7 +15,7 @@ packages_pre = ["%s.%s" % (prefix, s) for s in packages]
 
 setup(
   name='neurodynex3',
-  version = '0.0.3b',
+  version = '0.0.4',
   packages=find_packages(),
   package_data={
     'neurodynex3': ['data/*'],
