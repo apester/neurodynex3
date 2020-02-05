@@ -9,17 +9,10 @@ This repository contains python exercises accompanying the book
 Exercises & Documentation
 -------------------------
 
-The full documentation and the exercises `can be found at readthedocs <http://neuronaldynamics-exercises.readthedocs.org/>`__.
+The full documentation and the exercises `can be found at readthedocs <https://lcn-neurodynex-exercises.readthedocs.io/en/latest/index.html/>`__.
 
 Quickstart
 ----------
-
-To install the exercises with anaconda/miniconda execute:
-
-.. code-block:: bash
-
-   conda install -c brian-team -c epfl-lcn neurodynex
-
 
 To install the exercises using ``pip`` simply execute:
 
