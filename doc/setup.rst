@@ -1,47 +1,125 @@
-.. _exercises-setup:
+.. _setup:
 
-Setting up Python and Brian
+Installation
 ===========================
 
-To solve the exercises you need to install Python, Brian2 and the neurodynex3 package. The installation procedure we described here focuses on the tools we use in the classroom sessions at EPFL. For that reason we additionally set up a **conda environment** (which we call bmnn below) and install `Jupyter <http://jupyter.readthedocs.io/en/latest/install.html>`__ .
+To solve the exercises you need to install `Python`, `Brian2` and the `neurodynex3` package. The turorial below describes two different ways if installing everything: (a) using the :ref:`pip <setup-pip>` package manager (Linux, macOS), or (b) using the :ref:`conda <exercises-setup-conda>` package manager if you have Anaconda installed (Linux, macOS, Windows).
 
 
 
-.. _exercises-setup-conda:
+.. _setup-pip:
 
-Using miniconda
----------------
-
-We offer anaconda packages for the most recent releases, which is the easiest way of running the exercises. (Alternatively you can clone the sources from github)
-
-Head over to the `miniconda download page <http://conda.pydata.org/miniconda.html>`__ and install **miniconda** (for Python 2.7 preferably).
-
-Now execute the following commands to **install** the exercise package as well as **Brian2** and some dependencies. Note: we create a `conda environment <http://conda.pydata.org/docs/test-drive.html#managing-envs>`_ called 'bmnn'. You may want to change that name. In the last command we install `Jupyter <http://jupyter.org>`_ , a handy tool to create solution documents.
-
+Using `pip`
+-----------
+We will start by creating a virtual environemt that contains a separate Python installation. To do this, we first need the `virtualenv` package. Install this by running:
 
 .. code-block:: bash
 
-    >> conda create --name bmnn python=2.7
-    >> source activate bmnn
-    >> conda install -c brian-team -c epfl-lcn neurodynex3
-    >> conda install jupyter
+    >> pip install virtualenv
 
-
-If you need to  **update** the exercise package, call:
+Now create the virtual environment in a folder called `bmnn`:
 
 .. code-block:: bash
 
-    >> source activate bmnn
-    >> conda update -c brian-team -c epfl-lcn neurodynex3
+    >> virtualenv bmnn
 
+Activate the virtual environment:
 
-You now have the tools you need to solve the python exercises. To get started, open a terminal, move to the folder where you want your code being stored and start a Jupyter notebook:
+.. code-block:: bash
+
+    >> source bmnn/bin/activate
+
+Now install `neurodynex3` and all its requirements:
+
+.. code-block:: bash
+
+    >> pip install neurodynex3
+
+You can now use Python in this environment as you normally would. Move to the folder where you want your code to be stored and start a Jupyter notebook by running:
 
 .. code-block:: bash
 
     >> cd your_folder
-    >> source activate bmnn
     >> jupyter notebook
+
+Finally, when you are done using `neurodynex3`, you can deactivate the environment:
+
+.. code-block:: bash
+
+    >> deactivate
+
+
+
+.. _setup-conda:
+
+Using `conda`
+---------------
+`Anaconda <https://www.anaconda.com/distribution/>`_ is a Python distribution that can be installed on Linux, macOS, and Windows. It comes together with a package manager called `conda`. To run `conda` commands if you are using Windows, first start the `Anaconda Prompt`.
+
+.. image:: anaconda-prompt.png
+   :align: center
+
+If you are using Linux or macOS, you can run `conda` commands in a regular terminal.
+
+We start by creating a virtual environemt that contains a separate Python installation. The virtual environment is called `bmnn`:
+
+.. code-block:: bash
+
+    >> conda create --name bmnn python
+
+Activate the virtual environment:
+
+.. code-block:: bash
+
+    >> conda activate bmnn
+
+Now install all the required Python packages:
+
+.. code-block:: bash
+
+    >> conda install numpy scipy jupyter matplotlib mpmath setuptools setuptools_scm mock nose
+
+Install `Brian2`:
+
+.. code-block:: bash
+
+    >> conda install -c conda-forge brian2
+
+Install `neurodynex3`:
+
+.. code-block:: bash
+
+    >> pip install neurodynex3
+
+You can now use Python in this environment as you normally would. Move to the folder where you want your code to be stored and start a Jupyter notebook by running:
+
+.. code-block:: bash
+
+    >> cd your_folder
+    >> jupyter notebook
+
+Finally, when you are done using `neurodynex3`, you can deactivate the environment:
+
+.. code-block:: bash
+
+    >> conda deactivate
+
+.. note::
+
+   If something goes wrong inside the virtual environment, you can simply delete it and start over:
+
+   .. code-block::
+
+      >> conda deactivate
+      >> conda remove --name bmnn --all
+   
+   More information can be found in the `conda documentation <https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html>`_.
+
+
+
+
+Using Jupyter
+-------------
 
 .. figure:: exc_images/StartJupyter.png
    :align: center
@@ -67,9 +145,9 @@ We recommend you to create one notebook per exercise.
 
 Links
 -----
-Here are some useful links to get started with Python and Brian
+Here are some useful links to get started with Python and Brian:
 
-* `<https://www.python.org/about/gettingstarted/>`_
-* `<https://brian2.readthedocs.io/en/latest/index.html>`_
-* `<http://www.scipy.org>`_
-* `<http://Matplotlib.sf.net>`_
+- `Python documentation <https://www.python.org/doc>`_
+- `Brian2 documentation <https://brian2.readthedocs.io/en/stable>`_
+- `Matplotlib documentation <https://matplotlib.org/tutorials/index.html>`_
+- `conda documentation <https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html>`_
