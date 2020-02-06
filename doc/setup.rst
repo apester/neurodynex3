@@ -48,6 +48,15 @@ Using ``pip``
 
       >> deactivate
 
+.. note::
+
+   If something goes wrong inside the virtual environment, you can simply delete it by removing its folder (with the regular ``rm -r`` command) and start over:
+
+   .. code-block:: bash
+
+      >> deactivate
+      >> rm -r bmnn
+
 
 
 .. _setup-conda:
