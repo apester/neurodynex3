@@ -3,7 +3,9 @@
 Installation
 ===========================
 
-To solve the exercises you need to install ``Python``, ``Brian2`` and the ``neurodynex3`` package. The turorial below describes two different ways if installing everything: (a) using the :ref:`pip <setup-pip>` package manager (Linux, macOS), or (b) using the :ref:`conda <setup-conda>` package manager if you have Anaconda installed (Linux, macOS, Windows).
+To solve the exercises you need to install ``Python``, ``Brian2`` and the ``neurodynex3`` package. The tutorial below describes two different ways of installing everything:
+- using the :ref:`pip <setup-pip>` package manager (Linux, macOS), *or*
+- using the :ref:`conda <setup-conda>` package manager if you have Anaconda installed (Linux, macOS, Windows).
 
 
 
@@ -82,7 +84,7 @@ If you are using Linux or macOS, you can run ``conda`` commands in a regular ter
 
       >> conda activate bmnn
 
-3. Now install all the required Python packages:
+3. Now install required Python packages:
 
    .. code-block:: bash
 
