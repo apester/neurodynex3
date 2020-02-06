@@ -14,7 +14,7 @@ Every :ref:`exercise <exercises-index>` comes with instructions and a demo funct
 Requirements
 ------------
 
-The following requirements should be met:
+The following packages are required to use ``neurodynex3``:
 
 -  Python 3 or higher
 -  `Brian2 Simulator <https://brian2.readthedocs.io/en/stable>`_
@@ -33,5 +33,5 @@ Disclaimer
 
 Bug reports
 -----------
-Did you find a bug? Open an issue on `github <https://github.com/martinbarry59/neurodynex3/issues>`_. Thank you!
+Did you find a bug? Open an issue on `Github <https://github.com/martinbarry59/neurodynex3/issues>`_. Thank you!
 

@@ -10,7 +10,7 @@ To solve the exercises you need to install ``Python``, ``Brian2`` and the ``neur
 .. _setup-pip:
 
 Using ``pip``
------------
+--------------
 We will start by creating a virtual environemt that contains a separate Python installation. To do this, we first need the ``virtualenv`` package. Install this by running:
 
 .. code-block:: bash
@@ -52,8 +52,8 @@ Finally, when you are done using the virtual environment, you can deactivate it:
 
 .. _setup-conda:
 
-Using `conda`
----------------
+Using ``conda``
+----------------
 `Anaconda <https://www.anaconda.com/distribution/>`_ is a Python distribution that can be installed on Linux, macOS, and Windows. It comes together with a package manager called ``conda``. To run ``conda`` commands if you are using Windows, first start the ``Anaconda Prompt``.
 
 .. image:: setup_images/anaconda-prompt.png
@@ -106,12 +106,12 @@ Finally, when you are done using the virtual environment, you can deactivate it:
 
 .. note::
 
-    If something goes wrong inside the virtual environment, you can simply delete it and start over:
+   If something goes wrong inside the virtual environment, you can simply delete it and start over:
 
-    .. code-block:: bash
+   .. code-block:: bash
 
-        >> conda deactivate
-        >> conda remove --name bmnn --all
+      >> conda deactivate
+      >> conda remove --name bmnn --all
    
    More information can be found in the `conda documentation <https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html>`_.
 
@@ -119,8 +119,8 @@ Finally, when you are done using the virtual environment, you can deactivate it:
 
 .. _setup-jupyter:
 
-Using Jupyter notebooks
--------------
+Start a Jupyter notebook
+--------------------------
 
 First, activate the virtual environment. If you use ``pip``, activate the virtual environment with
 
@@ -136,12 +136,12 @@ If you use ``conda``, activate the virtual environment with:
 
 .. note::
    
-    Always make sure you use programs that are inside the virtual environment. To see that you are using ``jupyter`` from inside the ``bmnn`` virtual environment, run
+   Always make sure you use programs that are inside the virtual environment. To see that you are using ``jupyter`` from inside the ``bmnn`` virtual environment, run
 
-    .. code-block:: bash
+   .. code-block:: bash
 
-        >> which jupyter
-        .../bmnn/bin/jupyter
+      >> which jupyter
+      .../bmnn/bin/jupyter
 
 Move to the folder where you want your code to be stored and start a Jupyter notebook:
 
