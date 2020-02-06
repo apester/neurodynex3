@@ -13,40 +13,40 @@ Using ``pip``
 --------------
 1. We will start by creating a virtual environemt that contains a separate Python installation. To do this, we first need the ``virtualenv`` package. Install this by running:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    >> pip install virtualenv
+      >> pip install virtualenv
 
 2. Now create the virtual environment in a folder called ``bmnn``:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    >> virtualenv bmnn
+      >> virtualenv bmnn
 
 3. Activate the virtual environment:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    >> source bmnn/bin/activate
+      >> source bmnn/bin/activate
 
 4. Now install ``neurodynex3`` and all its requirements:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    >> pip install neurodynex3
+      >> pip install neurodynex3
 
 5. You can now use Python in this environment as you normally would. Move to the folder where you want your code to be stored and start a Jupyter notebook by running:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    >> cd your_folder
-    >> jupyter notebook
+      >> cd your_folder
+      >> jupyter notebook
 
 6. Finally, when you are done using the virtual environment, you can deactivate it:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    >> deactivate
+      >> deactivate
 
 
 
@@ -63,53 +63,53 @@ If you are using Linux or macOS, you can run ``conda`` commands in a regular ter
 
 1. We start by creating a virtual environemt that contains a separate Python installation. The virtual environment is called ``bmnn``:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    >> conda create --name bmnn python
+      >> conda create --name bmnn python
 
 2. Activate the virtual environment:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    >> conda activate bmnn
+      >> conda activate bmnn
 
 3. Now install all the required Python packages:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    >> conda install numpy scipy jupyter matplotlib mpmath setuptools setuptools_scm mock nose
+      >> conda install numpy scipy jupyter matplotlib mpmath setuptools setuptools_scm mock nose
 
 4. Install ``Brian2``:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    >> conda install -c conda-forge brian2
+      >> conda install -c conda-forge brian2
 
 5. We will now install ``neurodynex3``. **Note:** this step is done using ``pip``, **not** ``conda``. First make sure that you are using ``pip`` inside the virtual environment:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    >> which pip
-    .../bmnn/bin/pip
+      >> which pip
+      .../bmnn/bin/pip
 
 6. Now run the install command:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    >> pip install neurodynex3
+      >> pip install neurodynex3
 
 7. You can now use Python in this environment as you normally would. Move to the folder where you want your code to be stored and start a Jupyter notebook by running:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    >> cd your_folder
-    >> jupyter notebook
+      >> cd your_folder
+      >> jupyter notebook
 
 8. Finally, when you are done using the virtual environment, you can deactivate it:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    >> conda deactivate
+      >> conda deactivate
 
 .. note::
 
@@ -131,41 +131,41 @@ Start a Jupyter notebook
 
 1. First, activate the virtual environment. If you use ``pip``, activate the virtual environment with
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    >> source bmnn/bin/activate
+      >> source bmnn/bin/activate
 
    If you use ``conda``, activate the virtual environment with:
 
-.. code-block:: bash
-
-    >> conda activate bmnn
-
-.. note::
-   
-   Always make sure you use programs that are inside the virtual environment. To see that you are using ``jupyter`` from inside the ``bmnn`` virtual environment, run
-
    .. code-block:: bash
 
-      >> which jupyter
-      .../bmnn/bin/jupyter
+      >> conda activate bmnn
+
+   .. note::
+   
+      Always make sure you use programs that are inside the virtual environment. To see that you are using ``jupyter`` from inside the ``bmnn`` virtual environment, run
+
+      .. code-block:: bash
+
+         >> which jupyter
+         .../bmnn/bin/jupyter
 
 2. Move to the folder where you want your code to be stored and start a Jupyter notebook:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    >> cd your_folder
-    >> jupyter notebook
+      >> cd your_folder
+      >> jupyter notebook
 
 3. Starting Jupyter will open your browser. Select ``New``, ``Python3`` to get a new notebook page. Depending on what else you have installed on your computer, you may have to specify the kernel.
 
-.. figure:: setup_images/start-notebook.png
-   :align: center
+   .. figure:: setup_images/start-notebook.png
+      :align: center
 
 4. Once you have create a new notebook, copy-paste the code of the exercise into the notebook and run it. Note that the first time you do this, the execution may take a little longer and, in some cases, you may see compilation warnings.
 
-.. figure:: setup_images/run-code.png
-   :align: center
+   .. figure:: setup_images/run-code.png
+      :align: center
 
 We recommend you to create one notebook per exercise.
 
