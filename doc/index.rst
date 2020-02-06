@@ -2,9 +2,10 @@ Neuronal Dynamics: Python Exercises
 ===================================
 
 This documentation is automatically generated documentation from the corresponding code
-repository hosted at Github_. The repository contains python exercises accompanying the book
-`Neuronal Dynamics <http://neuronaldynamics.epfl.ch/>`__ by Wulfram
-Gerstner, Werner M. Kistler, Richard Naud and Liam Paninski.
+repository hosted at `Github <https://github.com/martinbarry59/neurodynex3>`_.
+The repository contains python exercises accompanying the book
+`Neuronal Dynamics <http://neuronaldynamics.epfl.ch/>`_ by Wulfram Gerstner,
+Werner M. Kistler, Richard Naud and Liam Paninski.
 
 Contents
 --------
@@ -13,6 +14,7 @@ Contents
     :maxdepth: 2
 
     intro
+    setup
     exercises/index
     contents
     licence
@@ -25,7 +27,6 @@ Indices and tables
 * :ref:`search`
 
 
-.. _Github: https://github.com/martinbarry59/neurodynex3
 .. |Build Status| image:: https://travis-ci.org/EPFL-LCN/neuronaldynamics-exercises.svg?branch=master
    :target: https://travis-ci.org/EPFL-LCN/neuronaldynamics-exercises
 .. |Conda Repo| image:: https://anaconda.org/epfl-lcn/neurodynex/badges/version.svg
