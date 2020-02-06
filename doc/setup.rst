@@ -4,7 +4,9 @@ Installation
 ===========================
 
 To solve the exercises you need to install ``Python``, ``Brian2`` and the ``neurodynex3`` package. The tutorial below describes two different ways of installing everything:
+
 - using the :ref:`pip <setup-pip>` package manager (Linux, macOS), *or*
+
 - using the :ref:`conda <setup-conda>` package manager if you have Anaconda installed (Linux, macOS, Windows).
 
 
