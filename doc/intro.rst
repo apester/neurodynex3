@@ -6,7 +6,7 @@ This repository contains python exercises accompanying the book `Neuronal Dynami
 Quickstart
 ----------
 
-See :ref:`the installation instructions <setup>` for details on how to install the Python packages needed for the exercises.
+See the :ref:`installation instructions <setup>` for details on how to install the Python packages needed for the exercises.
 
 Every :ref:`exercise <exercises-index>` comes with instructions and a demo function to get started. We recommend to create one Jupyter notebook per exercise.
 
