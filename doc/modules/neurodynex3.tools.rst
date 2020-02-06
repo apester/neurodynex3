@@ -1,29 +1,29 @@
-neurodynex.tools package
+neurodynex3.tools package
 ========================
 
 Submodules
 ----------
 
-neurodynex.tools.input\_factory module
+neurodynex3.tools.input\_factory module
 --------------------------------------
 
-.. automodule:: neurodynex.tools.input_factory
+.. automodule:: neurodynex3.tools.input_factory
     :members:
     :undoc-members:
     :show-inheritance:
 
-neurodynex.tools.plot\_tools module
+neurodynex3.tools.plot\_tools module
 -----------------------------------
 
-.. automodule:: neurodynex.tools.plot_tools
+.. automodule:: neurodynex3.tools.plot_tools
     :members:
     :undoc-members:
     :show-inheritance:
 
-neurodynex.tools.spike\_tools module
+neurodynex3.tools.spike\_tools module
 ------------------------------------
 
-.. automodule:: neurodynex.tools.spike_tools
+.. automodule:: neurodynex3.tools.spike_tools
     :members:
     :undoc-members:
     :show-inheritance:
@@ -32,7 +32,7 @@ neurodynex.tools.spike\_tools module
 Module contents
 ---------------
 
-.. automodule:: neurodynex.tools
+.. automodule:: neurodynex3.tools
     :members:
     :undoc-members:
     :show-inheritance:

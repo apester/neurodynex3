@@ -1,13 +1,13 @@
-neurodynex.phase\_plane\_analysis package
+neurodynex3.phase\_plane\_analysis package
 =========================================
 
 Submodules
 ----------
 
-neurodynex.phase\_plane\_analysis.fitzhugh\_nagumo module
+neurodynex3.phase\_plane\_analysis.fitzhugh\_nagumo module
 ---------------------------------------------------------
 
-.. automodule:: neurodynex.phase_plane_analysis.fitzhugh_nagumo
+.. automodule:: neurodynex3.phase_plane_analysis.fitzhugh_nagumo
     :members:
     :undoc-members:
     :show-inheritance:
@@ -16,7 +16,7 @@ neurodynex.phase\_plane\_analysis.fitzhugh\_nagumo module
 Module contents
 ---------------
 
-.. automodule:: neurodynex.phase_plane_analysis
+.. automodule:: neurodynex3.phase_plane_analysis
     :members:
     :undoc-members:
     :show-inheritance:

@@ -1,13 +1,13 @@
-neurodynex.ojas\_rule package
+neurodynex3.ojas\_rule package
 =============================
 
 Submodules
 ----------
 
-neurodynex.ojas\_rule.oja module
+neurodynex3.ojas\_rule.oja module
 --------------------------------
 
-.. automodule:: neurodynex.ojas_rule.oja
+.. automodule:: neurodynex3.ojas_rule.oja
     :members:
     :undoc-members:
     :show-inheritance:
@@ -16,7 +16,7 @@ neurodynex.ojas\_rule.oja module
 Module contents
 ---------------
 
-.. automodule:: neurodynex.ojas_rule
+.. automodule:: neurodynex3.ojas_rule
     :members:
     :undoc-members:
     :show-inheritance:

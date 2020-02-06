@@ -1,13 +1,13 @@
-neurodynex.cable\_equation package
+neurodynex3.cable\_equation package
 ==================================
 
 Submodules
 ----------
 
-neurodynex.cable\_equation.passive\_cable module
+neurodynex3.cable\_equation.passive\_cable module
 ------------------------------------------------
 
-.. automodule:: neurodynex.cable_equation.passive_cable
+.. automodule:: neurodynex3.cable_equation.passive_cable
     :members:
     :undoc-members:
     :show-inheritance:
@@ -16,7 +16,7 @@ neurodynex.cable\_equation.passive\_cable module
 Module contents
 ---------------
 
-.. automodule:: neurodynex.cable_equation
+.. automodule:: neurodynex3.cable_equation
     :members:
     :undoc-members:
     :show-inheritance:

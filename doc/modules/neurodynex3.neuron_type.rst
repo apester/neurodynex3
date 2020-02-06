@@ -1,13 +1,13 @@
-neurodynex.neuron\_type package
+neurodynex3.neuron\_type package
 ===============================
 
 Submodules
 ----------
 
-neurodynex.neuron\_type.neurons module
+neurodynex3.neuron\_type.neurons module
 --------------------------------------
 
-.. automodule:: neurodynex.neuron_type.neurons
+.. automodule:: neurodynex3.neuron_type.neurons
     :members:
     :undoc-members:
     :show-inheritance:
@@ -16,7 +16,7 @@ neurodynex.neuron\_type.neurons module
 Module contents
 ---------------
 
-.. automodule:: neurodynex.neuron_type
+.. automodule:: neurodynex3.neuron_type
     :members:
     :undoc-members:
     :show-inheritance:

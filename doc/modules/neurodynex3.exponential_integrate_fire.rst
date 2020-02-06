@@ -1,13 +1,13 @@
-neurodynex.exponential\_integrate\_fire package
+neurodynex3.exponential\_integrate\_fire package
 ===============================================
 
 Submodules
 ----------
 
-neurodynex.exponential\_integrate\_fire.exp\_IF module
+neurodynex3.exponential\_integrate\_fire.exp\_IF module
 ------------------------------------------------------
 
-.. automodule:: neurodynex.exponential_integrate_fire.exp_IF
+.. automodule:: neurodynex3.exponential_integrate_fire.exp_IF
     :members:
     :undoc-members:
     :show-inheritance:
@@ -16,7 +16,7 @@ neurodynex.exponential\_integrate\_fire.exp\_IF module
 Module contents
 ---------------
 
-.. automodule:: neurodynex.exponential_integrate_fire
+.. automodule:: neurodynex3.exponential_integrate_fire
     :members:
     :undoc-members:
     :show-inheritance:

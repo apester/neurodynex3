@@ -1,13 +1,13 @@
-neurodynex.hodgkin\_huxley package
+neurodynex3.hodgkin\_huxley package
 ==================================
 
 Submodules
 ----------
 
-neurodynex.hodgkin\_huxley.HH module
+neurodynex3.hodgkin\_huxley.HH module
 ------------------------------------
 
-.. automodule:: neurodynex.hodgkin_huxley.HH
+.. automodule:: neurodynex3.hodgkin_huxley.HH
     :members:
     :undoc-members:
     :show-inheritance:
@@ -16,7 +16,7 @@ neurodynex.hodgkin\_huxley.HH module
 Module contents
 ---------------
 
-.. automodule:: neurodynex.hodgkin_huxley
+.. automodule:: neurodynex3.hodgkin_huxley
     :members:
     :undoc-members:
     :show-inheritance:

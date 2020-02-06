@@ -1,13 +1,13 @@
-neurodynex.competing\_populations package
+neurodynex3.competing\_populations package
 =========================================
 
 Submodules
 ----------
 
-neurodynex.competing\_populations.decision\_making module
+neurodynex3.competing\_populations.decision\_making module
 ---------------------------------------------------------
 
-.. automodule:: neurodynex.competing_populations.decision_making
+.. automodule:: neurodynex3.competing_populations.decision_making
     :members:
     :undoc-members:
     :show-inheritance:
@@ -16,7 +16,7 @@ neurodynex.competing\_populations.decision\_making module
 Module contents
 ---------------
 
-.. automodule:: neurodynex.competing_populations
+.. automodule:: neurodynex3.competing_populations
     :members:
     :undoc-members:
     :show-inheritance:

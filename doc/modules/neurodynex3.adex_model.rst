@@ -1,13 +1,13 @@
-neurodynex.adex\_model package
+neurodynex3.adex\_model package
 ==============================
 
 Submodules
 ----------
 
-neurodynex.adex\_model.AdEx module
+neurodynex3.adex\_model.AdEx module
 ----------------------------------
 
-.. automodule:: neurodynex.adex_model.AdEx
+.. automodule:: neurodynex3.adex_model.AdEx
     :members:
     :undoc-members:
     :show-inheritance:
@@ -16,7 +16,7 @@ neurodynex.adex\_model.AdEx module
 Module contents
 ---------------
 
-.. automodule:: neurodynex.adex_model
+.. automodule:: neurodynex3.adex_model
     :members:
     :undoc-members:
     :show-inheritance:
