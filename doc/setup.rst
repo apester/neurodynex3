@@ -11,38 +11,38 @@ To solve the exercises you need to install ``Python``, ``Brian2`` and the ``neur
 
 Using ``pip``
 --------------
-We will start by creating a virtual environemt that contains a separate Python installation. To do this, we first need the ``virtualenv`` package. Install this by running:
+1. We will start by creating a virtual environemt that contains a separate Python installation. To do this, we first need the ``virtualenv`` package. Install this by running:
 
 .. code-block:: bash
 
     >> pip install virtualenv
 
-Now create the virtual environment in a folder called ``bmnn``:
+2. Now create the virtual environment in a folder called ``bmnn``:
 
 .. code-block:: bash
 
     >> virtualenv bmnn
 
-Activate the virtual environment:
+3. Activate the virtual environment:
 
 .. code-block:: bash
 
     >> source bmnn/bin/activate
 
-Now install ``neurodynex3`` and all its requirements:
+4. Now install ``neurodynex3`` and all its requirements:
 
 .. code-block:: bash
 
     >> pip install neurodynex3
 
-You can now use Python in this environment as you normally would. Move to the folder where you want your code to be stored and start a Jupyter notebook by running:
+5. You can now use Python in this environment as you normally would. Move to the folder where you want your code to be stored and start a Jupyter notebook by running:
 
 .. code-block:: bash
 
     >> cd your_folder
     >> jupyter notebook
 
-Finally, when you are done using the virtual environment, you can deactivate it:
+6. Finally, when you are done using the virtual environment, you can deactivate it:
 
 .. code-block:: bash
 
@@ -61,44 +61,51 @@ Using ``conda``
 
 If you are using Linux or macOS, you can run ``conda`` commands in a regular terminal.
 
-We start by creating a virtual environemt that contains a separate Python installation. The virtual environment is called ``bmnn``:
+1. We start by creating a virtual environemt that contains a separate Python installation. The virtual environment is called ``bmnn``:
 
 .. code-block:: bash
 
     >> conda create --name bmnn python
 
-Activate the virtual environment:
+2. Activate the virtual environment:
 
 .. code-block:: bash
 
     >> conda activate bmnn
 
-Now install all the required Python packages:
+3. Now install all the required Python packages:
 
 .. code-block:: bash
 
     >> conda install numpy scipy jupyter matplotlib mpmath setuptools setuptools_scm mock nose
 
-Install ``Brian2``:
+4. Install ``Brian2``:
 
 .. code-block:: bash
 
     >> conda install -c conda-forge brian2
 
-Install ``neurodynex3``. Note: this step is done using ``pip``, **not** ``conda``:
+5. We will now install ``neurodynex3``. **Note:** this step is done using ``pip``, **not** ``conda``. First make sure that you are using ``pip`` inside the virtual environment:
+
+.. code-block:: bash
+
+    >> which pip
+    .../bmnn/bin/pip
+
+6. Now run the install command:
 
 .. code-block:: bash
 
     >> pip install neurodynex3
 
-You can now use Python in this environment as you normally would. Move to the folder where you want your code to be stored and start a Jupyter notebook by running:
+7. You can now use Python in this environment as you normally would. Move to the folder where you want your code to be stored and start a Jupyter notebook by running:
 
 .. code-block:: bash
 
     >> cd your_folder
     >> jupyter notebook
 
-Finally, when you are done using the virtual environment, you can deactivate it:
+8. Finally, when you are done using the virtual environment, you can deactivate it:
 
 .. code-block:: bash
 
@@ -122,13 +129,13 @@ Finally, when you are done using the virtual environment, you can deactivate it:
 Start a Jupyter notebook
 --------------------------
 
-First, activate the virtual environment. If you use ``pip``, activate the virtual environment with
+1. First, activate the virtual environment. If you use ``pip``, activate the virtual environment with
 
 .. code-block:: bash
 
     >> source bmnn/bin/activate
 
-If you use ``conda``, activate the virtual environment with:
+   If you use ``conda``, activate the virtual environment with:
 
 .. code-block:: bash
 
@@ -143,19 +150,19 @@ If you use ``conda``, activate the virtual environment with:
       >> which jupyter
       .../bmnn/bin/jupyter
 
-Move to the folder where you want your code to be stored and start a Jupyter notebook:
+2. Move to the folder where you want your code to be stored and start a Jupyter notebook:
 
 .. code-block:: bash
 
     >> cd your_folder
     >> jupyter notebook
 
-Starting Jupyter will open your browser. Select ``New``, ``Python3`` to get a new notebook page. Depending on what else you have installed on your computer, you may have to specify the kernel.
+3. Starting Jupyter will open your browser. Select ``New``, ``Python3`` to get a new notebook page. Depending on what else you have installed on your computer, you may have to specify the kernel.
 
 .. figure:: setup_images/start-notebook.png
    :align: center
 
-Once you have create a new notebook, copy-paste the code of the exercise into the notebook and run it. Note that the first time you do this, the execution may take a little longer and, in some cases, you may see compilation warnings.
+4. Once you have create a new notebook, copy-paste the code of the exercise into the notebook and run it. Note that the first time you do this, the execution may take a little longer and, in some cases, you may see compilation warnings.
 
 .. figure:: setup_images/run-code.png
    :align: center
