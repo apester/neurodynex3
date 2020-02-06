@@ -170,11 +170,13 @@ Start a Jupyter notebook
 
    .. figure:: setup_images/start-notebook.png
       :align: center
+      :target: setup_images/start-notebook.png
 
 4. Once you have create a new notebook, copy-paste the code of the exercise into the notebook and run it. Note that the first time you do this, the execution may take a little longer and, in some cases, you may see compilation warnings.
 
    .. figure:: setup_images/run-code.png
       :align: center
+      :target: setup_images/run-code.png
 
 We recommend you to create one notebook per exercise.
 
