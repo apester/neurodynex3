@@ -3,11 +3,13 @@
 Installation
 ===========================
 
-To solve the exercises you need to install ``Python``, ``Brian2`` and the ``neurodynex3`` package. The tutorial below describes two different ways of installing everything:
+To solve the exercises you need to install ``Python``, the ``Brian2`` simulator and the ``neurodynex3`` package. The tutorial below will explain two different ways of installing everything:
 
-- using the :ref:`pip <setup-pip>` package manager (Linux, macOS), *or*
+- using the :ref:`pip <setup-pip>` package manager (Linux, macOS)
 
-- using the :ref:`conda <setup-conda>` package manager if you have Anaconda installed (Linux, macOS, Windows).
+- using the :ref:`conda <setup-conda>` package manager, if you have Anaconda installed (Linux, macOS, Windows).
+
+In both cases, we will use the package manager to create a virtual environment called ``bmnn`` and install everything there.
 
 
 
@@ -37,7 +39,7 @@ Using ``pip``
 
    .. code-block:: bash
 
-      >> pip install neurodynex3
+      >> pip install --upgrade neurodynex3
 
 5. You can now use Python in this environment as you normally would. Move to the folder where you want your code to be stored and start a Jupyter notebook by running:
 
@@ -176,7 +178,7 @@ Start a Jupyter notebook
       :align: center
       :target: _images/start-notebook.png
 
-4. Once you have create a new notebook, copy-paste the code of the exercise into the notebook and run it. Note that the first time you do this, the execution may take a little longer and, in some cases, you may see compilation warnings.
+4. Once you have created a new notebook, copy-paste the code of the exercise into the notebook and run it. Note that the first time you do this, the execution may take a little longer and, in some cases, you may see compilation warnings.
 
    .. figure:: setup_images/run-code.png
       :align: center
@@ -191,5 +193,6 @@ Here are some useful links to get started with Python and Brian:
 
 - `Python documentation <https://www.python.org/doc>`_
 - `Brian2 documentation <https://brian2.readthedocs.io/en/stable>`_
+- `Jupyter notebook documentation <https://jupyter-notebook.readthedocs.io/en/stable>`_
 - `Matplotlib documentation <https://matplotlib.org/tutorials/index.html>`_
 - `conda documentation <https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html>`_
