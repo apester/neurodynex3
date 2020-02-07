@@ -105,7 +105,7 @@ If you are using Linux or macOS, you can run ``conda`` commands in a regular ter
    .. code-block:: bash
 
       >> which pip
-      .../bmnn/bin/pip
+      .../anaconda3/envs/bmnn/bin/pip
 
 6. Now run the install command:
 
@@ -158,12 +158,19 @@ Start a Jupyter notebook
 
    .. note::
    
-      Always make sure you use programs that are inside the virtual environment. To see that you are using ``jupyter`` from inside the ``bmnn`` virtual environment, run
+      Always make sure you use programs that are inside the virtual environment. For example, you can use the ``which`` command to see that you are using the ``jupyter`` that is inside the ``bmnn`` virtual environment. For ``pip`` you should see
 
       .. code-block:: bash
 
          >> which jupyter
          .../bmnn/bin/jupyter
+
+      and for ``conda`` you should see
+
+      .. code-block:: bash
+
+         >> which jupyter
+         .../anaconda3/envs/bmnn/bin/jupyter
 
 2. Move to the folder where you want your code to be stored and start a Jupyter notebook:
 
