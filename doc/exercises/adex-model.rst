@@ -11,7 +11,7 @@ Use function :func:`.AdEx.simulate_AdEx_neuron` to run the model for different i
 
 .. code-block:: py
 
-    % matplotlib inline
+    %matplotlib inline
     import brian2 as b2
     from neurodynex3.adex_model import AdEx
     from neurodynex3.tools import plot_tools, input_factory
