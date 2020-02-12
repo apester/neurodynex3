@@ -1,38 +1,195 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>11. Network of LIF neurons (Brunel) &#8212; LCN-neurodynex3  documentation</title>
-    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>11. Network of LIF neurons (Brunel) &mdash; Neuronaldynamics Exercises 0.0.5.dev56+gcef1c8a.d20200212 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="12. Spatial Working Memory (Compte et. al.)" href="spatial-working-memory.html" />
-    <link rel="prev" title="10. Oja’s hebbian learning rule" href="ojas-rule.html" />
+    <link rel="prev" title="10. Oja’s hebbian learning rule" href="ojas-rule.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
    
-  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
-  </head><body>
-  
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
           
 
-          <div class="body" role="main">
+          
+            <a href="../index.html" class="icon icon-home"> Neuronaldynamics Exercises
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.5.dev56+gcef1c8a.d20200212
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Exercises</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="setup.html">1. Setting up Python and Brian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leaky-integrate-and-fire.html">2. Leaky-integrate-and-fire model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exponential-integrate-and-fire.html">3. The Exponential Integrate-and-Fire model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adex-model.html">4. AdEx: the Adaptive Exponential Integrate-and-Fire model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passive-cable.html">5. Dendrites and the (passive) cable equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hodgkin-huxley.html">6. Numerical integration of the HH model of the squid axon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="phase-plane-analysis.html">7. FitzHugh-Nagumo: Phase plane and bifurcation analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hopfield-network.html">8. Hopfield Network model of associative memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="neuron-type.html">9. Type I and type II neuron models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ojas-rule.html">10. Oja’s hebbian learning rule</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">11. Network of LIF neurons (Brunel)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#exercise-model-parameters-and-threshold-rate">11.1. Exercise: model parameters and threshold rate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#question">11.1.1. Question:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#exercise-population-activity">11.2. Exercise: Population activity</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#question-network-states">11.2.1. Question: Network states</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#question-interspike-interval-isi-and-coefficient-of-variation-cv">11.2.2. Question: Interspike interval (ISI)  and Coefficient of Variation (CV)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#exercise-emergence-of-synchronization">11.3. Exercise: Emergence of Synchronization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">11.3.1. Question:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#bonus-power-spectrum-of-the-population-activity">11.4. Bonus: Power Spectrum of the Population Activity</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#question-sampling-the-population-activity">11.4.1. Question: Sampling the Population Activity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#question-sampling-a-single-neuron-spike-train">11.4.2. Question: Sampling a Single Neuron Spike Train</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#question-single-neuron-activity-vs-population-activity">11.4.3. Question: Single Neuron activity vs. Population Activity</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="spatial-working-memory.html">12. Spatial Working Memory (Compte et. al.)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="perceptual-decision-making.html">13. Perceptual Decision Making (Wong &amp; Wang)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contents.html">Python exercise modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../licence.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Neuronaldynamics Exercises</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Exercises</a> &raquo;</li>
+        
+      <li>11. Network of LIF neurons (Brunel)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/exercises/brunel-network.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="network-of-lif-neurons-brunel">
 <h1>11. Network of LIF neurons (Brunel)<a class="headerlink" href="#network-of-lif-neurons-brunel" title="Permalink to this headline">¶</a></h1>
@@ -274,93 +431,52 @@ print(&quot;done&quot;)
 </div>
 
 
+           </div>
+           
           </div>
-          
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="../index.html">LCN-neurodynex3</a></h1>
-
-
-
-
-
-
-
-
-<h3>Navigation</h3>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Exercises</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="setup.html">1. Setting up Python and Brian</a></li>
-<li class="toctree-l2"><a class="reference internal" href="leaky-integrate-and-fire.html">2. Leaky-integrate-and-fire model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="exponential-integrate-and-fire.html">3. The Exponential Integrate-and-Fire model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="adex-model.html">4. AdEx: the Adaptive Exponential Integrate-and-Fire model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="passive-cable.html">5. Dendrites and the (passive) cable equation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hodgkin-huxley.html">6. Numerical integration of the HH model of the squid axon</a></li>
-<li class="toctree-l2"><a class="reference internal" href="phase-plane-analysis.html">7. FitzHugh-Nagumo: Phase plane and bifurcation analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hopfield-network.html">8. Hopfield Network model of associative memory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="neuron-type.html">9. Type I and type II neuron models</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ojas-rule.html">10. Oja’s hebbian learning rule</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">11. Network of LIF neurons (Brunel)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spatial-working-memory.html">12. Spatial Working Memory (Compte et. al.)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="perceptual-decision-making.html">13. Perceptual Decision Making (Wong &amp; Wang)</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../contents.html">Python exercise modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../licence.html">License</a></li>
-</ul>
-
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="../index.html">Documentation overview</a><ul>
-  <li><a href="index.html">Exercises</a><ul>
-      <li>Previous: <a href="ojas-rule.html" title="previous chapter">10. Oja’s hebbian learning rule</a></li>
-      <li>Next: <a href="spatial-working-memory.html" title="next chapter">12. Spatial Working Memory (Compte et. al.)</a></li>
-  </ul></li>
-  </ul></li>
-</ul>
-</div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="spatial-working-memory.html" class="btn btn-neutral float-right" title="12. Spatial Working Memory (Compte et. al.)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ojas-rule.html" class="btn btn-neutral float-left" title="10. Oja’s hebbian learning rule" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
     </div>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+  
 
+  <hr/>
 
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, EPFL-LCN
 
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
-
-
-
+</footer>
 
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2020, B-S-I.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.2</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-      
-      |
-      <a href="../_sources/exercises/brunel-network.rst.txt"
-          rel="nofollow">Page source</a>
-    </div>
 
-    
+    </section>
 
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
     
-  </body>
+   
+
+</body>
 </html>

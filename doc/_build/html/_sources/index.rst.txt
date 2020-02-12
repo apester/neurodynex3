@@ -1,4 +1,4 @@
-|Build Status| |Conda Repo|
+neurodynex3|Build Status| |Conda Repo|
 
 Neuronal Dynamics: Python Exercises
 ===================================
@@ -16,6 +16,7 @@ Contents
 
     intro
     exercises/index
+    
     contents
     licence
 

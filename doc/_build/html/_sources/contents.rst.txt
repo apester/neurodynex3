@@ -8,4 +8,4 @@ across exercises. Note that the code is not optimized for performance and there 
 .. toctree::
     :maxdepth: 4
 
-    modules/neurodynex3
+    modules/modules

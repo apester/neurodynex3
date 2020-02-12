@@ -1,38 +1,197 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>13. Perceptual Decision Making (Wong &amp; Wang) &#8212; LCN-neurodynex3  documentation</title>
-    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>13. Perceptual Decision Making (Wong &amp; Wang) &mdash; Neuronaldynamics Exercises 0.0.5.dev56+gcef1c8a.d20200212 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Python exercise modules" href="../contents.html" />
-    <link rel="prev" title="12. Spatial Working Memory (Compte et. al.)" href="spatial-working-memory.html" />
+    <link rel="prev" title="12. Spatial Working Memory (Compte et. al.)" href="spatial-working-memory.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
    
-  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
-  </head><body>
-  
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
           
 
-          <div class="body" role="main">
+          
+            <a href="../index.html" class="icon icon-home"> Neuronaldynamics Exercises
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.5.dev56+gcef1c8a.d20200212
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Exercises</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="setup.html">1. Setting up Python and Brian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leaky-integrate-and-fire.html">2. Leaky-integrate-and-fire model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exponential-integrate-and-fire.html">3. The Exponential Integrate-and-Fire model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adex-model.html">4. AdEx: the Adaptive Exponential Integrate-and-Fire model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passive-cable.html">5. Dendrites and the (passive) cable equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hodgkin-huxley.html">6. Numerical integration of the HH model of the squid axon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="phase-plane-analysis.html">7. FitzHugh-Nagumo: Phase plane and bifurcation analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hopfield-network.html">8. Hopfield Network model of associative memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="neuron-type.html">9. Type I and type II neuron models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ojas-rule.html">10. Oja’s hebbian learning rule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="brunel-network.html">11. Network of LIF neurons (Brunel)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spatial-working-memory.html">12. Spatial Working Memory (Compte et. al.)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">13. Perceptual Decision Making (Wong &amp; Wang)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#exercise-the-network-implementation">13.1. Exercise: The network implementation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#question-understanding-brian2-monitors">13.1.1. Question: Understanding Brian2 Monitors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#question-accessing-a-dictionary-to-plot-the-population-rates">13.1.2. Question: Accessing a dictionary to plot the population rates</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#exercise-stimulating-the-decision-making-circuit">13.2. Exercise: Stimulating the decision making circuit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#question-coherence-level">13.2.1. Question: Coherence Level</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#question-input-stimuli-with-different-coherence-levels">13.2.2. Question: Input stimuli with different coherence levels</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#exercise-decision-space">13.3. Exercise: Decision Space</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#question-plotting-the-decision-space">13.3.1. Question: Plotting the Decision Space</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#question-implementing-a-decision-criterion">13.3.2. Question: Implementing a decision criterion</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#exercise-percent-correct-and-decision-time-as-a-function-of-coherence-level">13.4. Exercise: Percent-correct and Decision-time as a function of coherence level</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#question-running-multiple-simulations">13.4.1. Question: Running multiple simulations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#question-percent-correct-time-to-decision">13.4.2. Question: Percent-Correct, Time-to-decision</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#references">13.5. <strong>References</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contents.html">Python exercise modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../licence.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Neuronaldynamics Exercises</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Exercises</a> &raquo;</li>
+        
+      <li>13. Perceptual Decision Making (Wong &amp; Wang)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/exercises/perceptual-decision-making.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="perceptual-decision-making-wong-wang">
 <h1>13. Perceptual Decision Making (Wong &amp; Wang)<a class="headerlink" href="#perceptual-decision-making-wong-wang" title="Permalink to this headline">¶</a></h1>
@@ -227,93 +386,52 @@ time_to_A, time_to_B, count_A, count_B, count_No = decision_making.run_multiple_
 </div>
 
 
+           </div>
+           
           </div>
-          
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="../index.html">LCN-neurodynex3</a></h1>
-
-
-
-
-
-
-
-
-<h3>Navigation</h3>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Exercises</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="setup.html">1. Setting up Python and Brian</a></li>
-<li class="toctree-l2"><a class="reference internal" href="leaky-integrate-and-fire.html">2. Leaky-integrate-and-fire model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="exponential-integrate-and-fire.html">3. The Exponential Integrate-and-Fire model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="adex-model.html">4. AdEx: the Adaptive Exponential Integrate-and-Fire model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="passive-cable.html">5. Dendrites and the (passive) cable equation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hodgkin-huxley.html">6. Numerical integration of the HH model of the squid axon</a></li>
-<li class="toctree-l2"><a class="reference internal" href="phase-plane-analysis.html">7. FitzHugh-Nagumo: Phase plane and bifurcation analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hopfield-network.html">8. Hopfield Network model of associative memory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="neuron-type.html">9. Type I and type II neuron models</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ojas-rule.html">10. Oja’s hebbian learning rule</a></li>
-<li class="toctree-l2"><a class="reference internal" href="brunel-network.html">11. Network of LIF neurons (Brunel)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spatial-working-memory.html">12. Spatial Working Memory (Compte et. al.)</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">13. Perceptual Decision Making (Wong &amp; Wang)</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../contents.html">Python exercise modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../licence.html">License</a></li>
-</ul>
-
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="../index.html">Documentation overview</a><ul>
-  <li><a href="index.html">Exercises</a><ul>
-      <li>Previous: <a href="spatial-working-memory.html" title="previous chapter">12. Spatial Working Memory (Compte et. al.)</a></li>
-      <li>Next: <a href="../contents.html" title="next chapter">Python exercise modules</a></li>
-  </ul></li>
-  </ul></li>
-</ul>
-</div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../contents.html" class="btn btn-neutral float-right" title="Python exercise modules" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="spatial-working-memory.html" class="btn btn-neutral float-left" title="12. Spatial Working Memory (Compte et. al.)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
     </div>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+  
 
+  <hr/>
 
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, EPFL-LCN
 
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
-
-
-
+</footer>
 
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2020, B-S-I.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.2</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-      
-      |
-      <a href="../_sources/exercises/perceptual-decision-making.rst.txt"
-          rel="nofollow">Page source</a>
-    </div>
 
-    
+    </section>
 
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
     
-  </body>
+   
+
+</body>
 </html>
