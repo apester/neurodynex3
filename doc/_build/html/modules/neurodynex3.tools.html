@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>neurodynex3.tools package &mdash; Neuronaldynamics Exercises 0.0.5.dev59+gb77bd15.d20200212 documentation</title>
+  <title>neurodynex3.tools package &mdash; Neuronaldynamics Exercises 0.0.5.dev60+gf1718ef.d20200212 documentation</title>
   
 
   
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                0.0.5.dev59+gb77bd15.d20200212
+                0.0.5.dev60+gf1718ef.d20200212
               </div>
             
           
@@ -162,14 +162,550 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="neurodynex3-tools-input-factory-module">
-<h2>neurodynex3.tools.input_factory module<a class="headerlink" href="#neurodynex3-tools-input-factory-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-neurodynex3.tools.input_factory">
+<span id="neurodynex3-tools-input-factory-module"></span><h2>neurodynex3.tools.input_factory module<a class="headerlink" href="#module-neurodynex3.tools.input_factory" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="neurodynex3.tools.input_factory.get_ramp_current">
+<code class="descclassname">neurodynex3.tools.input_factory.</code><code class="descname">get_ramp_current</code><span class="sig-paren">(</span><em>t_start</em>, <em>t_end</em>, <em>unit_time</em>, <em>amplitude_start</em>, <em>amplitude_end</em>, <em>append_zero=True</em><span class="sig-paren">)</span><a class="headerlink" href="#neurodynex3.tools.input_factory.get_ramp_current" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a ramp current. If t_start == t_end, then ALL entries are 0.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>t_start</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – start of the ramp</li>
+<li><strong>t_end</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – end of the ramp</li>
+<li><strong>unit_time</strong> (<em>Brian2 unit</em>) – unit of t_start and t_end. e.g. 0.1*brian2.ms</li>
+<li><strong>amplitude_start</strong> (<em>Quantity</em>) – amplitude of the ramp at t_start. e.g. 3.5*brian2.uamp</li>
+<li><strong>amplitude_end</strong> (<em>Quantity</em>) – amplitude of the ramp at t_end. e.g. 4.5*brian2.uamp</li>
+<li><strong>append_zero</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a><em>, </em><em>optional</em>) – if true, 0Amp is appended at t_end+1.
+Without that trailing 0, Brian reads out the last value in the
+array (=amplitude_end) for all indices &gt; t_end.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Brian2.TimedArray</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">TimedArray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="neurodynex3.tools.input_factory.get_sinusoidal_current">
+<code class="descclassname">neurodynex3.tools.input_factory.</code><code class="descname">get_sinusoidal_current</code><span class="sig-paren">(</span><em>t_start</em>, <em>t_end</em>, <em>unit_time</em>, <em>amplitude</em>, <em>frequency</em>, <em>direct_current</em>, <em>phase_offset=0.0</em>, <em>append_zero=True</em><span class="sig-paren">)</span><a class="headerlink" href="#neurodynex3.tools.input_factory.get_sinusoidal_current" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a sinusoidal current. If t_start == t_end, then ALL entries are 0.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>t_start</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – start of the sine wave</li>
+<li><strong>t_end</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – end of the sine wave</li>
+<li><strong>unit_time</strong> (<em>Quantity</em><em>, </em><em>Time</em>) – unit of t_start and t_end. e.g. 0.1*brian2.ms</li>
+<li><strong>amplitude</strong> (<em>Quantity</em><em>, </em><em>Current</em>) – maximum amplitude of the sinus e.g. 3.5*brian2.uamp</li>
+<li><strong>frequency</strong> (<em>Quantity</em><em>, </em><em>Hz</em>) – Frequency of the sine. e.g. 0.5*brian2.kHz</li>
+<li><strong>direct_current</strong> (<em>Quantity</em><em>, </em><em>Current</em>) – DC-component (=offset) of the current</li>
+<li><strong>phase_offset</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a><em>, </em><em>Optional</em>) – phase at t_start. Default = 0.</li>
+<li><strong>append_zero</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a><em>, </em><em>optional</em>) – if true, 0Amp is appended at t_end+1. Without that
+trailing 0, Brian reads out the last value in the array for all indices &gt; t_end.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Brian2.TimedArray</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">TimedArray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="neurodynex3.tools.input_factory.get_spikes_current">
+<code class="descclassname">neurodynex3.tools.input_factory.</code><code class="descname">get_spikes_current</code><span class="sig-paren">(</span><em>t_spikes</em>, <em>unit_time</em>, <em>amplitude</em>, <em>append_zero=True</em><span class="sig-paren">)</span><a class="headerlink" href="#neurodynex3.tools.input_factory.get_spikes_current" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a two dimensional TimedArray wich has one column for each value in t_spikes.
+All values in each column are 0 except one, the spike time as specified in t_spikes is set to amplitude.
+Note: This function is provided to easily insert pulse currents into a cable. For other use of
+spike input, search the Brian2 documentation for SpikeGeneration.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>t_spikes</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – list of spike times</li>
+<li><strong>unit_time</strong> (<em>Quantity</em><em>, </em><em>Time</em>) – unit of t_spikes . e.g. 1*brian2.ms</li>
+<li><strong>amplitude</strong> (<em>Quantity</em><em>, </em><em>Current</em>) – amplitude of the spike. All spikes have the sampe amplitude</li>
+<li><strong>append_zero</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a><em>, </em><em>optional</em>) – if true, 0Amp is appended at t_end+1. Without that trailing 0,
+Brian reads out the last value in the array for all indices &gt; t_end.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Brian2.TimedArray</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">TimedArray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="neurodynex3.tools.input_factory.get_step_current">
+<code class="descclassname">neurodynex3.tools.input_factory.</code><code class="descname">get_step_current</code><span class="sig-paren">(</span><em>t_start</em>, <em>t_end</em>, <em>unit_time</em>, <em>amplitude</em>, <em>append_zero=True</em><span class="sig-paren">)</span><a class="headerlink" href="#neurodynex3.tools.input_factory.get_step_current" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a step current. If t_start == t_end, then a single
+entry in the values array is set to amplitude.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>t_start</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – start of the step</li>
+<li><strong>t_end</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – end of the step</li>
+<li><strong>unit_time</strong> (<em>Brian2 unit</em>) – unit of t_start and t_end. e.g. 0.1*brian2.ms</li>
+<li><strong>amplitude</strong> (<em>Quantity</em>) – amplitude of the step. e.g. 3.5*brian2.uamp</li>
+<li><strong>append_zero</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a><em>, </em><em>optional</em>) – if true, 0Amp is appended at t_end+1.</li>
+<li><strong>that trailing 0</strong><strong>, </strong><strong>Brian reads out the last value in the array</strong> (<em>Without</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Brian2.TimedArray</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">TimedArray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="neurodynex3.tools.input_factory.get_zero_current">
+<code class="descclassname">neurodynex3.tools.input_factory.</code><code class="descname">get_zero_current</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#neurodynex3.tools.input_factory.get_zero_current" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a TimedArray with one entry: 0 Amp</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">TimedArray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="neurodynex3.tools.input_factory.getting_started">
+<code class="descclassname">neurodynex3.tools.input_factory.</code><code class="descname">getting_started</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#neurodynex3.tools.input_factory.getting_started" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="neurodynex3.tools.input_factory.plot_ramp_current_example">
+<code class="descclassname">neurodynex3.tools.input_factory.</code><code class="descname">plot_ramp_current_example</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#neurodynex3.tools.input_factory.plot_ramp_current_example" title="Permalink to this definition">¶</a></dt>
+<dd><p>Example for get_ramp_current</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="neurodynex3.tools.input_factory.plot_sinusoidal_current_example">
+<code class="descclassname">neurodynex3.tools.input_factory.</code><code class="descname">plot_sinusoidal_current_example</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#neurodynex3.tools.input_factory.plot_sinusoidal_current_example" title="Permalink to this definition">¶</a></dt>
+<dd><p>Example for get_sinusoidal_current</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="neurodynex3.tools.input_factory.plot_step_current_example">
+<code class="descclassname">neurodynex3.tools.input_factory.</code><code class="descname">plot_step_current_example</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#neurodynex3.tools.input_factory.plot_step_current_example" title="Permalink to this definition">¶</a></dt>
+<dd><p>Example for get_step_current.</p>
+</dd></dl>
+
 </div>
-<div class="section" id="neurodynex3-tools-plot-tools-module">
-<h2>neurodynex3.tools.plot_tools module<a class="headerlink" href="#neurodynex3-tools-plot-tools-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-neurodynex3.tools.plot_tools">
+<span id="neurodynex3-tools-plot-tools-module"></span><h2>neurodynex3.tools.plot_tools module<a class="headerlink" href="#module-neurodynex3.tools.plot_tools" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="neurodynex3.tools.plot_tools.plot_ISI_distribution">
+<code class="descclassname">neurodynex3.tools.plot_tools.</code><code class="descname">plot_ISI_distribution</code><span class="sig-paren">(</span><em>spike_stats</em>, <em>hist_nr_bins=50</em>, <em>xlim_max_ISI=None</em><span class="sig-paren">)</span><a class="headerlink" href="#neurodynex3.tools.plot_tools.plot_ISI_distribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the ISI distribution of the given spike_monitor and displays the distribution in a histogram</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>spike_stats</strong> (<a class="reference internal" href="#neurodynex3.tools.spike_tools.PopulationSpikeStats" title="neurodynex3.tools.spike_tools.PopulationSpikeStats"><em>neurodynex3.tools.spike_tools.PopulationSpikeStats</em></a>) – statistics of a population activity</li>
+<li><strong>hist_nr_bins</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – Number of histrogram bins. Default:50</li>
+<li><strong>xlim_max_ISI</strong> (<em>Quantity</em>) – Default: None. In not None, the upper xlim of the plot is set to xlim_max_ISI.
+The CV does not change if this bound is set.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">the figure</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="neurodynex3.tools.plot_tools.plot_network_activity">
+<code class="descclassname">neurodynex3.tools.plot_tools.</code><code class="descname">plot_network_activity</code><span class="sig-paren">(</span><em>rate_monitor</em>, <em>spike_monitor</em>, <em>voltage_monitor=None</em>, <em>spike_train_idx_list=None</em>, <em>t_min=None</em>, <em>t_max=None</em>, <em>N_highlighted_spiketrains=3</em>, <em>avg_window_width=1. * msecond</em>, <em>sup_title=None</em>, <em>figure_size=(10</em>, <em>4)</em><span class="sig-paren">)</span><a class="headerlink" href="#neurodynex3.tools.plot_tools.plot_network_activity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Visualizes the results of a network simulation: spike-train, population activity and voltage-traces.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>rate_monitor</strong> (<em>PopulationRateMonitor</em>) – rate of the population</li>
+<li><strong>spike_monitor</strong> (<em>SpikeMonitor</em>) – spike trains of individual neurons</li>
+<li><strong>voltage_monitor</strong> (<em>StateMonitor</em>) – optional. voltage traces of some (same as in spike_train_idx_list) neurons</li>
+<li><strong>spike_train_idx_list</strong> (<em>list</em>) – optional. A list of neuron indices whose spike-train is plotted.
+If no list is provided, all (up to 500) spike-trains in the spike_monitor are plotted. If None, the
+the list in voltage_monitor.record is used.</li>
+<li><strong>t_min</strong> (<em>Quantity</em>) – optional. lower bound of the plotted time interval.
+if t_min is None, it is set to the larger of [0ms, (t_max - 100ms)]</li>
+<li><strong>t_max</strong> (<em>Quantity</em>) – optional. upper bound of the plotted time interval.
+if t_max is None, it is set to the timestamp of the last spike in</li>
+<li><strong>N_highlighted_spiketrains</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – optional. Number of spike trains visually highlighted, defaults to 3
+If N_highlighted_spiketrains==0 and voltage_monitor is not None, then all voltage traces of
+the voltage_monitor are plotted. Otherwise N_highlighted_spiketrains voltage traces are plotted.</li>
+<li><strong>avg_window_width</strong> (<em>Quantity</em>) – optional. Before plotting the population rate (PopulationRateMonitor), the rate
+is smoothed using a window of width = avg_window_width. Defaults is 1.0ms</li>
+<li><strong>sup_title</strong> (<em>String</em>) – figure suptitle. Default is None.</li>
+<li><strong>figure_size</strong> (<em>tuple</em>) – (width,height) tuple passed to pyplot’s figsize parameter.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The whole figure
+Axes: Top panel, Raster plot
+Axes: Middle panel, population activity
+Axes: Bottom panel, voltage traces. None if no voltage monitor is provided.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Figure</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="neurodynex3.tools.plot_tools.plot_population_activity_power_spectrum">
+<code class="descclassname">neurodynex3.tools.plot_tools.</code><code class="descname">plot_population_activity_power_spectrum</code><span class="sig-paren">(</span><em>freq</em>, <em>ps</em>, <em>max_freq</em>, <em>average_At=None</em>, <em>plot_f0=False</em><span class="sig-paren">)</span><a class="headerlink" href="#neurodynex3.tools.plot_tools.plot_population_activity_power_spectrum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plots the power spectrum of the population activity A(t)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>freq</strong> – frequencies (= x axis)</li>
+<li><strong>ps</strong> – power spectrum of the population activity</li>
+<li><strong>max_freq</strong> (<em>Quantity</em>) – The data is plotted in the interval [-.05*max_freq, max_freq]</li>
+<li><strong>plot_f0</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – if true, the power at frequency 0 is plotted. Default is False and the value is not plotted.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">the figure</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="neurodynex3.tools.plot_tools.plot_spike_train_power_spectrum">
+<code class="descclassname">neurodynex3.tools.plot_tools.</code><code class="descname">plot_spike_train_power_spectrum</code><span class="sig-paren">(</span><em>freq</em>, <em>mean_ps</em>, <em>all_ps</em>, <em>max_freq</em>, <em>nr_highlighted_neurons=2</em>, <em>mean_firing_freqs_per_neuron=None</em>, <em>plot_f0=False</em><span class="sig-paren">)</span><a class="headerlink" href="#neurodynex3.tools.plot_tools.plot_spike_train_power_spectrum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Visualizes the power spectrum of the spike trains.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>freq</strong> – frequencies (= x axis)</li>
+<li><strong>mean_ps</strong> – average power taken over all neurons (typically all of a subsample).</li>
+<li><strong>all_ps</strong> (<a class="reference external" href="https://docs.python.org/2/library/stdtypes.html#dict" title="(in Python v2.7)"><em>dict</em></a>) – power spectra for each single neuron</li>
+<li><strong>max_freq</strong> (<em>Quantity</em>) – The x-lim of the plot is [-0.05*max_freq, max_freq]</li>
+<li><strong>mean_firing_freqs_per_neuron</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) – None or the mean firing rate averaged across the neurons. Default is
+None in which case the value is not shown in the legend</li>
+<li><strong>plot_f0</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – if true, the power at frequency 0 is plotted. Default is False and the value is not plotted.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">all_ps[random_neuron_index]</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">the figure and the index of the random neuron for which the PS is computed</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="neurodynex3.tools.plot_tools.plot_voltage_and_current_traces">
+<code class="descclassname">neurodynex3.tools.plot_tools.</code><code class="descname">plot_voltage_and_current_traces</code><span class="sig-paren">(</span><em>voltage_monitor</em>, <em>current</em>, <em>title=None</em>, <em>firing_threshold=None</em>, <em>legend_location=0</em><span class="sig-paren">)</span><a class="headerlink" href="#neurodynex3.tools.plot_tools.plot_voltage_and_current_traces" title="Permalink to this definition">¶</a></dt>
+<dd><p>plots voltage and current .</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>voltage_monitor</strong> (<em>StateMonitor</em>) – recorded voltage</li>
+<li><strong>current</strong> (<em>TimedArray</em>) – injected current</li>
+<li><strong>title</strong> (<em>string</em><em>, </em><em>optional</em>) – title of the figure</li>
+<li><strong>firing_threshold</strong> (<em>Quantity</em><em>, </em><em>optional</em>) – if set to a value, the firing threshold is plotted.</li>
+<li><strong>legend_location</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – legend location. default = 0 (=”best”)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">the figure</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </div>
-<div class="section" id="neurodynex3-tools-spike-tools-module">
-<h2>neurodynex3.tools.spike_tools module<a class="headerlink" href="#neurodynex3-tools-spike-tools-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-neurodynex3.tools.spike_tools">
+<span id="neurodynex3-tools-spike-tools-module"></span><h2>neurodynex3.tools.spike_tools module<a class="headerlink" href="#module-neurodynex3.tools.spike_tools" title="Permalink to this headline">¶</a></h2>
+<p>This the spike_tools submodule provides functions to analyse the
+Brian2 SpikeMonitors and Brian2 StateMonitors. The code provided here is
+not optimized for performance and there is no guarantee for correctness.</p>
+<dl class="docutils">
+<dt>Relevant book chapters:</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://neuronaldynamics.epfl.ch/online/Ch19.S2.html#SS1.p6">http://neuronaldynamics.epfl.ch/online/Ch19.S2.html#SS1.p6</a></li>
+</ul>
+</dd>
+</dl>
+<dl class="class">
+<dt id="neurodynex3.tools.spike_tools.PopulationSpikeStats">
+<em class="property">class </em><code class="descclassname">neurodynex3.tools.spike_tools.</code><code class="descname">PopulationSpikeStats</code><span class="sig-paren">(</span><em>nr_neurons</em>, <em>nr_spikes</em>, <em>all_ISI</em>, <em>filtered_spike_trains</em><span class="sig-paren">)</span><a class="headerlink" href="#neurodynex3.tools.spike_tools.PopulationSpikeStats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Wraps a few spike-train related properties.</p>
+<dl class="attribute">
+<dt id="neurodynex3.tools.spike_tools.PopulationSpikeStats.CV">
+<code class="descname">CV</code><a class="headerlink" href="#neurodynex3.tools.spike_tools.PopulationSpikeStats.CV" title="Permalink to this definition">¶</a></dt>
+<dd><p>Coefficient of Variation</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="neurodynex3.tools.spike_tools.PopulationSpikeStats.all_ISI">
+<code class="descname">all_ISI</code><a class="headerlink" href="#neurodynex3.tools.spike_tools.PopulationSpikeStats.all_ISI" title="Permalink to this definition">¶</a></dt>
+<dd><p>all ISIs in no specific order</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="neurodynex3.tools.spike_tools.PopulationSpikeStats.filtered_spike_trains">
+<code class="descname">filtered_spike_trains</code><a class="headerlink" href="#neurodynex3.tools.spike_tools.PopulationSpikeStats.filtered_spike_trains" title="Permalink to this definition">¶</a></dt>
+<dd><p>a time-window filtered copy of the original spike_monitor.all_spike_trains</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="neurodynex3.tools.spike_tools.PopulationSpikeStats.mean_isi">
+<code class="descname">mean_isi</code><a class="headerlink" href="#neurodynex3.tools.spike_tools.PopulationSpikeStats.mean_isi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mean Inter Spike Interval</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="neurodynex3.tools.spike_tools.PopulationSpikeStats.nr_neurons">
+<code class="descname">nr_neurons</code><a class="headerlink" href="#neurodynex3.tools.spike_tools.PopulationSpikeStats.nr_neurons" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of neurons in the original population</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="neurodynex3.tools.spike_tools.PopulationSpikeStats.nr_spikes">
+<code class="descname">nr_spikes</code><a class="headerlink" href="#neurodynex3.tools.spike_tools.PopulationSpikeStats.nr_spikes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Nr of spikes</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="neurodynex3.tools.spike_tools.PopulationSpikeStats.std_isi">
+<code class="descname">std_isi</code><a class="headerlink" href="#neurodynex3.tools.spike_tools.PopulationSpikeStats.std_isi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Standard deviation of the ISI</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="neurodynex3.tools.spike_tools.filter_spike_trains">
+<code class="descclassname">neurodynex3.tools.spike_tools.</code><code class="descname">filter_spike_trains</code><span class="sig-paren">(</span><em>spike_trains</em>, <em>window_t_min=0. * second</em>, <em>window_t_max=None</em>, <em>idx_subset=None</em><span class="sig-paren">)</span><a class="headerlink" href="#neurodynex3.tools.spike_tools.filter_spike_trains" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>creates a new dictionary neuron_idx=&gt;spike_times where all spike_times are in the</dt>
+<dd>half open interval [window_t_min,window_t_max)</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>spike_trains</strong> (<a class="reference external" href="https://docs.python.org/2/library/stdtypes.html#dict" title="(in Python v2.7)"><em>dict</em></a>) – a dictionary of spike trains. Typically obtained by
+calling spike_monitor.spike_trains()</li>
+<li><strong>window_t_min</strong> (<em>Quantity</em>) – Lower bound of the time window: t&gt;=window_t_min. Default is 0ms.</li>
+<li><strong>window_t_max</strong> (<em>Quantity</em>) – Upper bound of the time window: t&lt;window_t_max.
+Default is None, in which case no upper bound is set.</li>
+<li><strong>idx_subset</strong> (<em>list</em><em>, </em><em>optional</em>) – a list of neuron indexes (dict keys) specifying a subset of neurons.
+Neurons NOT in the key list are NOT added to the resulting dictionary. Default is None, in which case
+all neurons are added to the resulting list.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">a filtered copy of spike_trains</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="neurodynex3.tools.spike_tools.get_averaged_single_neuron_power_spectrum">
+<code class="descclassname">neurodynex3.tools.spike_tools.</code><code class="descname">get_averaged_single_neuron_power_spectrum</code><span class="sig-paren">(</span><em>spike_monitor</em>, <em>sampling_frequency</em>, <em>window_t_min</em>, <em>window_t_max</em>, <em>nr_neurons_average=100</em>, <em>subtract_mean=False</em><span class="sig-paren">)</span><a class="headerlink" href="#neurodynex3.tools.spike_tools.get_averaged_single_neuron_power_spectrum" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>averaged power-spectrum of spike trains in the time window [window_t_min, window_t_max).</dt>
+<dd>The power spectrum of every single neuron’s spike train is computed. Then the average
+across all single-neuron powers is computed. In order to limit the compuation time, the
+number of neurons taken to compute the average is limited to nr_neurons_average which defaults to 100</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>spike_monitor</strong> (<em>SpikeMonitor</em>) – Brian2 SpikeMonitor</li>
+<li><strong>sampling_frequency</strong> (<em>Quantity</em>) – sampling frequency used to discretize the spike trains.</li>
+<li><strong>window_t_min</strong> (<em>Quantity</em>) – Lower bound of the time window: t&gt;=window_t_min. Spikes
+before window_t_min are not taken into account (set a lower bound if you want to exclude an initial
+transient in the population activity)</li>
+<li><strong>window_t_max</strong> (<em>Quantity</em>) – Upper bound of the time window: t&lt;window_t_max.</li>
+<li><strong>nr_neurons_average</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – Number of neurons over which the average is taken.</li>
+<li><strong>subtract_mean</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – If true, the mean value of the signal is subtracted before FFT. Default is False</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">freq, mean_ps, all_ps_dict, mean_firing_rate, mean_firing_freqs_per_neuron</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="neurodynex3.tools.spike_tools.get_population_activity_power_spectrum">
+<code class="descclassname">neurodynex3.tools.spike_tools.</code><code class="descname">get_population_activity_power_spectrum</code><span class="sig-paren">(</span><em>rate_monitor</em>, <em>delta_f</em>, <em>k_repetitions</em>, <em>T_init=100. * msecond</em>, <em>subtract_mean_activity=False</em><span class="sig-paren">)</span><a class="headerlink" href="#neurodynex3.tools.spike_tools.get_population_activity_power_spectrum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the power spectrum of the population activity A(t) (=rate_monitor.rate)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>rate_monitor</strong> (<em>RateMonitor</em>) – Brian2 rate monitor. rate_monitor.rate is the signal being
+analysed here. The temporal resolution is read from rate_monitor.clock.dt</li>
+<li><strong>delta_f</strong> (<em>Quantity</em>) – The desired frequency resolution.</li>
+<li><strong>k_repetitions</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – The data rate_monitor.rate is split into k_repetitions which are FFT’d
+independently and then averaged in frequency domain.</li>
+<li><strong>T_init</strong> (<em>Quantity</em>) – Rates in the time interval [0, T_init] are removed before doing the
+Fourier transform. Use this parameter to ignore the initial transient signals of the simulation.</li>
+<li><strong>subtract_mean_activity</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – If true, the mean value of the signal is subtracted. Default is False</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">freqs, ps, average_population_rate</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="neurodynex3.tools.spike_tools.get_spike_stats">
+<code class="descclassname">neurodynex3.tools.spike_tools.</code><code class="descname">get_spike_stats</code><span class="sig-paren">(</span><em>voltage_monitor</em>, <em>spike_threshold</em><span class="sig-paren">)</span><a class="headerlink" href="#neurodynex3.tools.spike_tools.get_spike_stats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Detects spike times and computes ISI, mean ISI and firing frequency.
+Here, the spike time is DEFINED as the value in
+voltage_monitor.t for which voltage_monitor.v[idx] is above threshold AND
+voltage_monitor.v[idx-1] is below threshold (crossing from below).
+Note: meanISI and firing frequency are set to numpy.nan if less than two spikes are detected
+Note: currently only the spike times of the first column in voltage_monitor are detected. Matrix-like
+monitors are not supported.
+:param voltage_monitor: A state monitor with at least the fields “v: and “t”
+:type voltage_monitor: StateMonitor
+:param spike_threshold: The spike threshold voltage. e.g. -50*b2.mV
+:type spike_threshold: Quantity</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(nr_of_spikes, spike_times, isi, mean_isi, spike_rate)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">tuple</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="neurodynex3.tools.spike_tools.get_spike_time">
+<code class="descclassname">neurodynex3.tools.spike_tools.</code><code class="descname">get_spike_time</code><span class="sig-paren">(</span><em>voltage_monitor</em>, <em>spike_threshold</em><span class="sig-paren">)</span><a class="headerlink" href="#neurodynex3.tools.spike_tools.get_spike_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Detects the spike times in the voltage. Here, the spike time is DEFINED as the value in
+voltage_monitor.t for which voltage_monitor.v[idx] is above threshold AND
+voltage_monitor.v[idx-1] is below threshold (crossing from below).
+Note: currently only the spike times of the first column in voltage_monitor are detected. Matrix-like
+monitors are not supported.
+:param voltage_monitor: A state monitor with at least the fields “v: and “t”
+:type voltage_monitor: StateMonitor
+:param spike_threshold: The spike threshold voltage. e.g. -50*b2.mV
+:type spike_threshold: Quantity</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of spike times (Quantity)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="neurodynex3.tools.spike_tools.get_spike_train_stats">
+<code class="descclassname">neurodynex3.tools.spike_tools.</code><code class="descname">get_spike_train_stats</code><span class="sig-paren">(</span><em>spike_monitor</em>, <em>window_t_min=0. * second</em>, <em>window_t_max=None</em><span class="sig-paren">)</span><a class="headerlink" href="#neurodynex3.tools.spike_tools.get_spike_train_stats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Analyses the spike monitor and returns a PopulationSpikeStats instance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>spike_monitor</strong> (<em>SpikeMonitor</em>) – Brian2 spike monitor</li>
+<li><strong>window_t_min</strong> (<em>Quantity</em>) – Lower bound of the time window: t&gt;=window_t_min. The stats are computed
+for spikes within the time window. Default is 0ms</li>
+<li><strong>window_t_max</strong> (<em>Quantity</em>) – Upper bound of the time window: t&lt;window_t_max. The stats are computed
+for spikes within the time window. Default is None, in which case no upper bound is set.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">PopulationSpikeStats</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="neurodynex3.tools.spike_tools.pretty_print_spike_train_stats">
+<code class="descclassname">neurodynex3.tools.spike_tools.</code><code class="descname">pretty_print_spike_train_stats</code><span class="sig-paren">(</span><em>voltage_monitor</em>, <em>spike_threshold</em><span class="sig-paren">)</span><a class="headerlink" href="#neurodynex3.tools.spike_tools.pretty_print_spike_train_stats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes and returns the same values as get_spike_stats. Additionally prints these values to the console.
+:param voltage_monitor:
+:param spike_threshold:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(nr_of_spikes, spike_times, isi, mean_isi, spike_rate)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">tuple</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </div>
 <div class="section" id="module-neurodynex3.tools">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-neurodynex3.tools" title="Permalink to this headline">¶</a></h2>

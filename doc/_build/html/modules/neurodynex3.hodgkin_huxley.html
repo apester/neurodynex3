@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>neurodynex3.hodgkin_huxley package &mdash; Neuronaldynamics Exercises 0.0.5.dev59+gb77bd15.d20200212 documentation</title>
+  <title>neurodynex3.hodgkin_huxley package &mdash; Neuronaldynamics Exercises 0.0.5.dev60+gf1718ef.d20200212 documentation</title>
   
 
   
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                0.0.5.dev59+gb77bd15.d20200212
+                0.0.5.dev60+gf1718ef.d20200212
               </div>
             
           
@@ -162,8 +162,62 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="neurodynex3-hodgkin-huxley-hh-module">
-<h2>neurodynex3.hodgkin_huxley.HH module<a class="headerlink" href="#neurodynex3-hodgkin-huxley-hh-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-neurodynex3.hodgkin_huxley.HH">
+<span id="neurodynex3-hodgkin-huxley-hh-module"></span><h2>neurodynex3.hodgkin_huxley.HH module<a class="headerlink" href="#module-neurodynex3.hodgkin_huxley.HH" title="Permalink to this headline">¶</a></h2>
+<p>Implementation of a Hodging-Huxley neuron
+Relevant book chapters:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://neuronaldynamics.epfl.ch/online/Ch2.S2.html">http://neuronaldynamics.epfl.ch/online/Ch2.S2.html</a></li>
+</ul>
+<dl class="function">
+<dt id="neurodynex3.hodgkin_huxley.HH.getting_started">
+<code class="descclassname">neurodynex3.hodgkin_huxley.HH.</code><code class="descname">getting_started</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#neurodynex3.hodgkin_huxley.HH.getting_started" title="Permalink to this definition">¶</a></dt>
+<dd><p>An example to quickly get started with the Hodgkin-Huxley module.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="neurodynex3.hodgkin_huxley.HH.plot_data">
+<code class="descclassname">neurodynex3.hodgkin_huxley.HH.</code><code class="descname">plot_data</code><span class="sig-paren">(</span><em>state_monitor</em>, <em>title=None</em><span class="sig-paren">)</span><a class="headerlink" href="#neurodynex3.hodgkin_huxley.HH.plot_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plots the state_monitor variables [“vm”, “I_e”, “m”, “n”, “h”] vs. time.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>state_monitor</strong> (<em>StateMonitor</em>) – the data to plot</li>
+<li><strong>title</strong> (<em>string</em><em>, </em><em>optional</em>) – plot title to display</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="neurodynex3.hodgkin_huxley.HH.simulate_HH_neuron">
+<code class="descclassname">neurodynex3.hodgkin_huxley.HH.</code><code class="descname">simulate_HH_neuron</code><span class="sig-paren">(</span><em>input_current</em>, <em>simulation_time</em><span class="sig-paren">)</span><a class="headerlink" href="#neurodynex3.hodgkin_huxley.HH.simulate_HH_neuron" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Hodgkin-Huxley neuron implemented in Brian2.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>input_current</strong> (<em>TimedArray</em>) – Input current injected into the HH neuron</li>
+<li><strong>simulation_time</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) – Simulation time [seconds]</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Brian2 StateMonitor with recorded fields
+[“vm”, “I_e”, “m”, “n”, “h”]</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">StateMonitor</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </div>
 <div class="section" id="module-neurodynex3.hodgkin_huxley">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-neurodynex3.hodgkin_huxley" title="Permalink to this headline">¶</a></h2>

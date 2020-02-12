@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2. Leaky-integrate-and-fire model &mdash; Neuronaldynamics Exercises 0.0.5.dev59+gb77bd15.d20200212 documentation</title>
+  <title>2. Leaky-integrate-and-fire model &mdash; Neuronaldynamics Exercises 0.0.5.dev60+gf1718ef.d20200212 documentation</title>
   
 
   
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                0.0.5.dev59+gb77bd15.d20200212
+                0.0.5.dev60+gf1718ef.d20200212
               </div>
             
           
@@ -198,7 +198,7 @@
 <p>See <a class="reference external" href="http://neuronaldynamics.epfl.ch/online/Ch1.S3.html">Chapter 1 Section 3</a> on general information about
 leaky-integrate-and-fire models.</p>
 <p><strong>Python classes</strong></p>
-<p>The <code class="xref py py-mod docutils literal notranslate"><span class="pre">leaky_integrate_and_fire.LIF</span></code> implements a parameterizable LIF model. Call <code class="xref py py-func docutils literal notranslate"><span class="pre">LIF.getting_started()</span></code> and have a look at it’s source code to learn how to efficiently use the <code class="xref py py-mod docutils literal notranslate"><span class="pre">leaky_integrate_and_fire.LIF</span></code> module.</p>
+<p>The <a class="reference internal" href="../modules/neurodynex3.leaky_integrate_and_fire.html#module-neurodynex3.leaky_integrate_and_fire.LIF" title="neurodynex3.leaky_integrate_and_fire.LIF"><code class="xref py py-mod docutils literal notranslate"><span class="pre">leaky_integrate_and_fire.LIF</span></code></a> implements a parameterizable LIF model. Call <code class="xref py py-func docutils literal notranslate"><span class="pre">LIF.getting_started()</span></code> and have a look at it’s source code to learn how to efficiently use the <a class="reference internal" href="../modules/neurodynex3.leaky_integrate_and_fire.html#module-neurodynex3.leaky_integrate_and_fire.LIF" title="neurodynex3.leaky_integrate_and_fire.LIF"><code class="xref py py-mod docutils literal notranslate"><span class="pre">leaky_integrate_and_fire.LIF</span></code></a> module.</p>
 <p>A typical Jupyter notebook looks like this:</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span>    <span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
 <span class="kn">import</span> <span class="nn">brian2</span> <span class="kn">as</span> <span class="nn">b2</span>
@@ -216,7 +216,7 @@ leaky-integrate-and-fire models.</p>
 <img alt="../_images/LIF_getting_started.png" src="../_images/LIF_getting_started.png" />
 <p class="caption"><span class="caption-text">Injection of a sinusoidal current into a leaky-integrate-and-fire neuron</span></p>
 </div>
-<p>Note that you can change all parameter of the LIF neuron by using the named parameters of the function <code class="xref py py-func docutils literal notranslate"><span class="pre">simulate_LIF_neuron()</span></code>. If you do not specify any parameter, the following default values are used:</p>
+<p>Note that you can change all parameter of the LIF neuron by using the named parameters of the function <a class="reference internal" href="../modules/neurodynex3.leaky_integrate_and_fire.html#neurodynex3.leaky_integrate_and_fire.LIF.simulate_LIF_neuron" title="neurodynex3.leaky_integrate_and_fire.LIF.simulate_LIF_neuron"><code class="xref py py-func docutils literal notranslate"><span class="pre">simulate_LIF_neuron()</span></code></a>. If you do not specify any parameter, the following default values are used:</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">V_REST</span> <span class="o">=</span> <span class="o">-</span><span class="mi">70</span><span class="o">*</span><span class="n">b2</span><span class="o">.</span><span class="n">mV</span>
 <span class="n">V_RESET</span> <span class="o">=</span> <span class="o">-</span><span class="mi">65</span><span class="o">*</span><span class="n">b2</span><span class="o">.</span><span class="n">mV</span>
 <span class="n">FIRING_THRESHOLD</span> <span class="o">=</span> <span class="o">-</span><span class="mi">50</span><span class="o">*</span><span class="n">b2</span><span class="o">.</span><span class="n">mV</span>
@@ -238,7 +238,7 @@ leaky-integrate-and-fire models.</p>
 </div>
 <div class="section" id="question-minimal-current-simulation">
 <h3>2.1.2. Question: minimal current (simulation)<a class="headerlink" href="#question-minimal-current-simulation" title="Permalink to this headline">¶</a></h3>
-<p>Use the value <strong>i_min</strong> you’ve computed and verify your result: inject a step current of amplitude i_min for 100ms into the LIF neuron and plot the membrane voltage. Vm should approach the firing threshold but <em>not</em> fire. We have implemented a couple of helper functions to solve this task. Use this code block, but make sure you understand it and you’ve read the docs of the functions <code class="xref py py-func docutils literal notranslate"><span class="pre">LIF.simulate_LIF_neuron()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">input_factory.get_step_current()</span></code> and <code class="xref py py-func docutils literal notranslate"><span class="pre">plot_tools.plot_voltage_and_current_traces()</span></code>.</p>
+<p>Use the value <strong>i_min</strong> you’ve computed and verify your result: inject a step current of amplitude i_min for 100ms into the LIF neuron and plot the membrane voltage. Vm should approach the firing threshold but <em>not</em> fire. We have implemented a couple of helper functions to solve this task. Use this code block, but make sure you understand it and you’ve read the docs of the functions <a class="reference internal" href="../modules/neurodynex3.leaky_integrate_and_fire.html#neurodynex3.leaky_integrate_and_fire.LIF.simulate_LIF_neuron" title="neurodynex3.leaky_integrate_and_fire.LIF.simulate_LIF_neuron"><code class="xref py py-func docutils literal notranslate"><span class="pre">LIF.simulate_LIF_neuron()</span></code></a>, <a class="reference internal" href="../modules/neurodynex3.tools.html#neurodynex3.tools.input_factory.get_step_current" title="neurodynex3.tools.input_factory.get_step_current"><code class="xref py py-func docutils literal notranslate"><span class="pre">input_factory.get_step_current()</span></code></a> and <a class="reference internal" href="../modules/neurodynex3.tools.html#neurodynex3.tools.plot_tools.plot_voltage_and_current_traces" title="neurodynex3.tools.plot_tools.plot_voltage_and_current_traces"><code class="xref py py-func docutils literal notranslate"><span class="pre">plot_tools.plot_voltage_and_current_traces()</span></code></a>.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">brian2</span> <span class="kn">as</span> <span class="nn">b2</span>
 <span class="kn">from</span> <span class="nn">neurodynex3.leaky_integrate_and_fire</span> <span class="kn">import</span> <span class="n">LIF</span>
 <span class="kn">from</span> <span class="nn">neurodynex3.tools</span> <span class="kn">import</span> <span class="n">input_factory</span>
@@ -265,7 +265,7 @@ leaky-integrate-and-fire models.</p>
 <p>For a constant input current I, a LIF neuron fires regularly with firing frequency f. If the current is to small (I &lt; I_min) f is 0Hz; for larger I the rate increases. A neuron’s firing-rate versus input-amplitude relationship is visualized in an “f-I curve”.</p>
 <div class="section" id="question-f-i-curve-and-refractoryness">
 <h3>2.2.1. Question: f-I Curve and refractoryness<a class="headerlink" href="#question-f-i-curve-and-refractoryness" title="Permalink to this headline">¶</a></h3>
-<p>We now study the f-I curve for a neuron with a refractory period of 3ms (see <code class="xref py py-func docutils literal notranslate"><span class="pre">LIF.simulate_LIF_neuron()</span></code> to learn how to set a refractory period).</p>
+<p>We now study the f-I curve for a neuron with a refractory period of 3ms (see <a class="reference internal" href="../modules/neurodynex3.leaky_integrate_and_fire.html#neurodynex3.leaky_integrate_and_fire.LIF.simulate_LIF_neuron" title="neurodynex3.leaky_integrate_and_fire.LIF.simulate_LIF_neuron"><code class="xref py py-func docutils literal notranslate"><span class="pre">LIF.simulate_LIF_neuron()</span></code></a> to learn how to set a refractory period).</p>
 <ol class="arabic simple">
 <li>Sketch the f-I curve you expect to see</li>
 <li>What is the maximum rate at which this neuron can fire?</li>

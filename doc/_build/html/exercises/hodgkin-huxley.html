@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>6. Numerical integration of the HH model of the squid axon &mdash; Neuronaldynamics Exercises 0.0.5.dev59+gb77bd15.d20200212 documentation</title>
+  <title>6. Numerical integration of the HH model of the squid axon &mdash; Neuronaldynamics Exercises 0.0.5.dev60+gf1718ef.d20200212 documentation</title>
   
 
   
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                0.0.5.dev59+gb77bd15.d20200212
+                0.0.5.dev60+gf1718ef.d20200212
               </div>
             
           
@@ -197,7 +197,7 @@
 <p>See <a class="reference external" href="http://neuronaldynamics.epfl.ch/online/Ch2.S2.html">Chapter 2 Section 2</a> on general information about
 the Hodgkin-Huxley equations and models.</p>
 <p><strong>Python classes</strong></p>
-<p>The <code class="xref py py-mod docutils literal notranslate"><span class="pre">hodgkin_huxley.HH</span></code> module contains all code required for this exercise. It implements a Hodgkin-Huxley neuron model.
+<p>The <a class="reference internal" href="../modules/neurodynex3.hodgkin_huxley.html#module-neurodynex3.hodgkin_huxley.HH" title="neurodynex3.hodgkin_huxley.HH"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hodgkin_huxley.HH</span></code></a> module contains all code required for this exercise. It implements a Hodgkin-Huxley neuron model.
 At the beginning of your exercise solutions, import the modules and run the demo function.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
 <span class="kn">import</span> <span class="nn">brian2</span> <span class="kn">as</span> <span class="nn">b2</span>
@@ -215,7 +215,7 @@ At the beginning of your exercise solutions, import the modules and run the demo
 </div>
 <div class="section" id="exercise-step-current-response">
 <h2>6.1. Exercise: step current response<a class="headerlink" href="#exercise-step-current-response" title="Permalink to this headline">¶</a></h2>
-<p>We study the response of a Hodgkin-Huxley neuron to different input currents. Have a look at the documentation of the functions <code class="xref py py-func docutils literal notranslate"><span class="pre">HH.simulate_HH_neuron()</span></code> and <code class="xref py py-func docutils literal notranslate"><span class="pre">HH.plot_data()</span></code> and the module <code class="xref py py-mod docutils literal notranslate"><span class="pre">neurodynex3.tools.input_factory</span></code>.</p>
+<p>We study the response of a Hodgkin-Huxley neuron to different input currents. Have a look at the documentation of the functions <a class="reference internal" href="../modules/neurodynex3.hodgkin_huxley.html#neurodynex3.hodgkin_huxley.HH.simulate_HH_neuron" title="neurodynex3.hodgkin_huxley.HH.simulate_HH_neuron"><code class="xref py py-func docutils literal notranslate"><span class="pre">HH.simulate_HH_neuron()</span></code></a> and <a class="reference internal" href="../modules/neurodynex3.hodgkin_huxley.html#neurodynex3.hodgkin_huxley.HH.plot_data" title="neurodynex3.hodgkin_huxley.HH.plot_data"><code class="xref py py-func docutils literal notranslate"><span class="pre">HH.plot_data()</span></code></a> and the module <a class="reference internal" href="../modules/neurodynex3.tools.html#module-neurodynex3.tools.input_factory" title="neurodynex3.tools.input_factory"><code class="xref py py-mod docutils literal notranslate"><span class="pre">neurodynex3.tools.input_factory</span></code></a>.</p>
 <div class="section" id="question">
 <h3>6.1.1. Question<a class="headerlink" href="#question" title="Permalink to this headline">¶</a></h3>
 <p>What is the lowest step current amplitude I_min for generating <strong>at least one spike</strong>? Determine the value by trying different input amplitudes in the code fragment:</p>
@@ -255,7 +255,7 @@ At the beginning of your exercise solutions, import the modules and run the demo
 <div class="section" id="id3">
 <h3>6.2.2. Question<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <p>Do the same as before but for a fast ramp current: The maximal amplitude at <code class="docutils literal notranslate"><span class="pre">t=ramp_t_end</span></code> is <code class="docutils literal notranslate"><span class="pre">4.5uAmp</span></code>. Start with <code class="docutils literal notranslate"><span class="pre">fast_ramp_t_end</span> <span class="pre">=</span> <span class="pre">8ms</span></code> and then increase it until you observe a spike.
-Note: Technically the input current is implemented using a TimedArray. For a short, steep ramp, the one milliseconds discretization for the current is not high enough. You can create a finer resolution by setting the parameter <code class="docutils literal notranslate"><span class="pre">unit_time</span></code> in the function <code class="xref py py-func docutils literal notranslate"><span class="pre">input_factory.get_ramp_current()</span></code> (see next code block)</p>
+Note: Technically the input current is implemented using a TimedArray. For a short, steep ramp, the one milliseconds discretization for the current is not high enough. You can create a finer resolution by setting the parameter <code class="docutils literal notranslate"><span class="pre">unit_time</span></code> in the function <a class="reference internal" href="../modules/neurodynex3.tools.html#neurodynex3.tools.input_factory.get_ramp_current" title="neurodynex3.tools.input_factory.get_ramp_current"><code class="xref py py-func docutils literal notranslate"><span class="pre">input_factory.get_ramp_current()</span></code></a> (see next code block)</p>
 <ul class="simple">
 <li>What is the membrane voltage at the time when the current injection stops (t=fast_ramp_t_end)?</li>
 </ul>
@@ -271,7 +271,7 @@ Note: Technically the input current is implemented using a TimedArray. For a sho
 </div>
 <div class="section" id="id4">
 <h3>6.2.3. Question<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<p>Use the function <code class="xref py py-func docutils literal notranslate"><span class="pre">HH.plot_data()</span></code> to visualize the dynamics of the system for the fast and the slow case above. Discuss the differences between the two situations. Why are the two “threshold” voltages different? Link your observation to the gating variables m,n, and h. Hint: have a look at <a class="reference external" href="http://neuronaldynamics.epfl.ch/online/Ch2.S2.html">Chapter 2 Figure 2.3</a></p>
+<p>Use the function <a class="reference internal" href="../modules/neurodynex3.hodgkin_huxley.html#neurodynex3.hodgkin_huxley.HH.plot_data" title="neurodynex3.hodgkin_huxley.HH.plot_data"><code class="xref py py-func docutils literal notranslate"><span class="pre">HH.plot_data()</span></code></a> to visualize the dynamics of the system for the fast and the slow case above. Discuss the differences between the two situations. Why are the two “threshold” voltages different? Link your observation to the gating variables m,n, and h. Hint: have a look at <a class="reference external" href="http://neuronaldynamics.epfl.ch/online/Ch2.S2.html">Chapter 2 Figure 2.3</a></p>
 </div>
 </div>
 <div class="section" id="exercise-rebound-spike">
@@ -284,7 +284,7 @@ Note: Technically the input current is implemented using a TimedArray. For a sho
 </div>
 <div class="section" id="exercise-brian-implementation-of-a-hh-neuron">
 <h2>6.4. Exercise: Brian implementation of a HH neuron<a class="headerlink" href="#exercise-brian-implementation-of-a-hh-neuron" title="Permalink to this headline">¶</a></h2>
-<p>In this exercise you will learn to work with the Brian2 model equations. To do so, get the source code of the function  <code class="xref py py-func docutils literal notranslate"><span class="pre">HH.simulate_HH_neuron()</span></code> (follow the link to the documentation and then click on the [source] link). Copy the function code and paste it into your Jupyter Notebook. Change the function name from simulate_HH_neuron to a name of your choice. Have a look at the source code and find the conductance parameters gK and gNa.</p>
+<p>In this exercise you will learn to work with the Brian2 model equations. To do so, get the source code of the function  <a class="reference internal" href="../modules/neurodynex3.hodgkin_huxley.html#neurodynex3.hodgkin_huxley.HH.simulate_HH_neuron" title="neurodynex3.hodgkin_huxley.HH.simulate_HH_neuron"><code class="xref py py-func docutils literal notranslate"><span class="pre">HH.simulate_HH_neuron()</span></code></a> (follow the link to the documentation and then click on the [source] link). Copy the function code and paste it into your Jupyter Notebook. Change the function name from simulate_HH_neuron to a name of your choice. Have a look at the source code and find the conductance parameters gK and gNa.</p>
 <div class="section" id="id6">
 <h3>6.4.1. Question<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <p>In the source code of your function, change the density of sodium channels. Increase it by a factor of 1.4. Stimulate this modified neuron with a step current.</p>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>neurodynex3.ojas_rule package &mdash; Neuronaldynamics Exercises 0.0.5.dev59+gb77bd15.d20200212 documentation</title>
+  <title>neurodynex3.ojas_rule package &mdash; Neuronaldynamics Exercises 0.0.5.dev60+gf1718ef.d20200212 documentation</title>
   
 
   
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                0.0.5.dev59+gb77bd15.d20200212
+                0.0.5.dev60+gf1718ef.d20200212
               </div>
             
           
@@ -174,7 +174,7 @@
 </dl>
 <dl class="function">
 <dt id="neurodynex3.ojas_rule.oja.learn">
-<code class="descclassname">neurodynex3.ojas_rule.oja.</code><code class="descname">learn</code><span class="sig-paren">(</span><em>cloud</em>, <em>initial_angle=None</em>, <em>eta=0.005</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/neurodynex3/ojas_rule/oja.html#learn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#neurodynex3.ojas_rule.oja.learn" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">neurodynex3.ojas_rule.oja.</code><code class="descname">learn</code><span class="sig-paren">(</span><em>cloud</em>, <em>initial_angle=None</em>, <em>eta=0.005</em><span class="sig-paren">)</span><a class="headerlink" href="#neurodynex3.ojas_rule.oja.learn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Run one batch of Oja’s learning over
 a cloud of datapoints.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -202,7 +202,7 @@ set of weights [deg]. If None, this is random.</li>
 
 <dl class="function">
 <dt id="neurodynex3.ojas_rule.oja.make_cloud">
-<code class="descclassname">neurodynex3.ojas_rule.oja.</code><code class="descname">make_cloud</code><span class="sig-paren">(</span><em>n=2000</em>, <em>ratio=1</em>, <em>angle=0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/neurodynex3/ojas_rule/oja.html#make_cloud"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#neurodynex3.ojas_rule.oja.make_cloud" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">neurodynex3.ojas_rule.oja.</code><code class="descname">make_cloud</code><span class="sig-paren">(</span><em>n=2000</em>, <em>ratio=1</em>, <em>angle=0</em><span class="sig-paren">)</span><a class="headerlink" href="#neurodynex3.ojas_rule.oja.make_cloud" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns an oriented elliptic
 gaussian cloud of 2D points</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -229,7 +229,7 @@ gaussian cloud of 2D points</p>
 
 <dl class="function">
 <dt id="neurodynex3.ojas_rule.oja.plot_oja_trace">
-<code class="descclassname">neurodynex3.ojas_rule.oja.</code><code class="descname">plot_oja_trace</code><span class="sig-paren">(</span><em>data_cloud</em>, <em>weights_course</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/neurodynex3/ojas_rule/oja.html#plot_oja_trace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#neurodynex3.ojas_rule.oja.plot_oja_trace" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">neurodynex3.ojas_rule.oja.</code><code class="descname">plot_oja_trace</code><span class="sig-paren">(</span><em>data_cloud</em>, <em>weights_course</em><span class="sig-paren">)</span><a class="headerlink" href="#neurodynex3.ojas_rule.oja.plot_oja_trace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plots the datapoints and the time series of the weights
 :param data_cloud: n by 2 data
 :type data_cloud: numpy.ndarray
@@ -240,7 +240,7 @@ gaussian cloud of 2D points</p>
 
 <dl class="function">
 <dt id="neurodynex3.ojas_rule.oja.run_oja">
-<code class="descclassname">neurodynex3.ojas_rule.oja.</code><code class="descname">run_oja</code><span class="sig-paren">(</span><em>n=2000</em>, <em>ratio=1.0</em>, <em>angle=0.0</em>, <em>learning_rate=0.01</em>, <em>do_plot=True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/neurodynex3/ojas_rule/oja.html#run_oja"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#neurodynex3.ojas_rule.oja.run_oja" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">neurodynex3.ojas_rule.oja.</code><code class="descname">run_oja</code><span class="sig-paren">(</span><em>n=2000</em>, <em>ratio=1.0</em>, <em>angle=0.0</em>, <em>learning_rate=0.01</em>, <em>do_plot=True</em><span class="sig-paren">)</span><a class="headerlink" href="#neurodynex3.ojas_rule.oja.run_oja" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generates a point cloud and runs Oja’s learning
 rule once. Optionally plots the result.</p>
 <table class="docutils field-list" frame="void" rules="none">
