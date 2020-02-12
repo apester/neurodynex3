@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>neurodynex3.leaky_integrate_and_fire package &mdash; Neuronaldynamics Exercises 0.0.5.dev56+gcef1c8a.d20200212 documentation</title>
+  <title>neurodynex3.leaky_integrate_and_fire package &mdash; Neuronaldynamics Exercises 0.0.5.dev59+gb77bd15.d20200212 documentation</title>
   
 
   
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                0.0.5.dev56+gcef1c8a.d20200212
+                0.0.5.dev59+gb77bd15.d20200212
               </div>
             
           
@@ -84,20 +84,10 @@
               
             
             
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../exercises/index.html">Exercises</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../contents.html">Python exercise modules</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="modules.html">neurodynex3</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="neurodynex3.html">neurodynex3 package</a><ul class="current">
-<li class="toctree-l4 current"><a class="reference internal" href="neurodynex3.html#subpackages">Subpackages</a></li>
-<li class="toctree-l4"><a class="reference internal" href="neurodynex3.html#module-neurodynex3">Module contents</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../contents.html">Python exercise modules</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../licence.html">License</a></li>
 </ul>
 
@@ -146,8 +136,6 @@
         
           <li><a href="../contents.html">Python exercise modules</a> &raquo;</li>
         
-          <li><a href="modules.html">neurodynex3</a> &raquo;</li>
-        
           <li><a href="neurodynex3.html">neurodynex3 package</a> &raquo;</li>
         
       <li>neurodynex3.leaky_integrate_and_fire package</li>
@@ -174,104 +162,8 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-neurodynex3.leaky_integrate_and_fire.LIF">
-<span id="neurodynex3-leaky-integrate-and-fire-lif-module"></span><h2>neurodynex3.leaky_integrate_and_fire.LIF module<a class="headerlink" href="#module-neurodynex3.leaky_integrate_and_fire.LIF" title="Permalink to this headline">¶</a></h2>
-<p>This file implements a leaky intergrate-and-fire (LIF) model.
-You can inject a step current or sinusoidal current into
-neuron using LIF_Step() or LIF_Sinus() methods respectively.</p>
-<p>Relevant book chapters:</p>
-<ul class="simple">
-<li><a class="reference external" href="http://neuronaldynamics.epfl.ch/online/Ch1.S3.html">http://neuronaldynamics.epfl.ch/online/Ch1.S3.html</a></li>
-</ul>
-<dl class="function">
-<dt id="neurodynex3.leaky_integrate_and_fire.LIF.get_random_param_set">
-<code class="descclassname">neurodynex3.leaky_integrate_and_fire.LIF.</code><code class="descname">get_random_param_set</code><span class="sig-paren">(</span><em>random_seed=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/neurodynex3/leaky_integrate_and_fire/LIF.html#get_random_param_set"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#neurodynex3.leaky_integrate_and_fire.LIF.get_random_param_set" title="Permalink to this definition">¶</a></dt>
-<dd><p>creates a set of random parameters. All values are constrained to their typical range
-:returns: a list of (obfuscated) parameters. Use this vector when calling simulate_random_neuron()
-:rtype: list</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="neurodynex3.leaky_integrate_and_fire.LIF.getting_started">
-<code class="descclassname">neurodynex3.leaky_integrate_and_fire.LIF.</code><code class="descname">getting_started</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/neurodynex3/leaky_integrate_and_fire/LIF.html#getting_started"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#neurodynex3.leaky_integrate_and_fire.LIF.getting_started" title="Permalink to this definition">¶</a></dt>
-<dd><p>An example to quickly get started with the LIF module.
-Returns:</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="neurodynex3.leaky_integrate_and_fire.LIF.print_default_parameters">
-<code class="descclassname">neurodynex3.leaky_integrate_and_fire.LIF.</code><code class="descname">print_default_parameters</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/neurodynex3/leaky_integrate_and_fire/LIF.html#print_default_parameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#neurodynex3.leaky_integrate_and_fire.LIF.print_default_parameters" title="Permalink to this definition">¶</a></dt>
-<dd><p>Prints the default values
-Returns:</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="neurodynex3.leaky_integrate_and_fire.LIF.print_obfuscated_parameters">
-<code class="descclassname">neurodynex3.leaky_integrate_and_fire.LIF.</code><code class="descname">print_obfuscated_parameters</code><span class="sig-paren">(</span><em>obfuscated_params</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/neurodynex3/leaky_integrate_and_fire/LIF.html#print_obfuscated_parameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#neurodynex3.leaky_integrate_and_fire.LIF.print_obfuscated_parameters" title="Permalink to this definition">¶</a></dt>
-<dd><p>Print the de-obfuscated values to the console</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>obfuscated_params</strong> – </td>
-</tr>
-</tbody>
-</table>
-<p>Returns:</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="neurodynex3.leaky_integrate_and_fire.LIF.simulate_LIF_neuron">
-<code class="descclassname">neurodynex3.leaky_integrate_and_fire.LIF.</code><code class="descname">simulate_LIF_neuron</code><span class="sig-paren">(</span><em>input_current</em>, <em>simulation_time=5. * msecond</em>, <em>v_rest=-70. * mvolt</em>, <em>v_reset=-65. * mvolt</em>, <em>firing_threshold=-50. * mvolt</em>, <em>membrane_resistance=10. * Mohm</em>, <em>membrane_time_scale=8. * msecond</em>, <em>abs_refractory_period=2. * msecond</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/neurodynex3/leaky_integrate_and_fire/LIF.html#simulate_LIF_neuron"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#neurodynex3.leaky_integrate_and_fire.LIF.simulate_LIF_neuron" title="Permalink to this definition">¶</a></dt>
-<dd><p>Basic leaky integrate and fire neuron implementation.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>input_current</strong> (<em>TimedArray</em>) – TimedArray of current amplitudes. One column per current_injection_location.</li>
-<li><strong>simulation_time</strong> (<em>Quantity</em>) – Time for which the dynamics are simulated: 5ms</li>
-<li><strong>v_rest</strong> (<em>Quantity</em>) – Resting potential: -70mV</li>
-<li><strong>v_reset</strong> (<em>Quantity</em>) – Reset voltage after spike - 65mV</li>
-<li><strong>firing_threshold</strong> (<em>Quantity</em>) – </li>
-<li><strong>membrane_resistance</strong> (<em>Quantity</em>) – 10Mohm</li>
-<li><strong>membrane_time_scale</strong> (<em>Quantity</em>) – 8ms</li>
-<li><strong>abs_refractory_period</strong> (<em>Quantity</em>) – 2ms</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Brian2 StateMonitor for the membrane voltage “v”
-SpikeMonitor: Biran2 SpikeMonitor</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">StateMonitor</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="neurodynex3.leaky_integrate_and_fire.LIF.simulate_random_neuron">
-<code class="descclassname">neurodynex3.leaky_integrate_and_fire.LIF.</code><code class="descname">simulate_random_neuron</code><span class="sig-paren">(</span><em>input_current</em>, <em>obfuscated_param_set</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/neurodynex3/leaky_integrate_and_fire/LIF.html#simulate_random_neuron"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#neurodynex3.leaky_integrate_and_fire.LIF.simulate_random_neuron" title="Permalink to this definition">¶</a></dt>
-<dd><p>Simulates a LIF neuron with unknown parameters (obfuscated_param_set)
-:param input_current: The current to probe the neuron
-:type input_current: TimedArray
-:param obfuscated_param_set: obfuscated parameters
-:type obfuscated_param_set: list</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Brian2 StateMonitor for the membrane voltage “v”
-SpikeMonitor: Biran2 SpikeMonitor</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">StateMonitor</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
+<div class="section" id="neurodynex3-leaky-integrate-and-fire-lif-module">
+<h2>neurodynex3.leaky_integrate_and_fire.LIF module<a class="headerlink" href="#neurodynex3-leaky-integrate-and-fire-lif-module" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="module-neurodynex3.leaky_integrate_and_fire">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-neurodynex3.leaky_integrate_and_fire" title="Permalink to this headline">¶</a></h2>

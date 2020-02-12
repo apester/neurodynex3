@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>4. AdEx: the Adaptive Exponential Integrate-and-Fire model &mdash; Neuronaldynamics Exercises 0.0.5.dev56+gcef1c8a.d20200212 documentation</title>
+  <title>4. AdEx: the Adaptive Exponential Integrate-and-Fire model &mdash; Neuronaldynamics Exercises 0.0.5.dev59+gb77bd15.d20200212 documentation</title>
   
 
   
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                0.0.5.dev56+gcef1c8a.d20200212
+                0.0.5.dev59+gb77bd15.d20200212
               </div>
             
           
@@ -186,7 +186,7 @@
 <p><strong>Book chapters</strong></p>
 <p>The Adaptive Exponential Integrate-and-Fire model is introduced in <a class="reference external" href="http://neuronaldynamics.epfl.ch/online/Ch6.S1.html">Chapter 6 Section 1</a></p>
 <p><strong>Python classes</strong></p>
-<p>Use function <a class="reference internal" href="../modules/neurodynex3.adex_model.html#neurodynex3.adex_model.AdEx.simulate_AdEx_neuron" title="neurodynex3.adex_model.AdEx.simulate_AdEx_neuron"><code class="xref py py-func docutils literal notranslate"><span class="pre">AdEx.simulate_AdEx_neuron()</span></code></a> to run the model for different input currents and different parameters. Get started by running the following script:</p>
+<p>Use function <code class="xref py py-func docutils literal notranslate"><span class="pre">AdEx.simulate_AdEx_neuron()</span></code> to run the model for different input currents and different parameters. Get started by running the following script:</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">matplotlib</span> <span class="n">inline</span>
 <span class="kn">import</span> <span class="nn">brian2</span> <span class="kn">as</span> <span class="nn">b2</span>
 <span class="kn">from</span> <span class="nn">neurodynex3.adex_model</span> <span class="kn">import</span> <span class="n">AdEx</span>
@@ -216,8 +216,8 @@
 <h3>4.1.1. Question: Firing pattern<a class="headerlink" href="#question-firing-pattern" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>When you simulate the model with the default parameters, it produces the voltage trace shown above. Describe that firing pattern. Use the terminology of Fig. 6.1 in <a class="reference external" href="http://neuronaldynamics.epfl.ch/online/Ch6.S1.html">Chapter 6.1</a></li>
-<li>Call the function <a class="reference internal" href="../modules/neurodynex3.adex_model.html#neurodynex3.adex_model.AdEx.simulate_AdEx_neuron" title="neurodynex3.adex_model.AdEx.simulate_AdEx_neuron"><code class="xref py py-func docutils literal notranslate"><span class="pre">AdEx.simulate_AdEx_neuron()</span></code></a> with different parameters and try to create <strong>adapting</strong>, <strong>bursting</strong> and <strong>irregular</strong> firing patterns. Table 6.1 in <a class="reference external" href="http://neuronaldynamics.epfl.ch/online/Ch6.S2.html">Chapter 6.1</a> provides a starting point for your explorations.</li>
-<li>In order to better understand the dynamics, it is useful to observe the joint evolution of <code class="docutils literal notranslate"><span class="pre">u</span></code> and <code class="docutils literal notranslate"><span class="pre">w</span></code> in a phase diagram. Use the function <a class="reference internal" href="../modules/neurodynex3.adex_model.html#neurodynex3.adex_model.AdEx.plot_adex_state" title="neurodynex3.adex_model.AdEx.plot_adex_state"><code class="xref py py-func docutils literal notranslate"><span class="pre">AdEx.plot_adex_state()</span></code></a> to get more insights.  Fig. 6.3 in <a class="reference external" href="http://neuronaldynamics.epfl.ch/online/Ch6.S2.html">Chapter 6 Section 2</a> shows a few trajectories in the phase diagram.</li>
+<li>Call the function <code class="xref py py-func docutils literal notranslate"><span class="pre">AdEx.simulate_AdEx_neuron()</span></code> with different parameters and try to create <strong>adapting</strong>, <strong>bursting</strong> and <strong>irregular</strong> firing patterns. Table 6.1 in <a class="reference external" href="http://neuronaldynamics.epfl.ch/online/Ch6.S2.html">Chapter 6.1</a> provides a starting point for your explorations.</li>
+<li>In order to better understand the dynamics, it is useful to observe the joint evolution of <code class="docutils literal notranslate"><span class="pre">u</span></code> and <code class="docutils literal notranslate"><span class="pre">w</span></code> in a phase diagram. Use the function <code class="xref py py-func docutils literal notranslate"><span class="pre">AdEx.plot_adex_state()</span></code> to get more insights.  Fig. 6.3 in <a class="reference external" href="http://neuronaldynamics.epfl.ch/online/Ch6.S2.html">Chapter 6 Section 2</a> shows a few trajectories in the phase diagram.</li>
 </ul>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>3. The Exponential Integrate-and-Fire model &mdash; Neuronaldynamics Exercises 0.0.5.dev56+gcef1c8a.d20200212 documentation</title>
+  <title>3. The Exponential Integrate-and-Fire model &mdash; Neuronaldynamics Exercises 0.0.5.dev59+gb77bd15.d20200212 documentation</title>
   
 
   
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                0.0.5.dev56+gcef1c8a.d20200212
+                0.0.5.dev59+gb77bd15.d20200212
               </div>
             
           
@@ -185,7 +185,7 @@
 <p><strong>Book chapters</strong></p>
 <p>The Exponential Integrate-and-Fire model is introduced in <a class="reference external" href="http://neuronaldynamics.epfl.ch/online/Ch5.S2.html">Chapter 5 Section 2</a></p>
 <p><strong>Python classes</strong></p>
-<p>The module <a class="reference internal" href="../modules/neurodynex3.exponential_integrate_fire.html#module-neurodynex3.exponential_integrate_fire.exp_IF" title="neurodynex3.exponential_integrate_fire.exp_IF"><code class="xref py py-mod docutils literal notranslate"><span class="pre">exponential_integrate_fire.exp_IF</span></code></a> implements the dynamics given in the book (equation 5.6).</p>
+<p>The module <code class="xref py py-mod docutils literal notranslate"><span class="pre">exponential_integrate_fire.exp_IF</span></code> implements the dynamics given in the book (equation 5.6).</p>
 <div class="figure align-center" id="id2">
 <img alt="../_images/exp_IF_min_current.png" src="../_images/exp_IF_min_current.png" />
 <p class="caption"><span class="caption-text">A short pulse current of 2ms duration is injected into an Exponential-Integrate-and-Fire neuron. The current amplitude is just sufficient to elicit a spike.</span></p>
@@ -210,7 +210,7 @@
 <span class="k">print</span><span class="p">(</span><span class="s2">&quot;nr of spikes: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">spike_monitor</span><span class="o">.</span><span class="n">count</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
 </pre></div>
 </div>
-<p>Note that you can change all parameters of the neuron by using the named parameters of the function <a class="reference internal" href="../modules/neurodynex3.exponential_integrate_fire.html#neurodynex3.exponential_integrate_fire.exp_IF.simulate_exponential_IF_neuron" title="neurodynex3.exponential_integrate_fire.exp_IF.simulate_exponential_IF_neuron"><code class="xref py py-func docutils literal notranslate"><span class="pre">simulate_exponential_IF_neuron()</span></code></a>. If you do not specify any parameter, the default values are used (see next code block). You can access these variables in your code by prefixing them with the module name (for example exp_IF.FIRING_THRESHOLD_v_spike).</p>
+<p>Note that you can change all parameters of the neuron by using the named parameters of the function <code class="xref py py-func docutils literal notranslate"><span class="pre">simulate_exponential_IF_neuron()</span></code>. If you do not specify any parameter, the default values are used (see next code block). You can access these variables in your code by prefixing them with the module name (for example exp_IF.FIRING_THRESHOLD_v_spike).</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">MEMBRANE_TIME_SCALE_tau</span> <span class="o">=</span> <span class="mf">12.0</span> <span class="o">*</span> <span class="n">b2</span><span class="o">.</span><span class="n">ms</span>
 <span class="n">MEMBRANE_RESISTANCE_R</span> <span class="o">=</span> <span class="mf">20.0</span> <span class="o">*</span> <span class="n">b2</span><span class="o">.</span><span class="n">Mohm</span>
 <span class="n">V_REST</span> <span class="o">=</span> <span class="o">-</span><span class="mf">65.0</span> <span class="o">*</span> <span class="n">b2</span><span class="o">.</span><span class="n">mV</span>
@@ -222,11 +222,11 @@
 </div>
 <div class="section" id="exercise-rehobase-threshold">
 <h2>3.1. Exercise: rehobase threshold<a class="headerlink" href="#exercise-rehobase-threshold" title="Permalink to this headline">¶</a></h2>
-<p>The goal of this exercise is to study the minimal current that can elicit a spike and to understand the different notions of a firing threshold. The Exponential-Integrate-and-Fire neuron model has two threshold related parameters. They correspond to the named parameters ‘v_spike’ and ‘v_rheobase’ in the function <a class="reference internal" href="../modules/neurodynex3.exponential_integrate_fire.html#neurodynex3.exponential_integrate_fire.exp_IF.simulate_exponential_IF_neuron" title="neurodynex3.exponential_integrate_fire.exp_IF.simulate_exponential_IF_neuron"><code class="xref py py-func docutils literal notranslate"><span class="pre">simulate_exponential_IF_neuron()</span></code></a>.</p>
+<p>The goal of this exercise is to study the minimal current that can elicit a spike and to understand the different notions of a firing threshold. The Exponential-Integrate-and-Fire neuron model has two threshold related parameters. They correspond to the named parameters ‘v_spike’ and ‘v_rheobase’ in the function <code class="xref py py-func docutils literal notranslate"><span class="pre">simulate_exponential_IF_neuron()</span></code>.</p>
 <div class="section" id="question">
 <h3>3.1.1. Question:<a class="headerlink" href="#question" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Modify the code example given above: Call <a class="reference internal" href="../modules/neurodynex3.exponential_integrate_fire.html#neurodynex3.exponential_integrate_fire.exp_IF.simulate_exponential_IF_neuron" title="neurodynex3.exponential_integrate_fire.exp_IF.simulate_exponential_IF_neuron"><code class="xref py py-func docutils literal notranslate"><span class="pre">simulate_exponential_IF_neuron()</span></code></a> and set the function parameter v_spike=+10mV (which overrides the default value -30mV). What do you expect to happen? How many spikes will be generated?</li>
+<li>Modify the code example given above: Call <code class="xref py py-func docutils literal notranslate"><span class="pre">simulate_exponential_IF_neuron()</span></code> and set the function parameter v_spike=+10mV (which overrides the default value -30mV). What do you expect to happen? How many spikes will be generated?</li>
 <li>Compute the minimal amplitude I_rh of a constant input current such that the neuron will elicit a spike. If you are not sure what and how to compute I_rh, have a look at <a class="reference external" href="http://neuronaldynamics.epfl.ch/online/Ch5.S1.html">Figure 5.1</a>  and <a class="reference external" href="http://neuronaldynamics.epfl.ch/online/Ch5.S2.html">the textbox “Rheobase threshold and interpretation of parameters”</a> in the book.</li>
 <li>Validate your result: Modify the code given above and inject a current of amplitude I_rh and 300 ms duration into the expIF neuron.</li>
 </ul>

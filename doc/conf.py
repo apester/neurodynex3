@@ -24,8 +24,8 @@ from setuptools_scm import get_version
 # sys.path.insert(0, os.path.abspath('.'))
 
 sys.path.insert(0, os.path.abspath('../.'))
-
-MOCK_MODULES = ['numpy', 'scipy', 'sklearn', 'matplotlib', 'matplotlib.pyplot', 'scipy.interpolate', 'scipy.special', 'math', '__future__', 'toolboxutilities']
+sys.path.insert(0, os.path.abspath('../..'))
+MOCK_MODULES = ['numpy', 'scipy', 'sklearn', 'matplotlib', 'matplotlib.pyplot', 'scipy.interpolate', 'scipy.special', 'math', 'toolboxutilities']
 for mod_name in MOCK_MODULES:
     sys.modules[mod_name] = mock.Mock()
 
