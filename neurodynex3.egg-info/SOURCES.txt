@@ -3,6 +3,7 @@ LICENSE.txt
 MANIFEST.in
 Makefile
 README.rst
+requirements-deploy.txt
 requirements.txt
 setup.py
 setup.py~

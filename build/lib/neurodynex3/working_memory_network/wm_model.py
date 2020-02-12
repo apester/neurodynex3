@@ -29,18 +29,20 @@ Note: Most parameters differ from the original publication.
 # Neuronal Dynamics: From Single Neurons to Networks and Models of Cognition.
 # Cambridge University Press, 2014.
 
-import brian2 as b2
-from brian2 import NeuronGroup, Synapses, PoissonInput, network_operation
-from brian2.monitors import StateMonitor, SpikeMonitor, PopulationRateMonitor
+
 from random import sample
-from collections import deque
-from neurodynex3.tools import plot_tools
+
+
 import numpy
 import matplotlib.pyplot as plt
 import math
+from collections import deque
+import brian2 as b2
 from scipy.special import erf
 from numpy.fft import rfft, irfft
-
+from brian2 import NeuronGroup, Synapses, PoissonInput, network_operation
+from brian2.monitors import StateMonitor, SpikeMonitor, PopulationRateMonitor
+from neurodynex3.tools import plot_tools
 b2.defaultclock.dt = 0.05 * b2.ms
 
 
@@ -187,7 +189,7 @@ def simulate_wm(
         - G_leak_inhib * (v-E_leak_inhib)
         - G_extern2inhib * s_AMPA * (v-E_AMPA)
         - G_inhib2inhib * s_GABA * (v-E_GABA)
-        - G_excit2inhib * s_NMDA_total * (v-E_NMDA)/(1.0+1.0*exp(-0.062*v/volt)/3.57)
+        - G_excit2inhib * s_NMDA_total  * (v-E_NMDA)/(1.0+1.0*exp(-0.062*1e3*v/volt)/3.57)
         )/Cm_inhib : volt (unless refractory)
         ds_AMPA/dt = -s_AMPA/tau_AMPA : 1
         ds_GABA/dt = -s_GABA/tau_GABA : 1
@@ -215,7 +217,7 @@ def simulate_wm(
         - G_leak_excit * (v-E_leak_excit)
         - G_extern2excit * s_AMPA * (v-E_AMPA)
         - G_inhib2excit * s_GABA * (v-E_GABA)
-        - G_excit2excit * s_NMDA_total * (v-E_NMDA)/(1.0+1.0*exp(-0.062*v/volt)/3.57)
+        - G_excit2excit * s_NMDA_total * (v-E_NMDA)/(1.0+1.0*exp(-0.062*1e3*v/volt)/3.57)
         + I_stim
         )/Cm_excit : volt (unless refractory)
         ds_AMPA/dt = -s_AMPA/tau_AMPA : 1
@@ -306,6 +308,7 @@ def getting_started():
                       stimulus_strength=.07 * b2.namp)
     plot_tools.plot_network_activity(rate_monitor_excit, spike_monitor_excit, voltage_monitor_excit,
                                      t_min=0. * b2.ms)
+
     plt.show()
 
 
