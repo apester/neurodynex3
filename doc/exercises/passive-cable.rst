@@ -15,8 +15,8 @@ The :mod:`.cable_equation.passive_cable` module implements a passive cable using
 
     import brian2 as b2
     import matplotlib.pyplot as plt
-    from neurodynex.cable_equation import passive_cable
-    from neurodynex.tools import input_factory
+    from neurodynex3.cable_equation import passive_cable
+    from neurodynex3.tools import input_factory
     passive_cable.getting_started()
 
 The function :func:`.passive_cable.getting_started` injects a very short pulse current at (t=500ms, x=100um) into a finite length cable and then lets Brian evolve the dynamics for 2ms. This simulation produces a time x location matrix whose entries are the membrane voltage at each (time,space)-index. The result is visualized using pyplot.imshow.
@@ -52,7 +52,7 @@ You can easily access those values in your code:
 
 .. code-block:: py
 
-    from neurodynex.cable_equation import passive_cable
+    from neurodynex3.cable_equation import passive_cable
     print(passive_cable.R_TRANSVERSAL)
 
 

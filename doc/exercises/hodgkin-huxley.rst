@@ -20,8 +20,8 @@ At the beginning of your exercise solutions, import the modules and run the demo
     import brian2 as b2
     import matplotlib.pyplot as plt
     import numpy as np
-    from neurodynex.hodgkin_huxley import HH
-    from neurodynex.tools import input_factory
+    from neurodynex3.hodgkin_huxley import HH
+    from neurodynex3.tools import input_factory
 
     HH.getting_started()
 
@@ -35,7 +35,7 @@ At the beginning of your exercise solutions, import the modules and run the demo
 
 Exercise: step current response
 -------------------------------
-We study the response of a Hodgkin-Huxley neuron to different input currents. Have a look at the documentation of the functions :func:`.HH.simulate_HH_neuron` and :func:`.HH.plot_data` and the module :mod:`neurodynex.tools.input_factory`.
+We study the response of a Hodgkin-Huxley neuron to different input currents. Have a look at the documentation of the functions :func:`.HH.simulate_HH_neuron` and :func:`.HH.plot_data` and the module :mod:`neurodynex3.tools.input_factory`.
 
 Question
 ~~~~~~~~

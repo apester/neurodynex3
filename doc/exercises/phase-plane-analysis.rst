@@ -19,7 +19,7 @@ In this exercise we study the phase plane of a two dimensional dynamical system 
       import brian2 as b2
       import matplotlib.pyplot as plt
       import numpy as np
-      from neurodynex.phase_plane_analysis import fitzhugh_nagumo
+      from neurodynex3.phase_plane_analysis import fitzhugh_nagumo
 
       fitzhugh_nagumo.plot_flow()
 

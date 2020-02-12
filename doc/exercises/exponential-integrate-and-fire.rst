@@ -22,12 +22,11 @@ To get started, copy the following code into a Jupyter notebook. It follows a co
 
 .. code-block:: py
 
-    % matplotlib inline
+    %matplotlib inline
     import brian2 as b2
     import matplotlib.pyplot as plt
     import neurodynex3.exponential_integrate_fire.exp_IF as exp_IF
     from neurodynex3.tools import plot_tools, input_factory
-
 
     input_current = input_factory.get_step_current(
         t_start=20, t_end=120, unit_time=b2.ms, amplitude=0.8 * b2.namp)
@@ -71,7 +70,7 @@ Question:
 Exercise: strength-duration curve
 ---------------------------------
 
-The minimal amplitude to elicit a spike depends on the duration of the current. For an infinitely long current, we've just calculated the rheobase current. For short pulses and step currents, we can "experimentally" determine the minimal currents. If we plot the amplitude versus duration, we get the strength-duration curve
+The minimal amplitude to elicit a spike depends on the duration of the current. For an infinitely long current, we've just calculated the rheobase current. For short pulses and step currents, we can "experimentally" determine the minimal currents. If we plot the amplitude versus duration, we get the strength-duration curve.
 
 
 Question:
@@ -88,7 +87,7 @@ At the end of the script, the strength-duration curve is plotted. Discuss it. Yo
 
 .. code-block:: py
 
-    % matplotlib inline
+    %matplotlib inline
     import brian2 as b2
     import matplotlib.pyplot as plt
     import neurodynex3.exponential_integrate_fire.exp_IF as exp_IF
