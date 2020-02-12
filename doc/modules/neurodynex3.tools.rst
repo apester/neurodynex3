@@ -1,11 +1,11 @@
 neurodynex3.tools package
-========================
+=========================
 
 Submodules
 ----------
 
 neurodynex3.tools.input\_factory module
---------------------------------------
+---------------------------------------
 
 .. automodule:: neurodynex3.tools.input_factory
     :members:
@@ -13,7 +13,7 @@ neurodynex3.tools.input\_factory module
     :show-inheritance:
 
 neurodynex3.tools.plot\_tools module
------------------------------------
+------------------------------------
 
 .. automodule:: neurodynex3.tools.plot_tools
     :members:
@@ -21,7 +21,7 @@ neurodynex3.tools.plot\_tools module
     :show-inheritance:
 
 neurodynex3.tools.spike\_tools module
-------------------------------------
+-------------------------------------
 
 .. automodule:: neurodynex3.tools.spike_tools
     :members:

@@ -1,11 +1,11 @@
 neurodynex3.test package
-=======================
+========================
 
 Submodules
 ----------
 
 neurodynex3.test.test\_AdEx module
----------------------------------
+----------------------------------
 
 .. automodule:: neurodynex3.test.test_AdEx
     :members:
@@ -13,7 +13,7 @@ neurodynex3.test.test\_AdEx module
     :show-inheritance:
 
 neurodynex3.test.test\_HH module
--------------------------------
+--------------------------------
 
 .. automodule:: neurodynex3.test.test_HH
     :members:
@@ -21,7 +21,7 @@ neurodynex3.test.test\_HH module
     :show-inheritance:
 
 neurodynex3.test.test\_LIF module
---------------------------------
+---------------------------------
 
 .. automodule:: neurodynex3.test.test_LIF
     :members:
@@ -29,7 +29,7 @@ neurodynex3.test.test\_LIF module
     :show-inheritance:
 
 neurodynex3.test.test\_LIF\_spiking\_network module
---------------------------------------------------
+---------------------------------------------------
 
 .. automodule:: neurodynex3.test.test_LIF_spiking_network
     :members:
@@ -37,7 +37,7 @@ neurodynex3.test.test\_LIF\_spiking\_network module
     :show-inheritance:
 
 neurodynex3.test.test\_cable\_equation module
---------------------------------------------
+---------------------------------------------
 
 .. automodule:: neurodynex3.test.test_cable_equation
     :members:
@@ -45,7 +45,7 @@ neurodynex3.test.test\_cable\_equation module
     :show-inheritance:
 
 neurodynex3.test.test\_decision\_making module
----------------------------------------------
+----------------------------------------------
 
 .. automodule:: neurodynex3.test.test_decision_making
     :members:
@@ -53,7 +53,7 @@ neurodynex3.test.test\_decision\_making module
     :show-inheritance:
 
 neurodynex3.test.test\_exponential\_IF module
---------------------------------------------
+---------------------------------------------
 
 .. automodule:: neurodynex3.test.test_exponential_IF
     :members:
@@ -61,7 +61,7 @@ neurodynex3.test.test\_exponential\_IF module
     :show-inheritance:
 
 neurodynex3.test.test\_hopfield module
--------------------------------------
+--------------------------------------
 
 .. automodule:: neurodynex3.test.test_hopfield
     :members:
@@ -69,7 +69,7 @@ neurodynex3.test.test\_hopfield module
     :show-inheritance:
 
 neurodynex3.test.test\_nagumo module
------------------------------------
+------------------------------------
 
 .. automodule:: neurodynex3.test.test_nagumo
     :members:
@@ -77,7 +77,7 @@ neurodynex3.test.test\_nagumo module
     :show-inheritance:
 
 neurodynex3.test.test\_neuron\_type module
------------------------------------------
+------------------------------------------
 
 .. automodule:: neurodynex3.test.test_neuron_type
     :members:
@@ -85,7 +85,7 @@ neurodynex3.test.test\_neuron\_type module
     :show-inheritance:
 
 neurodynex3.test.test\_oja module
---------------------------------
+---------------------------------
 
 .. automodule:: neurodynex3.test.test_oja
     :members:
@@ -93,7 +93,7 @@ neurodynex3.test.test\_oja module
     :show-inheritance:
 
 neurodynex3.test.test\_spike\_tools module
------------------------------------------
+------------------------------------------
 
 .. automodule:: neurodynex3.test.test_spike_tools
     :members:
@@ -101,7 +101,7 @@ neurodynex3.test.test\_spike\_tools module
     :show-inheritance:
 
 neurodynex3.test.test\_working\_memory module
---------------------------------------------
+---------------------------------------------
 
 .. automodule:: neurodynex3.test.test_working_memory
     :members:

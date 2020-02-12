@@ -1,5 +1,5 @@
 neurodynex3 package
-==================
+===================
 
 Subpackages
 -----------
