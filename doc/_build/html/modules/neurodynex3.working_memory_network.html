@@ -1,0 +1,203 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>neurodynex3.working_memory_network package &#8212; LCN-neurodynex3  documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="License" href="../licence.html" />
+    <link rel="prev" title="neurodynex3.tools package" href="neurodynex3.tools.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="neurodynex3-working-memory-network-package">
+<h1>neurodynex3.working_memory_network package<a class="headerlink" href="#neurodynex3-working-memory-network-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-neurodynex3.working_memory_network.wm_model">
+<span id="neurodynex3-working-memory-network-wm-model-module"></span><h2>neurodynex3.working_memory_network.wm_model module<a class="headerlink" href="#module-neurodynex3.working_memory_network.wm_model" title="Permalink to this headline">¶</a></h2>
+<p>Implementation of a working memory model.
+Literature:
+Compte, A., Brunel, N., Goldman-Rakic, P. S., &amp; Wang, X. J. (2000). Synaptic mechanisms and
+network dynamics underlying spatial working memory in a cortical network model.
+Cerebral Cortex, 10(9), 910-923.</p>
+<p>Some parts of this implementation are inspired by material from
+<em>Stanford University, BIOE 332: Large-Scale Neural Modeling, Kwabena Boahen &amp; Tatiana Engel, 2013</em>,
+online available.</p>
+<p>Note: Most parameters differ from the original publication.</p>
+<dl class="function">
+<dt id="neurodynex3.working_memory_network.wm_model.getting_started">
+<code class="descclassname">neurodynex3.working_memory_network.wm_model.</code><code class="descname">getting_started</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/neurodynex3/working_memory_network/wm_model.html#getting_started"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#neurodynex3.working_memory_network.wm_model.getting_started" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="neurodynex3.working_memory_network.wm_model.simulate_wm">
+<code class="descclassname">neurodynex3.working_memory_network.wm_model.</code><code class="descname">simulate_wm</code><span class="sig-paren">(</span><em>N_excitatory=1024</em>, <em>N_inhibitory=256</em>, <em>N_extern_poisson=1000</em>, <em>poisson_firing_rate=1.4 * hertz</em>, <em>weight_scaling_factor=2.0</em>, <em>sigma_weight_profile=20.0</em>, <em>Jpos_excit2excit=1.6</em>, <em>stimulus_center_deg=180</em>, <em>stimulus_width_deg=40</em>, <em>stimulus_strength=70. * pamp</em>, <em>t_stimulus_start=0. * second</em>, <em>t_stimulus_duration=0. * second</em>, <em>distractor_center_deg=90</em>, <em>distractor_width_deg=40</em>, <em>distractor_strength=0. * amp</em>, <em>t_distractor_start=0. * second</em>, <em>t_distractor_duration=0. * second</em>, <em>G_inhib2inhib=0.3584 * nsiemens</em>, <em>G_inhib2excit=0.4676 * nsiemens</em>, <em>G_excit2excit=133.35 * psiemens</em>, <em>G_excit2inhib=122.64 * psiemens</em>, <em>monitored_subset_size=1024</em>, <em>sim_time=0.8 * second</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/neurodynex3/working_memory_network/wm_model.html#simulate_wm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#neurodynex3.working_memory_network.wm_model.simulate_wm" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>N_excitatory</strong> (<em>int</em>) – Size of the excitatory population</li>
+<li><strong>N_inhibitory</strong> (<em>int</em>) – Size of the inhibitory population</li>
+<li><strong>weight_scaling_factor</strong> (<em>float</em>) – weight prefactor. When increasing the size of the populations,
+the synaptic weights have to be decreased. Using the default values, we have
+N_excitatory*weight_scaling_factor = 2048 and N_inhibitory*weight_scaling_factor=512</li>
+<li><strong>N_extern_poisson</strong> (<em>int</em>) – Size of the external input population (Poisson input)</li>
+<li><strong>poisson_firing_rate</strong> (<em>Quantity</em>) – Firing rate of the external population</li>
+<li><strong>sigma_weight_profile</strong> (<em>float</em>) – standard deviation of the gaussian input profile in
+the excitatory population.</li>
+<li><strong>Jpos_excit2excit</strong> (<em>float</em>) – Strength of the recurrent input within the excitatory population.
+Jneg_excit2excit is computed from sigma_weight_profile, Jpos_excit2excit and the normalization
+condition.</li>
+<li><strong>stimulus_center_deg</strong> (<em>float</em>) – Center of the stimulus in [0, 360]</li>
+<li><strong>stimulus_width_deg</strong> (<em>float</em>) – width of the stimulus. All neurons in
+stimulus_center_deg +- (stimulus_width_deg/2) receive the same input current</li>
+<li><strong>stimulus_strength</strong> (<em>Quantity</em>) – Input current to the neurons at stimulus_center_deg +- (stimulus_width_deg/2)</li>
+<li><strong>t_stimulus_start</strong> (<em>Quantity</em>) – time when the input stimulus is turned on</li>
+<li><strong>t_stimulus_duration</strong> (<em>Quantity</em>) – duration of the stimulus.</li>
+<li><strong>distractor_center_deg</strong> (<em>float</em>) – Center of the distractor in [0, 360]</li>
+<li><strong>distractor_width_deg</strong> (<em>float</em>) – width of the distractor. All neurons in
+distractor_center_deg +- (distractor_width_deg/2) receive the same input current
+distractor_strength (Quantity): Input current to the neurons at
+distractor_center_deg +- (distractor_width_deg/2)</li>
+<li><strong>t_distractor_start</strong> (<em>Quantity</em>) – time when the distractor is turned on</li>
+<li><strong>t_distractor_duration</strong> (<em>Quantity</em>) – duration of the distractor.</li>
+<li><strong>G_inhib2inhib</strong> (<em>Quantity</em>) – projections from inhibitory to inhibitory population (later
+rescaled by weight_scaling_factor)</li>
+<li><strong>G_inhib2excit</strong> (<em>Quantity</em>) – projections from inhibitory to excitatory population (later
+rescaled by weight_scaling_factor)</li>
+<li><strong>G_excit2excit</strong> (<em>Quantity</em>) – projections from excitatory to excitatory population (later
+rescaled by weight_scaling_factor)</li>
+<li><strong>G_excit2inhib</strong> (<em>Quantity</em>) – projections from excitatory to inhibitory population (later
+rescaled by weight_scaling_factor)</li>
+<li><strong>monitored_subset_size</strong> (<em>int</em>) – nr of neurons for which a Spike- and Voltage monitor
+is registered.</li>
+<li><strong>sim_time</strong> (<em>Quantity</em>) – simulation time</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><dl class="docutils">
+<dt>rate_monitor_excit (Brian2 PopulationRateMonitor for the excitatory population),</dt>
+<dd><p class="first last">spike_monitor_excit, voltage_monitor_excit, idx_monitored_neurons_excit,        rate_monitor_inhib, spike_monitor_inhib, voltage_monitor_inhib, idx_monitored_neurons_inhib,        weight_profile_45 (The weights profile for the neuron with preferred direction = 45deg).</p>
+</dd>
+</dl>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">results (tuple)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-neurodynex3.working_memory_network">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-neurodynex3.working_memory_network" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">LCN-neurodynex3</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/index.html">Exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contents.html">Python exercise modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../licence.html">License</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="../contents.html">Python exercise modules</a><ul>
+  <li><a href="neurodynex3.html">neurodynex3 package</a><ul>
+      <li>Previous: <a href="neurodynex3.tools.html" title="previous chapter">neurodynex3.tools package</a></li>
+      <li>Next: <a href="../licence.html" title="next chapter">License</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, B-S-I.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/modules/neurodynex3.working_memory_network.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
