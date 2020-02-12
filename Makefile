@@ -4,7 +4,7 @@ deploy: test pypi
 # Documentation building
 
 sphinx:
-	sphinx-apidoc -o doc/modules neurodynex3/neurodynex3 -f
+	sphinx-apidoc -o doc/modules neurodynex3 -f
 	make -C doc html
 
 # Pypi deployment  (removed, march 2018)
