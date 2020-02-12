@@ -1,0 +1,283 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>neurodynex3.brunel_model package &mdash; Neuronaldynamics Exercises 0.0.5.dev49+gd411808.d20200212 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="neurodynex3.cable_equation package" href="neurodynex3.cable_equation.html" />
+    <link rel="prev" title="neurodynex3.adex_model package" href="neurodynex3.adex_model.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Neuronaldynamics Exercises
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.5.dev49+gd411808.d20200212
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/index.html">Exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contents.html">Python exercise modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../licence.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Neuronaldynamics Exercises</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../contents.html">Python exercise modules</a> &raquo;</li>
+        
+          <li><a href="neurodynex3.html">neurodynex3 package</a> &raquo;</li>
+        
+      <li>neurodynex3.brunel_model package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/modules/neurodynex3.brunel_model.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="neurodynex3-brunel-model-package">
+<h1>neurodynex3.brunel_model package<a class="headerlink" href="#neurodynex3-brunel-model-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-neurodynex3.brunel_model.LIF_spiking_network">
+<span id="neurodynex3-brunel-model-lif-spiking-network-module"></span><h2>neurodynex3.brunel_model.LIF_spiking_network module<a class="headerlink" href="#module-neurodynex3.brunel_model.LIF_spiking_network" title="Permalink to this headline">¶</a></h2>
+<p>Implementation of the Brunel 2000 network:
+sparsely connected network of identical LIF neurons (Model A).</p>
+<dl class="function">
+<dt id="neurodynex3.brunel_model.LIF_spiking_network.getting_started">
+<code class="descclassname">neurodynex3.brunel_model.LIF_spiking_network.</code><code class="descname">getting_started</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/neurodynex3/brunel_model/LIF_spiking_network.html#getting_started"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#neurodynex3.brunel_model.LIF_spiking_network.getting_started" title="Permalink to this definition">¶</a></dt>
+<dd><p>A simple example to get started</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="neurodynex3.brunel_model.LIF_spiking_network.simulate_brunel_network">
+<code class="descclassname">neurodynex3.brunel_model.LIF_spiking_network.</code><code class="descname">simulate_brunel_network</code><span class="sig-paren">(</span><em>N_Excit=5000</em>, <em>N_Inhib=None</em>, <em>N_extern=1000</em>, <em>connection_probability=0.1</em>, <em>w0=100. * uvolt</em>, <em>g=4.0</em>, <em>synaptic_delay=1.5 * msecond</em>, <em>poisson_input_rate=13. * hertz</em>, <em>w_external=None</em>, <em>v_rest=0. * volt</em>, <em>v_reset=10. * mvolt</em>, <em>firing_threshold=20. * mvolt</em>, <em>membrane_time_scale=20. * msecond</em>, <em>abs_refractory_period=2. * msecond</em>, <em>monitored_subset_size=100</em>, <em>random_vm_init=False</em>, <em>sim_time=100. * msecond</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/neurodynex3/brunel_model/LIF_spiking_network.html#simulate_brunel_network"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#neurodynex3.brunel_model.LIF_spiking_network.simulate_brunel_network" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fully parametrized implementation of a sparsely connected network of LIF neurons (Brunel 2000)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>N_Excit</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – Size of the excitatory popluation</li>
+<li><strong>N_Inhib</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – optional. Size of the inhibitory population.
+If not set (=None), N_Inhib is set to N_excit/4.</li>
+<li><strong>N_extern</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – optional. Number of presynaptic excitatory poisson neurons. Note: if set to a value,
+this number does NOT depend on N_Excit and NOT depend on connection_probability (this is different
+from the book and paper. Only if N_extern is set to ‘None’, then N_extern is computed as
+N_Excit*connection_probability.</li>
+<li><strong>connection_probability</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) – probability to connect to any of the (N_Excit+N_Inhib) neurons
+CE = connection_probability*N_Excit
+CI = connection_probability*N_Inhib
+Cexternal = N_extern</li>
+<li><strong>w0</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) – Synaptic strength J</li>
+<li><strong>g</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) – relative importance of inhibition. J_exc = w0. J_inhib = -g*w0</li>
+<li><strong>synaptic_delay</strong> (<em>Quantity</em>) – Delay between presynaptic spike and postsynaptic increase of v_m</li>
+<li><strong>poisson_input_rate</strong> (<em>Quantity</em>) – Poisson rate of the external population</li>
+<li><strong>w_external</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) – optional. Synaptic weight of the excitatory external poisson neurons onto all
+neurons in the network. Default is None, in that case w_external is set to w0, which is the
+standard value in the book and in the paper Brunel2000.
+The purpose of this parameter is to see the effect of external input in the
+absence of network feedback(setting w0 to 0mV and w_external&gt;0).</li>
+<li><strong>v_rest</strong> (<em>Quantity</em>) – Resting potential</li>
+<li><strong>v_reset</strong> (<em>Quantity</em>) – Reset potential</li>
+<li><strong>firing_threshold</strong> (<em>Quantity</em>) – Spike threshold</li>
+<li><strong>membrane_time_scale</strong> (<em>Quantity</em>) – tau_m</li>
+<li><strong>abs_refractory_period</strong> (<em>Quantity</em>) – absolute refractory period, tau_ref</li>
+<li><strong>monitored_subset_size</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – nr of neurons for which a VoltageMonitor is recording Vm</li>
+<li><strong>random_vm_init</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – if true, the membrane voltage of each neuron is initialized with a
+random value drawn from Uniform(v_rest, firing_threshold)</li>
+<li><strong>sim_time</strong> (<em>Quantity</em>) – Simulation time</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">(rate_monitor, spike_monitor, voltage_monitor, idx_monitored_neurons)
+PopulationRateMonitor: Rate Monitor
+SpikeMonitor: SpikeMonitor for ALL (N_Excit+N_Inhib) neurons
+StateMonitor: membrane voltage for a selected subset of neurons
+list: index of monitored neurons. length = monitored_subset_size</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-neurodynex3.brunel_model">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-neurodynex3.brunel_model" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="neurodynex3.cable_equation.html" class="btn btn-neutral float-right" title="neurodynex3.cable_equation package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="neurodynex3.adex_model.html" class="btn btn-neutral float-left" title="neurodynex3.adex_model package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, EPFL-LCN
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

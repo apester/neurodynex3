@@ -1,0 +1,214 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>neurodynex3.test.test_decision_making &mdash; Neuronaldynamics Exercises 0.0.5.dev49+gd411808.d20200212 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Neuronaldynamics Exercises
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.5.dev49+gd411808.d20200212
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../setup.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../exercises/index.html">Exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contents.html">Python exercise modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../licence.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Neuronaldynamics Exercises</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../test.html">neurodynex3.test</a> &raquo;</li>
+        
+      <li>neurodynex3.test.test_decision_making</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for neurodynex3.test.test_decision_making</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">neurodynex3.competing_populations</span> <span class="k">import</span> <span class="n">decision_making</span>
+<span class="kn">import</span> <span class="nn">brian2</span> <span class="k">as</span> <span class="nn">b2</span>
+
+
+<div class="viewcode-block" id="test_sim_decision_making_network"><a class="viewcode-back" href="../../../modules/neurodynex3.test.html#neurodynex3.test.test_decision_making.test_sim_decision_making_network">[docs]</a><span class="k">def</span> <span class="nf">test_sim_decision_making_network</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Test if the decision making circuit is initialized and simulated for 3ms&quot;&quot;&quot;</span>
+    <span class="n">b2</span><span class="o">.</span><span class="n">defaultclock</span><span class="o">.</span><span class="n">dt</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="o">*</span> <span class="n">b2</span><span class="o">.</span><span class="n">ms</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">decision_making</span>\
+        <span class="o">.</span><span class="n">sim_decision_making_network</span><span class="p">(</span>
+            <span class="n">N_Excit</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">N_Inhib</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">weight_scaling_factor</span><span class="o">=</span><span class="mf">10.</span><span class="p">,</span> <span class="n">t_stimulus_start</span><span class="o">=</span><span class="mi">0</span> <span class="o">*</span> <span class="n">b2</span><span class="o">.</span><span class="n">ms</span><span class="p">,</span>
+            <span class="n">t_stimulus_duration</span><span class="o">=</span><span class="mi">9999</span> <span class="o">*</span> <span class="n">b2</span><span class="o">.</span><span class="n">ms</span><span class="p">,</span> <span class="n">coherence_level</span><span class="o">=.</span><span class="mi">5</span><span class="p">,</span> <span class="n">stimulus_update_interval</span><span class="o">=</span><span class="mi">2</span> <span class="o">*</span> <span class="n">b2</span><span class="o">.</span><span class="n">ms</span><span class="p">,</span>
+            <span class="n">mu0_mean_stimulus_Hz</span><span class="o">=</span><span class="mf">160.</span><span class="p">,</span> <span class="n">stimulus_std_Hz</span><span class="o">=</span><span class="mf">20.</span><span class="p">,</span> <span class="n">N_extern</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">firing_rate_extern</span><span class="o">=</span><span class="mf">9.5</span> <span class="o">*</span> <span class="n">b2</span><span class="o">.</span><span class="n">Hz</span><span class="p">,</span>
+            <span class="n">w_pos</span><span class="o">=</span><span class="mf">1.70</span><span class="p">,</span> <span class="n">f_Subpop_size</span><span class="o">=</span><span class="mf">0.30</span><span class="p">,</span> <span class="n">max_sim_time</span><span class="o">=</span><span class="mf">3.</span> <span class="o">*</span> <span class="n">b2</span><span class="o">.</span><span class="n">ms</span><span class="p">,</span>
+            <span class="n">stop_condition_rate</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">monitored_subset_size</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="s2">&quot;rate_monitor_A&quot;</span> <span class="ow">in</span> <span class="n">results</span><span class="p">,</span> \
+        <span class="s2">&quot;results dict returned from sim_decision_making_network does not contain key rate_monitor_A&quot;</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, EPFL-LCN
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
