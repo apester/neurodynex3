@@ -1,7 +1,7 @@
-Python exercise modules
+Package index
 -----------------------
 
-All exercises are contained in subpackages of the python package ``neurodynex3``.
+All exercises are contained in subpackages of the Python package ``neurodynex3``.
 The subpackages contain modules used for each exercise. The module ``neurodynex3.tools`` provides functions shared
 across exercises. Note that the code is not optimized for performance and there is no guarantee for correctness.
 
