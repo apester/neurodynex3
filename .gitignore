@@ -5,3 +5,4 @@ neurodynex3/*.py~
 *.egg-info
 dist/
 build/
+.DS_Store
