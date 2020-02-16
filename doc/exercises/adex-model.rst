@@ -76,7 +76,7 @@ Exercise: phase plane and nullclines
 ------------------------------------
 First, try to get some intuition on shape of nullclines by plotting or simply sketching them on a piece of paper and answering the following questions.
 
-#. Plot or sketch the u- and w- nullclines of the AdEx model (``I(t) = 0``)
+#. Plot or sketch the ``u`` and ``w`` nullclines of the AdEx model (``I(t) = 0``).
 #. How do the nullclines change with respect to ``a``?
 #. How do the nullclines change if a constant current ``I(t) = c`` is applied?
 #. What is the interpretation of parameter ``b``?
