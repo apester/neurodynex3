@@ -62,9 +62,9 @@ Question:
 
 * Modify the code example given above: Call :func:`.simulate_exponential_IF_neuron` and set the function parameter ``v_spike`` to +10mV (which overrides the default value -30mV). What do you expect to happen? How many spikes will be generated?
 
-* Compute the minimal amplitude I_rh of a constant input current such that the neuron will elicit a spike. If you are not sure what and how to compute I_rh, have a look at `Figure 5.1 <http://neuronaldynamics.epfl.ch/online/Ch5.S1.html>`_ and the textbox `"Rheobase threshold and interpretation of parameters" <http://neuronaldynamics.epfl.ch/online/Ch5.S2.html>`_ in the book.
+* Compute the minimal amplitude :math:`I_{rh}` of a constant input current such that the neuron will elicit a spike. If you are not sure what and how to compute :math:`I_{rh}`, have a look at `Figure 5.1 <http://neuronaldynamics.epfl.ch/online/Ch5.S1.html>`_ and the textbox `"Rheobase threshold and interpretation of parameters" <http://neuronaldynamics.epfl.ch/online/Ch5.S2.html>`_ in the book.
 
-* Validate your result: Modify the code given above and inject a current of amplitude I_rh and 300ms duration into the expIF neuron.
+* Validate your result: Modify the code given above and inject a current of amplitude :math:`I_{rh}` and 300ms duration into the expIF neuron.
 
 
 Exercise: strength-duration curve
@@ -75,9 +75,9 @@ The minimal amplitude to elicit a spike depends on the duration of the current. 
 
 Question:
 ~~~~~~~~~
-Have a look at the following code: for the values i = 0, 2 and 6 we did not provide the minimal amplitude, but the entries in ``min_amp[i]`` are set to 0. Complete the ``min_amp`` list.
+Have a look at the following code: for the values ``i`` = 0, 2 and 6 we did not provide the minimal amplitude, but the entries in ``min_amp[i]`` are set to 0. Complete the ``min_amp`` list.
 
-* Set the index i to 0.
+* Set the index ``i`` to 0.
 * Enter an informed guess into the ``min_amp`` table.
 * Run the script.
 * Depending on the plot, increase or decrease the amplitude, repeat until you just get one spike.
