@@ -49,7 +49,7 @@ Note that you can change all parameter of the LIF neuron by using the named para
 
 Exercise: minimal current
 -------------------------
-In the absence of an input current, a LIF neuron has a constant membrane voltage ``V_REST``. If an input current drives vm above the firing threshold, a spike is generated. Then, ``vm`` is reset to ``V_RESET`` and the neuron ignores any input during the refractroy period.
+In the absence of an input current, a LIF neuron has a constant membrane voltage ``V_REST``. If an input current drives ``vm`` above the firing threshold, a spike is generated. Then, ``vm`` is reset to ``V_RESET`` and the neuron ignores any input during the refractroy period.
 
 Question: minimal current (calculation)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -63,7 +63,7 @@ For the default neuron parameters (see above), compute the minimal amplitude :ma
 
 Question: minimal current (simulation)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Use the value :math:`I_{min}` you've computed and verify your result: inject a step current of amplitude :math:`I_{min}` for 100ms into the LIF neuron and plot the membrane voltage. Vm should approach the firing threshold but **not** fire. We have implemented a couple of helper functions to solve this task. Use this code block, but make sure you understand it and you've read the docs of the functions :func:`.LIF.simulate_LIF_neuron`, :func:`.input_factory.get_step_current` and :func:`.plot_tools.plot_voltage_and_current_traces`.
+Use the value :math:`I_{min}` you've computed and verify your result: inject a step current of amplitude :math:`I_{min}` for 100ms into the LIF neuron and plot the membrane voltage. ``vm`` should approach the firing threshold but **not** fire. We have implemented a couple of helper functions to solve this task. Use this code block, but make sure you understand it and you've read the docs of the functions :func:`.LIF.simulate_LIF_neuron`, :func:`.input_factory.get_step_current` and :func:`.plot_tools.plot_voltage_and_current_traces`.
 
 .. code-block:: py
 
@@ -105,7 +105,7 @@ Exercise: "Experimentally" estimate the parameters of a LIF neuron
 A LIF neuron is determined by the following parameters: Resting potential, reset voltage, firing threshold, membrane resistance, membrane time-scale, absolute refractory period. By injecting a known test current into a LIF neuron (with unknown parameters), you can determine the neuron properties from the voltage response.
 
 
-Question: "Read" the LIF parameters out of the vm plot
+Question: "Read" the LIF parameters out of the ``vm`` plot
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #. Get a random parameter set.
 #. Create an input current of your choice.
