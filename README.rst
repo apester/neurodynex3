@@ -7,7 +7,7 @@ This repository contains python exercises accompanying the book
 Exercises & Documentation
 -------------------------
 
-The full documentation and the exercises `can be found at readthedocs <https://lcn-neurodynex-exercises.readthedocs.io/en/latest/index.html/>`_.
+The full documentation and the exercises can be found at `readthedocs <https://lcn-neurodynex-exercises.readthedocs.io/en/latest>`_.
 
 Quickstart
 ----------
