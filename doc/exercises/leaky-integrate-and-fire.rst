@@ -49,7 +49,7 @@ Note that you can change all parameter of the LIF neuron by using the named para
 
 Exercise: minimal current
 -------------------------
-In the absence of an input current, a LIF neuron has a constant membrane voltage :code:`V_REST`. If an input current drives vm above the firing threshold, a spike is generated. Then, ``vm`` is reset to :py:`V_RESET` and the neuron ignores any input during the refractroy period.
+In the absence of an input current, a LIF neuron has a constant membrane voltage :code:`V_REST`. If an input current drives vm above the firing threshold, a spike is generated. Then, ``vm`` is reset to :bash:`V_RESET` and the neuron ignores any input during the refractroy period.
 
 Question: minimal current (calculation)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
