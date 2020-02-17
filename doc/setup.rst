@@ -104,8 +104,8 @@ If you are using Linux or macOS, you can run ``conda`` commands in a regular ter
 
    .. code-block:: bash
 
-      >> which pip
-      .../anaconda3/envs/bmnn/bin/pip
+      >> pip --version
+      pip 20.0.2 from //anaconda3/envs/bmnn/lib/python3.8/site-packages/pip (python 3.8)
 
 6. Now run the install command:
 
