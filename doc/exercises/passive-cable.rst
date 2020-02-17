@@ -130,8 +130,9 @@ Question
 ~~~~~~~~
 Inject a very brief pulse current at (t=.05ms, x=400um). Run Brian twice for 0.2 ms with two different parameter sets (see example below). Plot the temporal evolution of the membrane voltage at x=500um for the two parameter sets. Discuss your observations.
 
+.. note::
 
- Note: to better see some of the effects, plot only a short time window and increase the temporal resolution of the numerical approximation (b2.defaultclock.dt = 0.005 * b2.ms)
+    To better see some of the effects, plot only a short time window and increase the temporal resolution of the numerical approximation (``b2.defaultclock.dt = 0.005 * b2.ms``).
 
 .. code-block:: py
 
@@ -183,6 +184,6 @@ You observed that the membrane voltage reaches a location dependent steady-state
 
 #. Plot the analytical solution and the simulation result in one figure.
 
-#. Run the simulation with different resolution parameters (change defaultclock.dt and/or the number of compartments). Compare the simulation with the analytical solution.
+#. Run the simulation with different resolution parameters (change ``b2.defaultclock.dt`` and/or the number of compartments). Compare the simulation with the analytical solution.
 
 #. If you need help to get started, or if you're not sure about the analytical solution, you can find a solution in the `Brian2 docs <http://brian2.readthedocs.io/en/latest/examples/compartmental.cylinder.html>`_.
