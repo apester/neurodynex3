@@ -37,8 +37,8 @@ def get_trajectory(v0=0., w0=0., I_ext=0., eps=0.1, a=2.0, tend=500.):
 
     .. math::
 
-        \frac{dv}{dt} = \frac{1}{1ms} v  (1-v^2) - w + I \\
-        \frac{dw}{dt} = eps  (v + 0.5  (a - w))
+        \frac{dv}{dt} = \frac{1}{1ms} v (1-v^2) - w + I \\
+        \frac{dw}{dt} = eps (v + 0.5 (a - w))
 
     Args:
         v0: Intial condition for v [mV]
