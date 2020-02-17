@@ -32,7 +32,7 @@ import numpy as np
 
 
 def get_trajectory(v0=0., w0=0., I_ext=0., eps=0.1, a=2.0, tend=500.):
-    """Solves the following system of FitzHugh Nagumo equations
+    r"""Solves the following system of FitzHugh Nagumo equations
     for given initial conditions:
 
     .. math::
