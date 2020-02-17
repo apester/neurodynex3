@@ -39,7 +39,7 @@ We study the response of a Hodgkin-Huxley neuron to different input currents. Ha
 
 Question
 ~~~~~~~~
-What is the lowest step current amplitude I_min for generating **at least one spike**? Determine the value by trying different input amplitudes in the code fragment:
+What is the lowest step current amplitude :math:`I_{min}` for generating **at least one spike**? Determine the value by trying different input amplitudes in the code fragment:
 
 .. code-block:: py
 
@@ -54,14 +54,14 @@ Question
 
 Exercise: slow and fast ramp current
 ------------------------------------
-The minimal current to elicit a spike does not just depend on the amplitude I or on the total charge Q of the current, but on the "shape" of the current. Let's see why:
+The minimal current to elicit a spike does not just depend on the amplitude :math:`I` or on the total charge :math:`Q` of the current, but on the "shape" of the current. Let's see why:
 
 
 Question
 ~~~~~~~~
 Inject a slow ramp current into a HH neuron. The current has amplitude ``0A`` at t in [0, 5] ms and linearly increases to an amplitude of ``12.0uAmp`` at ``t=ramp_t_end``. At ``t>ramp_t_end``, the current is set to ``0A``. Using the following code, reduce ``slow_ramp_t_end`` to the maximal duration of the ramp current, such that the neuron does **not** spike. Make sure you simulate system for at least 20ms after the current stops.
 
-* What is the membrane voltage at the time when the current injection stops (t=slow_ramp_t_end)?
+* What is the membrane voltage at the time when the current injection stops (``t=slow_ramp_t_end``)?
 
 .. code-block:: py
 
@@ -77,9 +77,9 @@ Inject a slow ramp current into a HH neuron. The current has amplitude ``0A`` at
 Question
 ~~~~~~~~
 Do the same as before but for a fast ramp current: The maximal amplitude at ``t=ramp_t_end`` is ``4.5uAmp``. Start with ``fast_ramp_t_end = 8ms`` and then increase it until you observe a spike.
-Note: Technically the input current is implemented using a TimedArray. For a short, steep ramp, the one milliseconds discretization for the current is not high enough. You can create a finer resolution by setting the parameter ``unit_time`` in the function :func:`.input_factory.get_ramp_current` (see next code block)
+Note: Technically the input current is implemented using a ``TimedArray``. For a short, steep ramp, the one millisecond discretization for the current is not high enough. You can create a finer resolution by setting the parameter ``unit_time`` in the function :func:`.input_factory.get_ramp_current` (see next code block).
 
-* What is the membrane voltage at the time when the current injection stops (t=fast_ramp_t_end)?
+* What is the membrane voltage at the time when the current injection stops (``t=fast_ramp_t_end``)?
 
 .. code-block:: py
 
@@ -94,7 +94,7 @@ Note: Technically the input current is implemented using a TimedArray. For a sho
 
 Question
 ~~~~~~~~
-Use the function :func:`.HH.plot_data` to visualize the dynamics of the system for the fast and the slow case above. Discuss the differences between the two situations. Why are the two "threshold" voltages different? Link your observation to the gating variables m,n, and h. Hint: have a look at `Chapter 2 Figure 2.3 <Chapter_>`_
+Use the function :func:`.HH.plot_data` to visualize the dynamics of the system for the fast and the slow case above. Discuss the differences between the two situations. Why are the two "threshold" voltages different? Link your observation to the gating variables :math:`m`, :math:`n`, and :math:`h`. Hint: have a look at `Chapter 2 Figure 2.3 <Chapter_>`_.
 
 
 Exercise: Rebound Spike
@@ -109,7 +109,7 @@ Inject a hyperpolarizing step current ``I_amp = -1 uA`` for 20ms into the HH neu
 Exercise: Brian implementation of a HH neuron
 ---------------------------------------------
 
-In this exercise you will learn to work with the Brian2 model equations. To do so, get the source code of the function  :func:`.HH.simulate_HH_neuron` (follow the link to the documentation and then click on the [source] link). Copy the function code and paste it into your Jupyter Notebook. Change the function name from simulate_HH_neuron to a name of your choice. Have a look at the source code and find the conductance parameters gK and gNa.
+In this exercise you will learn to work with the Brian2 model equations. To do so, get the source code of the function  :func:`.HH.simulate_HH_neuron` (follow the link to the documentation and then click on the [source] link). Copy the function code and paste it into your Jupyter Notebook. Change the function name from ``simulate_HH_neuron`` to a name of your choice. Have a look at the source code and find the conductance parameters ``gK`` and ``gNa``.
 
 Question
 ~~~~~~~~
