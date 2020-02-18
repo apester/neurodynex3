@@ -5,6 +5,7 @@ Subpackages
 -----------
 
 .. toctree::
+    :maxdepth: 1
 
     neurodynex3.adex_model
     neurodynex3.brunel_model
