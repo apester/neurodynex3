@@ -24,8 +24,7 @@ from setuptools_scm import get_version
 # sys.path.insert(0, os.path.abspath('.'))
 
 sys.path.insert(0, os.path.abspath('../.'))
-# sys.path.insert(0, os.path.abspath('../..'))
-# MOCK_MODULES = ['numpy', 'scipy', 'sklearn', 'matplotlib', 'matplotlib.pyplot', 'scipy.interpolate', 'scipy.special', 'math', 'toolboxutilities']
+
 MOCK_MODULES = []
 for mod_name in MOCK_MODULES:
     sys.modules[mod_name] = mock.Mock()
@@ -40,11 +39,12 @@ for mod_name in MOCK_MODULES:
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.linkcode',
     'sphinx.ext.napoleon',
+    'sphinx.ext.todo',
+    'sphinx.ext.coverage',
+    'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
-    'sphinx.ext.extlinks',
+    'sphinx.ext.intersphinx',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -115,7 +115,7 @@ pygments_style = 'sphinx'
 #keep_warnings = False
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
-todo_include_todos = False
+todo_include_todos = True
 
 
 # -- Options for HTML output ----------------------------------------------
@@ -301,54 +301,5 @@ intersphinx_mapping = {
   'python': ('http://docs.python.org/2', None),
   'numpy': ('http://docs.scipy.org/doc/numpy/', None),
   'scipy': ('http://docs.scipy.org/doc/scipy/reference/', None),
-  'matplotlib': ('https://matplotlib.org/', None)
+  'matplotlib': ('http://matplotlib.sourceforge.net/', None)
 }
-def linkcode_resolve(domain, info):
-    """
-    Determine the URL corresponding to Python object
-    """
-    if domain != 'py':
-        return None
-
-    modname = info['module']
-    fullname = info['fullname']
-
-    submod = sys.modules.get(modname)
-    if submod is None:
-        return None
-
-    obj = submod
-    for part in fullname.split('.'):
-        try:
-            obj = getattr(obj, part)
-        except:
-            return None
-
-    try:
-        fn = inspect.getsourcefile(obj)
-    except:
-        fn = None
-    if not fn:
-        try:
-            fn = inspect.getsourcefile(sys.modules[obj.__module__])
-        except:
-            fn = None
-    if not fn:
-        return None
-
-    try:
-        source, lineno = inspect.findsource(obj)
-    except:
-        lineno = None
-
-    if lineno:
-        linespec = "#L%d" % (lineno + 1)
-    else:
-        linespec = ""
-
-    fn = relpath(fn, start=dirname(bossdata.__file__))
-
-    # Could use version,release declared above here but for now we
-    # just link to the latest code on the master branch.
-    github = 'https://github.com/bossdata/bossdata'
-    return '%s/blob/master/dkirkby/%s%s' % (github,fn,linespec)
