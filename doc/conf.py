@@ -61,7 +61,7 @@ source_suffix = ['.rst', '.md']
 master_doc = 'index'
 
 # General information about the project.
-project = u'Neuronaldynamics Exercises'
+project = u'Neuronal Dynamics Exercises'
 copyright = u'2016, EPFL-LCN'
 author = u'EPFL-LCN'
 
