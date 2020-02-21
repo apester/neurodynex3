@@ -167,10 +167,10 @@ Start a Jupyter notebook
 
       and on Windows you can use the ``where`` command
 
-      .. code-block:: bash
+      .. code-block:: code
 
          >> where jupyter
-         C:\\...\\Anaconda3\\envs\\bmnn\\jupyter.exe
+         C:\...\Anaconda3\envs\bmnn\jupyter.exe
 
 2. Move to the folder where you want your code to be stored and start a Jupyter notebook:
 
