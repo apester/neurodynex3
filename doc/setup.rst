@@ -170,7 +170,7 @@ Start a Jupyter notebook
       .. code-block:: bash
 
          >> where jupyter
-         C:\...\Anaconda3\envs\bmnn\jupyter.exe
+         C:\\...\\Anaconda3\\envs\\bmnn\\jupyter.exe
 
 2. Move to the folder where you want your code to be stored and start a Jupyter notebook:
 
