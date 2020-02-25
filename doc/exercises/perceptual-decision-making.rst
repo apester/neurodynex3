@@ -204,7 +204,7 @@ Use the function :func:`.competing_populations.decision_making.run_multiple_simu
     coherence_levels = [-0.1, -0.5]  # for negative values, B is the correct decision.
     nr_repetitions = 3
 
-    time_to_A, time_to_B, count_A, count_B, count_No = decision_making.run_multiple_simulations(get_decision_time,coherence_levels, nr_repetitions, max_sim_time=??, rate_threshold=??, avg_window_width=??)
+    time_to_A, time_to_B, count_A, count_B, count_No = decision_making.run_multiple_simulations(get_decision_time,coherence_levels, nr_repetitions, max_sim_time=XXXX, rate_threshold=XXXX, avg_window_width=XXXX)
 
 * See the doc of :func:`.run_multiple_simulations` to understand the parameters and return values.
 * Write a function that takes ``coherence_levels, time_to_A, time_to_B, count_A, count_B, count_No`` and writes ``Percent correct`` (for each level in ``coherence_levels``) to the terminal.

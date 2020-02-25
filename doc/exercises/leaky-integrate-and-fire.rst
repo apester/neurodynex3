@@ -106,7 +106,7 @@ A LIF neuron is determined by the following parameters: Resting potential, reset
 
 
 Question: "Read" the LIF parameters out of the ``vm`` plot
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #. Get a random parameter set.
 #. Create an input current of your choice.
 #. Simulate the LIF neuron using the random parameters and your test-current. Note that the simulation runs for a fixed duration of 50ms.

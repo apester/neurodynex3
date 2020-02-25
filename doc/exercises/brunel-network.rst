@@ -125,16 +125,16 @@ Before answering the questions, make sure you understand the notions ISI and CV.
     from neurodynex3.tools import plot_tools, spike_tools
     import brian2 as b2
 
-    poisson_rate = ??? *b2.Hz
-    g = ???
-    CE = ???
-    simtime = ??? *b2.ms
+    poisson_rate = XXXX *b2.Hz
+    g = XXXX
+    CE = XXXX
+    simtime = XXXX *b2.ms
 
     rate_monitor, spike_monitor, voltage_monitor, monitored_spike_idx = LIF_spiking_network.simulate_brunel_network(N_Excit=CE, poisson_input_rate=poisson_rate, g=g, sim_time=simtime)
     plot_tools.plot_network_activity(rate_monitor, spike_monitor, voltage_monitor, spike_train_idx_list=monitored_spike_idx, t_min = 0*b2.ms)
-    plot_tools.plot_network_activity(rate_monitor, spike_monitor, voltage_monitor, spike_train_idx_list=monitored_spike_idx, t_min = simtime - ??? *b2.ms)
+    plot_tools.plot_network_activity(rate_monitor, spike_monitor, voltage_monitor, spike_train_idx_list=monitored_spike_idx, t_min = simtime - XXXX *b2.ms)
     spike_stats = spike_tools.get_spike_train_stats(spike_monitor, window_t_min= 100 *b2.ms)
-    plot_tools.plot_ISI_distribution(spike_stats, hist_nr_bins=100, xlim_max_ISI= ??? *b2.ms)
+    plot_tools.plot_ISI_distribution(spike_stats, hist_nr_bins=100, xlim_max_ISI= XXXX *b2.ms)
 
 
 * In the Synchronous Repetitive (SR) state, what is the dominant frequency of the population activity A(t)? Compare this frequency to the firing frequency of a single neuron. You can do this "visually" using the plots created by :func:`.plot_tools.plot_network_activity` or by solving the bonus exercise below.
@@ -220,23 +220,23 @@ We can now compute and plot the power spectrum.
     import brian2 as b2
 
     # Specify the parameters of the desired network state (e.g. SI fast)
-    poisson_rate = ??? *b2.Hz
-    g = ???
-    CE = ???
+    poisson_rate = XXXX *b2.Hz
+    g = XXXX
+    CE = XXXX
 
     # Specify the signal and simulation properties:
-    delta_t = ??? * b2.ms
-    delta_f = ??? * b2.Hz
-    T_init = ??? * b2.ms
-    k = ???
+    delta_t = XXXX * b2.ms
+    delta_f = XXXX * b2.Hz
+    T_init = XXXX * b2.ms
+    k = XXXX
 
     # compute the remaining values:
-    f_max = ???
-    N_samples = ???
-    T_signal = ???
+    f_max = XXXX
+    N_samples = XXXX
+    T_signal = XXXX
     T_sim = k * T_signal + T_init
 
-    # replace the ??? by appropriate values:
+    # replace the XXXX by appropriate values:
 
     print("Start simulation. T_sim={}, T_signal={}, N_samples={}".format(T_sim, T_signal, N_samples))
     b2.defaultclock.dt = delta_t
@@ -249,20 +249,20 @@ We can now compute and plot the power spectrum.
     plot_tools.plot_network_activity(rate_monitor, spike_monitor, voltage_monitor,
                                      spike_train_idx_list=monitored_spike_idx, t_min=0*b2.ms)
     plot_tools.plot_network_activity(rate_monitor, spike_monitor, voltage_monitor,
-                                     spike_train_idx_list=monitored_spike_idx, t_min=T_sim - ??? *b2.ms)
+                                     spike_train_idx_list=monitored_spike_idx, t_min=T_sim - XXXX *b2.ms)
     spike_stats = spike_tools.get_spike_train_stats(spike_monitor, window_t_min= T_init)
-    plot_tools.plot_ISI_distribution(spike_stats, hist_nr_bins= ???, xlim_max_ISI= ??? *b2.ms)
+    plot_tools.plot_ISI_distribution(spike_stats, hist_nr_bins= XXXX, xlim_max_ISI= XXXX *b2.ms)
 
     #  Power Spectrum
     pop_freqs, pop_ps, average_population_rate = \
         spike_tools.get_population_activity_power_spectrum(
             rate_monitor, delta_f, k, T_init)
-    plot_tools.plot_population_activity_power_spectrum(pop_freqs, pop_ps, ??? *b2.Hz, average_population_rate)
+    plot_tools.plot_population_activity_power_spectrum(pop_freqs, pop_ps, XXXX *b2.Hz, average_population_rate)
     freq, mean_ps, all_ps, mean_firing_rate, all_mean_firing_freqs = \
         spike_tools.get_averaged_single_neuron_power_spectrum(
             spike_monitor, sampling_frequency=1./delta_t, window_t_min= T_init,
-            window_t_max=T_sim, nr_neurons_average= ??? )
-    plot_tools.plot_spike_train_power_spectrum(freq, mean_ps, all_ps, max_freq= ??? * b2.Hz,
+            window_t_max=T_sim, nr_neurons_average= XXXX )
+    plot_tools.plot_spike_train_power_spectrum(freq, mean_ps, all_ps, max_freq= XXXX * b2.Hz,
                                                mean_firing_freqs_per_neuron=all_mean_firing_freqs,
                                                nr_highlighted_neurons=2)
     print("done")

@@ -3,7 +3,7 @@ AdEx: the Adaptive Exponential Integrate-and-Fire model
 
 **Book chapters**
 
-The Adaptive Exponential Integrate-and-Fire model is introduced in `Chapter 6 Section 1 <http://neuronaldynamics.epfl.ch/online/Ch6.S1.html>`_
+The Adaptive Exponential Integrate-and-Fire model is introduced in `Chapter 6 Section 1 <http://neuronaldynamics.epfl.ch/online/Ch6.S1.html>`_.
 
 **Python classes**
 
@@ -49,13 +49,14 @@ We have implemented an Exponential Integrate-and-Fire model with a single adapta
 
 Question: Firing pattern
 ~~~~~~~~~~~~~~~~~~~~~~~~
-* When you simulate the model with the default parameters, it produces the voltage trace shown above. Describe that firing pattern. Use the terminology of Fig. 6.1 in `Chapter 6.1 <http://neuronaldynamics.epfl.ch/online/Ch6.S1.html>`_
+* When you simulate the model with the default parameters, it produces the voltage trace shown above. Describe that firing pattern. Use the terminology of Fig. 6.1 in `Chapter 6.1 <http://neuronaldynamics.epfl.ch/online/Ch6.S1.html>`_.
 
-* Call the function :func:`.AdEx.simulate_AdEx_neuron` with different parameters and try to create **adapting**, **bursting** and **irregular** firing patterns. Table 6.1 in `Chapter 6.1 <http://neuronaldynamics.epfl.ch/online/Ch6.S2.html>`_ provides a starting point for your explorations.
+* Call the function :func:`.AdEx.simulate_AdEx_neuron` with different parameters and try to create **adapting**, **bursting** and **irregular** firing patterns. Table 6.1 in `Chapter 6.2 <http://neuronaldynamics.epfl.ch/online/Ch6.S2.html>`_ provides a starting point for your explorations.
 
-* In order to better understand the dynamics, it is useful to observe the joint evolution of ``u`` and ``w`` in a phase diagram. Use the function :func:`.AdEx.plot_adex_state` to get more insights.  Fig. 6.3 in `Chapter 6 Section 2 <http://neuronaldynamics.epfl.ch/online/Ch6.S2.html>`_ shows a few trajectories in the phase diagram.
+* In order to better understand the dynamics, it is useful to observe the joint evolution of ``u`` and ``w`` in a phase diagram. Use the function :func:`.AdEx.plot_adex_state` to get more insights.  Fig. 6.3 in `Chapter 6.2 <http://neuronaldynamics.epfl.ch/online/Ch6.S2.html>`_ shows a few trajectories in the phase diagram.
 
 .. note::
+
     If you want to set a parameter to 0, Brian still expects a unit. Therefore use ``a=0*b2.nS`` instead of ``a=0``.
 
 If you do not specify any parameter, the following default values are used:

@@ -167,7 +167,7 @@ Start a Jupyter notebook
 
       and on Windows you can use the ``where`` command
 
-      .. code-block:: code
+      .. code-block::
 
          >> where jupyter
          C:\...\Anaconda3\envs\bmnn\jupyter.exe
