@@ -5,7 +5,7 @@ In this exercise we study a well known network of sparsely connected Leaky-Integ
 
 **Book chapters**
 
-The Brunel model is introduced in `Chapter 13 Section 4.2 <http://neuronaldynamics.epfl.ch/online/Ch13.S4.html>`_ . The network structure is shown in figure 13.6b. Read the section "Synchrony, oscillations, and irregularity" and have a look at Figure 13.7. For this exercise, you can skip the explanations related to the Fokker-Planck equation.
+The Brunel model is introduced in `Chapter 13 Section 4.2 <http://neuronaldynamics.epfl.ch/online/Ch13.S4.html>`_. The network structure is shown in Figure 13.6b. Read the section *Synchrony, oscillations, and irregularity* and have a look at Figure 13.7. For this exercise, you can skip the explanations related to the Fokker-Planck equation.
 
 
 **Python classes**
@@ -16,10 +16,10 @@ The module :mod:`.brunel_model.LIF_spiking_network` implements a parametrized ne
 .. figure:: exc_images/Brunel_Spiking_LIF.png
    :align: center
 
-   Simulation result. Top: raster plot of 150 randomly selected neurons. Three spike trains are visually highlighted. Middle: time evolution of the population activity A(t). Bottom: Membrane voltage of three neurons. The red color in the top and bottom panels identifies the same neuron.
+   Simulation result. Top: raster plot of 150 randomly selected neurons. Three spike trains are visually highlighted. Middle: time evolution of the population activity :math:`A(t)`. Bottom: Membrane voltage of three neurons. The red color in the top and bottom panels identifies the same neuron.
 
 
-To get started, call the function  :func:`.brunel_model.LIF_spiking_network.getting_started` or copy the following code into a Jupyter notebook.
+To get started, call the function :func:`.brunel_model.LIF_spiking_network.getting_started` or copy the following code into a Jupyter notebook.
 
 
 .. code-block:: py
@@ -33,7 +33,7 @@ To get started, call the function  :func:`.brunel_model.LIF_spiking_network.gett
     plot_tools.plot_network_activity(rate_monitor, spike_monitor, voltage_monitor, spike_train_idx_list=monitored_spike_idx, t_min=0.*b2.ms)
 
 
-Note that you can change all parameters of the neuron by using the named parameters of the function :func:`.simulate_brunel_network`. If you do not specify any parameter, the default values are used (see next code block). You can access these variables in your code by prefixing them with the module name (for example LIF_spiking_network.POISSON_INPUT_RATE).
+Note that you can change all parameters of the neuron by using the named parameters of the function :func:`.simulate_brunel_network`. If you do not specify any parameter, the default values are used (see next code block). You can access these variables in your code by prefixing them with the module name (for example ``LIF_spiking_network.POISSON_INPUT_RATE``).
 
 .. code-block:: py
 
@@ -56,13 +56,13 @@ Note that you can change all parameters of the neuron by using the named paramet
 Exercise: model parameters and threshold rate
 ---------------------------------------------
 
-In the first exercise, we get familiar with the model and parameters. Make sure you have read the `book chapter <http://neuronaldynamics.epfl.ch/online/Ch13.S4.html>`_ . Then have a look at the documentation of :func:`.simulate_brunel_network`. Note that in our implementation, the number of excitatory presynaptic poisson neurons (input from the external population) is a parameter `N_extern` and thus independent of `CE`.
+In the first exercise, we get familiar with the model and parameters. Make sure you have read the `book chapter <http://neuronaldynamics.epfl.ch/online/Ch13.S4.html>`_ . Then have a look at the documentation of :func:`.simulate_brunel_network`. Note that in our implementation, the number of excitatory presynaptic poisson neurons (input from the external population) is a parameter :math:`N_extern` and thus independent of :math:`C_E`.
 
 
 Question:
 ~~~~~~~~~
 
-* Run the simulation with the default parameters (see code block above). In that default configuration, what values  take the variables :math:`N_E`, :math:`N_I`, :math:`C_E`, :math:`C_I`, :math:`w_{EE}`, :math:`w_{EI}`, :math:`w_{IE}`, and :math:`w_{II}`? The variables are described in the book and in `Fig. 13.6 <http://neuronaldynamics.epfl.ch/online/Ch13.S4.html>`_.
+* Run the simulation with the default parameters (see code block above). In that default configuration, what are the values of the variables :math:`N_E`, :math:`N_I`, :math:`C_E`, :math:`C_I`, :math:`w_{EE}`, :math:`w_{EI}`, :math:`w_{IE}`, and :math:`w_{II}`? The variables are described in the book and in `Fig. 13.6 <http://neuronaldynamics.epfl.ch/online/Ch13.S4.html>`_.
 
 * What are the units of the weights :math:`w`?
 
@@ -86,7 +86,7 @@ Question:
 Exercise: Population activity
 -----------------------------
 
-The network of spiking LIF-neurons shows characteristic population activities. In this exercise we investigate the asynchronous irregular (AI), synchronous regular (SR), fast synchronous irregular (SI fast) and slow synchronous irregular (SI slow) activity types.
+The network of spiking LIF-neurons shows characteristic population activities. In this exercise we investigate the asynchronous irregular (AI), synchronous regular (SR), fast synchronous irregular (SI-fast) and slow synchronous irregular (SI-slow) activity types.
 
 Question: Network states
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -164,7 +164,7 @@ Question:
 
 Bonus: Power Spectrum of the Population Activity
 ------------------------------------------------
-We can get more insights into the statistics of the network activity by analysing the power spectrum of the spike trains and the population activity. The four regimes (SR, AI, SI fast, SI slow) are characterized by *two* properties: the regularity/irregularity of individual neuron's spike trains *and* the stationary/oscillatory pattern of the population activity A(t). We transform the spike trains and :math:`A(t)` into the frequency domain to identify regularities.
+We can get more insights into the statistics of the network activity by analysing the power spectrum of the spike trains and the population activity. The four regimes (SR, AI, SI-fast, SI-slow) are characterized by *two* properties: the regularity/irregularity of individual neuron's spike trains *and* the stationary/oscillatory pattern of the population activity A(t). We transform the spike trains and :math:`A(t)` into the frequency domain to identify regularities.
 
 Question: Sampling the Population Activity
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -208,9 +208,9 @@ Question: Single Neuron activity vs. Population Activity
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 We can now compute and plot the power spectrum.
 
-* For each network states SR, AI, SI fast, SI slow, find the parameters, then compute and plot the power spectrum using the script given here. Make sure you understand the script and read the documentation of the functions :func:`.spike_tools.get_averaged_single_neuron_power_spectrum`, :func:`.plot_tools.plot_spike_train_power_spectrum`, :func:`.spike_tools.get_population_activity_power_spectrum`, and :func:`.plot_tools.plot_population_activity_power_spectrum`.
+* For each network states SR, AI, SI-fast, SI-slow, find the parameters, then compute and plot the power spectrum using the script given here. Make sure you understand the script and read the documentation of the functions :func:`.spike_tools.get_averaged_single_neuron_power_spectrum`, :func:`.plot_tools.plot_spike_train_power_spectrum`, :func:`.spike_tools.get_population_activity_power_spectrum`, and :func:`.plot_tools.plot_population_activity_power_spectrum`.
 
-* Discuss power spectra of the states SR, AI, SI fast and SI slow. Compare the individual neuron's spike train powers to the averaged power spectrum and to the power spectrum of :math:`A(t)`.
+* Discuss power spectra of the states SR, AI, SI-fast and SI-slow. Compare the individual neuron's spike train powers to the averaged power spectrum and to the power spectrum of :math:`A(t)`.
 
 .. code-block:: py
 
