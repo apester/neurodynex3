@@ -1,7 +1,7 @@
 Network of LIF neurons (Brunel)
 ===============================
 
-In this exercise we study a well known network of sparsely connected Leaky-Integrate-And-Fire neurons (Brunel, 2000).
+In this exercise we study a well known network of sparsely connected Leaky-Integrate-And-Fire neurons `(Brunel, 2000) <https://doi.org/10.1023/A:1008925309027>`_.
 
 **Book chapters**
 
