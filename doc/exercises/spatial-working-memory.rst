@@ -7,7 +7,7 @@ In this exercise we study a model of spatial working memory. The model has been 
 .. figure:: exc_images/WorkingMemory_Demo.png
    :align: center
 
-   *Top:* A weak stimulus, centered at 120deg, is applied to a subset of the excitatory population from ``t``=200ms to ``t``=400ms (blue box in top panel). This creates an activity bump in the excitatory subpopulation. The activity sustains after the end of the stimulation. The active neurons have a preferred direction close to the stimulus location. *Middle:* The population activity increases over time when the stimulus is applied. *Bottom:* Voltage traces for three selected neurons. The spikes of the red neuron are visible in the top and bottom panel.
+   *Top:* A weak stimulus, centered at 120deg, is applied to a subset of the excitatory population from ``t`` = 200ms to ``t`` = 400ms (blue box in top panel). This creates an activity bump in the excitatory subpopulation. The activity sustains after the end of the stimulation. The active neurons have a preferred direction close to the stimulus location. *Middle:* The population activity increases over time when the stimulus is applied. *Bottom:* Voltage traces for three selected neurons. The spikes of the red neuron are visible in the top and bottom panel.
 
 Figure `18.4 <http://neuronaldynamics.epfl.ch/online/Ch18.S1.html>`_ in chapter 18.1 shows the kind of ring model we are studying here.
 
@@ -123,7 +123,7 @@ Run the stimulation given above. Then answer the following questions qualitative
 
 * At which time can you identify a change in the population activity? How does that compare to the time when the stimulus is applied?
 * What is the population activity at the end of the simulation?
-* For the time point ``t``=400ms, sketch the firing rate across the population (neuron index on the x-axis, per-neuron firing rate on the y-axis).
+* For the time point ``t`` = 400ms, sketch the firing rate across the population (neuron index on the x-axis, per-neuron firing rate on the y-axis).
 
 * Increase the stimulus strength to :math:`0.5 \text{nA}`. What happens when the stimulus stops?
 * Increase the stimulus width to 60deg (``stimulus_strength=0.1 * b2.namp, stimulus_center_deg = 120``). How does the bump shape change?
@@ -186,7 +186,7 @@ The parameter ``spike_monitor`` is the ``spike_monitor_excit`` returned by the f
         ...
     return spike_count_list
 
-Do a plausibility check of your implementation: In one of the previous questions you have sketched the firing rates across the population at ``t``=400ms. Use ``get_spike_count`` to plot the profile. Compare to your sketch. You can use the following code block. It's assumed you have run a simulation and the two variables ``spike_monitor_excit`` and ``idx_monitored_neurons_excit`` are defined. Then play with the ``t_window`` parameter to get an intuition for 'good' values.
+Do a plausibility check of your implementation: In one of the previous questions you have sketched the firing rates across the population at ``t`` = 400ms. Use ``get_spike_count`` to plot the profile. Compare to your sketch. You can use the following code block. It's assumed you have run a simulation and the two variables ``spike_monitor_excit`` and ``idx_monitored_neurons_excit`` are defined. Then play with the ``t_window`` parameter to get an intuition for 'good' values.
 
 .. code-block:: py
 
@@ -237,7 +237,7 @@ As mentioned above, the population vector changes over time due to drift and dif
 
 Use your functions developed in the previous questions to study the diffusion of the population vector:
 
-* Simulate a network of size ``N_excitatory`` = 2048. Apply a stimulus from ``t``=100ms to ``t``=300ms. Plot theta(t). *Note that when you increase the size of the excitatory population you also have to increase the inhibitory population and the weights (``N_inhibitory`` and ``weight_scaling_factor``). When doubling the number of presynaptic neurons, you have to scale the weights by 0.5 to keep the total synaptic input the same.*
+* Simulate a network of size ``N_excitatory`` = 2048. Apply a stimulus from ``t`` = 100ms to ``t`` = 300ms. Plot theta(t). *Note that when you increase the size of the excitatory population you also have to increase the inhibitory population and the weights (``N_inhibitory`` and ``weight_scaling_factor``). When doubling the number of presynaptic neurons, you have to scale the weights by 0.5 to keep the total synaptic input the same.*
 
 * Repeat the simulation at least 3 times. Plot each time series ``theta(t)`` into the same figure.
 
