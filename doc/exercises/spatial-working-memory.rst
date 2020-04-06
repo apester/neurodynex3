@@ -167,9 +167,9 @@ Write a function ``get_orientation(idx_list, N)`` which maps a vector of neuron 
 
 Extracting spikes from the spike monitor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The population vector :math:`\theta` changes over time due to drift and diffusion which is why we are interested in :math:`\theta(t)`. As we are dealing with spikes (discrete point events), and a small number of neurons, we have to average the population activity over some time window around :math:`t` (i.e. :math:`\[ t_{min}=t - t_{window}/2, t_{max}=t + t_{window}/2 \]`) to get an estimate of :math:`\theta(t)`.
+The population vector :math:`\theta` changes over time due to drift and diffusion which is why we are interested in :math:`\theta(t)`. As we are dealing with spikes (discrete point events), and a small number of neurons, we have to average the population activity over some time window around :math:`t` (i.e. :math:`[ t_{min}=t - t_{window}/2, t_{max}=t + t_{window}/2 ]`) to get an estimate of :math:`\theta(t)`.
 
-Write a function ``get_spike_count(spike_monitor, spike_index_list, t_min, t_max)`` which returns an array of spike counts (one value for each neuron in ``spike_index_list``). Be careful about the indexing: ``spike_index_list`` is a list of :math:`k` neuron indices in :math:`\[ 0, N-1 \]` while the returned array ``spike_count_list`` is of length :math:`k`.
+Write a function ``get_spike_count(spike_monitor, spike_index_list, t_min, t_max)`` which returns an array of spike counts (one value for each neuron in ``spike_index_list``). Be careful about the indexing: ``spike_index_list`` is a list of :math:`k` neuron indices in :math:`[ 0, N-1 ]` while the returned array ``spike_count_list`` is of length :math:`k`.
 
 The parameter ``spike_monitor`` is the ``spike_monitor_excit`` returned by the function :func:`.simulate_wm`. The following pseudo-code and fragments are useful to implement ``get_spike_count``:
 
@@ -237,7 +237,7 @@ As mentioned above, the population vector changes over time due to drift and dif
 
 Use your functions developed in the previous questions to study the diffusion of the population vector:
 
-* Simulate a network of size ``N_excitatory = 2048``. Apply a stimulus from :math:`t = 100 \text{ms}` to :math:`t = 300 \text{ms}`. Plot :math:`\theta(t)`. *Note that when you increase the size of the excitatory population you also have to increase the inhibitory population and the weights (``N_inhibitory`` and ``weight_scaling_factor``). When doubling the number of presynaptic neurons, you have to scale the weights by 0.5 to keep the total synaptic input the same.*
+* Simulate a network of size ``N_excitatory = 2048``. Apply a stimulus from :math:`t = 100 \text{ms}` to :math:`t = 300 \text{ms}`. Plot :math:`\theta(t)`. *Note that when you increase the size of the excitatory population you also have to increase the inhibitory population and the weights* (``N_inhibitory`` and ``weight_scaling_factor``). *When doubling the number of presynaptic neurons, you have to scale the weights by 0.5 to keep the total synaptic input the same.*
 
 * Repeat the simulation at least 3 times. Plot each time series :math:`\theta(t)` into the same figure.
 
