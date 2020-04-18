@@ -267,6 +267,6 @@ The dynamics of the NMDA receptor are implemented in the function :func:`.simula
 **References**
 --------------
 
-[1] Compte, A., Brunel, N., Goldman-Rakic, P. S., & Wang, X. J. (2000). Synaptic mechanisms and network dynamics underlying spatial working memory in a cortical network model. Cerebral Cortex, 10(9), 910-923. `Link <https://doi.org/10.1093/cercor/10.9.910>`_
+[1] Compte, A., Brunel, N., Goldman-Rakic, P. S., & Wang, X. J. (2000). `Synaptic mechanisms and network dynamics underlying spatial working memory in a cortical network model <https://doi.org/10.1093/cercor/10.9.910>`_. Cerebral Cortex, 10(9), 910-923.
 
 [2] Parts of this exercise and parts of the implementation are inspired by material from *Stanford University, BIOE 332: Large-Scale Neural Modeling, Kwabena Boahen & Tatiana Engel, 2013*, online available.
