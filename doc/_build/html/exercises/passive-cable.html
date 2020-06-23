@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5. Dendrites and the (passive) cable equation &mdash; Neuronaldynamics Exercises 0.0.5.dev60+gf1718ef.d20200212 documentation</title>
+  <title>5. Dendrites and the (passive) cable equation &mdash; Neuronaldynamics Exercises 0.0.5.dev61+gfd12cb6.d20200212 documentation</title>
   
 
   
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                0.0.5.dev60+gf1718ef.d20200212
+                0.0.5.dev61+gfd12cb6.d20200212
               </div>
             
           
@@ -195,7 +195,7 @@
 <p><strong>Book chapters</strong></p>
 <p>In <a class="reference external" href="http://neuronaldynamics.epfl.ch/online/Ch3.S2.html">Chapter 3 Section 2</a> the cable equation is derived and compartmental models are introduced.</p>
 <p><strong>Python classes</strong></p>
-<p>The <a class="reference internal" href="../modules/neurodynex3.cable_equation.html#module-neurodynex3.cable_equation.passive_cable" title="neurodynex3.cable_equation.passive_cable"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cable_equation.passive_cable</span></code></a> module implements a passive cable using a <a class="reference external" href="http://brian2.readthedocs.io/en/latest/user/multicompartmental.html">Brian2 multicompartment</a> model. To get started, import the module and call the demo function:</p>
+<p>The <code class="xref py py-mod docutils literal notranslate"><span class="pre">cable_equation.passive_cable</span></code> module implements a passive cable using a <a class="reference external" href="http://brian2.readthedocs.io/en/latest/user/multicompartmental.html">Brian2 multicompartment</a> model. To get started, import the module and call the demo function:</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">brian2</span> <span class="kn">as</span> <span class="nn">b2</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 <span class="kn">from</span> <span class="nn">neurodynex3.cable_equation</span> <span class="kn">import</span> <span class="n">passive_cable</span>
@@ -203,7 +203,7 @@
 <span class="n">passive_cable</span><span class="o">.</span><span class="n">getting_started</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>The function <a class="reference internal" href="../modules/neurodynex3.cable_equation.html#neurodynex3.cable_equation.passive_cable.getting_started" title="neurodynex3.cable_equation.passive_cable.getting_started"><code class="xref py py-func docutils literal notranslate"><span class="pre">passive_cable.getting_started()</span></code></a> injects a very short pulse current at (t=500ms, x=100um) into a finite length cable and then lets Brian evolve the dynamics for 2ms. This simulation produces a time x location matrix whose entries are the membrane voltage at each (time,space)-index. The result is visualized using pyplot.imshow.</p>
+<p>The function <code class="xref py py-func docutils literal notranslate"><span class="pre">passive_cable.getting_started()</span></code> injects a very short pulse current at (t=500ms, x=100um) into a finite length cable and then lets Brian evolve the dynamics for 2ms. This simulation produces a time x location matrix whose entries are the membrane voltage at each (time,space)-index. The result is visualized using pyplot.imshow.</p>
 <div class="figure align-center">
 <img alt="../_images/cable_equation_pulse.png" src="../_images/cable_equation_pulse.png" />
 </div>
@@ -215,7 +215,7 @@
 </div>
 <p class="last">This way, your plot shows voltage in mV and time in ms, which is useful for visualizations. Note that this scaling (to physical units) is different from the scaling in the theoretical derivation (e.g. <a class="reference external" href="http://neuronaldynamics.epfl.ch/online/Ch3.S2.html">chapter 3.2.1</a>  where the quantities are rescaled to a unit-free characteristic length scale</p>
 </div>
-<p>Using the module <a class="reference internal" href="../modules/neurodynex3.cable_equation.html#module-neurodynex3.cable_equation.passive_cable" title="neurodynex3.cable_equation.passive_cable"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cable_equation.passive_cable</span></code></a>, we study some properties of the passive cable. Note: if you do not specify the cable parameters, the function <a class="reference internal" href="../modules/neurodynex3.cable_equation.html#neurodynex3.cable_equation.passive_cable.simulate_passive_cable" title="neurodynex3.cable_equation.passive_cable.simulate_passive_cable"><code class="xref py py-func docutils literal notranslate"><span class="pre">cable_equation.passive_cable.simulate_passive_cable()</span></code></a> uses the following default values:</p>
+<p>Using the module <code class="xref py py-mod docutils literal notranslate"><span class="pre">cable_equation.passive_cable</span></code>, we study some properties of the passive cable. Note: if you do not specify the cable parameters, the function <code class="xref py py-func docutils literal notranslate"><span class="pre">cable_equation.passive_cable.simulate_passive_cable()</span></code> uses the following default values:</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">CABLE_LENGTH</span> <span class="o">=</span> <span class="mf">500.</span> <span class="o">*</span> <span class="n">b2</span><span class="o">.</span><span class="n">um</span>  <span class="c1"># length of dendrite</span>
 <span class="n">CABLE_DIAMETER</span> <span class="o">=</span> <span class="mf">2.</span> <span class="o">*</span> <span class="n">b2</span><span class="o">.</span><span class="n">um</span>  <span class="c1"># diameter of dendrite</span>
 <span class="n">R_LONGITUDINAL</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">b2</span><span class="o">.</span><span class="n">kohm</span> <span class="o">*</span> <span class="n">b2</span><span class="o">.</span><span class="n">mm</span>  <span class="c1"># Intracellular medium resistance</span>
@@ -232,8 +232,8 @@
 <div class="section" id="exercise-spatial-and-temporal-evolution-of-a-pulse-input">
 <h2>5.1. Exercise: spatial and temporal evolution of a pulse input<a class="headerlink" href="#exercise-spatial-and-temporal-evolution-of-a-pulse-input" title="Permalink to this headline">¶</a></h2>
 <p>Create a cable of length 800um and inject a 0.1ms long step current of amplitude 0.8nanoAmp at (t=1ms, x=200um). Run Brian for 3 milliseconds.</p>
-<p>You can use the function <a class="reference internal" href="../modules/neurodynex3.cable_equation.html#neurodynex3.cable_equation.passive_cable.simulate_passive_cable" title="neurodynex3.cable_equation.passive_cable.simulate_passive_cable"><code class="xref py py-func docutils literal notranslate"><span class="pre">cable_equation.passive_cable.simulate_passive_cable()</span></code></a> to implement this task. For the parameters not specified here (e.g. dentrite diameter) you can rely on the default values. Have a look at the documentation of <a class="reference internal" href="../modules/neurodynex3.cable_equation.html#neurodynex3.cable_equation.passive_cable.simulate_passive_cable" title="neurodynex3.cable_equation.passive_cable.simulate_passive_cable"><code class="xref py py-func docutils literal notranslate"><span class="pre">simulate_passive_cable()</span></code></a> and the source code of <a class="reference internal" href="../modules/neurodynex3.cable_equation.html#neurodynex3.cable_equation.passive_cable.getting_started" title="neurodynex3.cable_equation.passive_cable.getting_started"><code class="xref py py-func docutils literal notranslate"><span class="pre">passive_cable.getting_started()</span></code></a> to learn how to efficiently solve this exercise.
-From the specification of <a class="reference internal" href="../modules/neurodynex3.cable_equation.html#neurodynex3.cable_equation.passive_cable.simulate_passive_cable" title="neurodynex3.cable_equation.passive_cable.simulate_passive_cable"><code class="xref py py-func docutils literal notranslate"><span class="pre">simulate_passive_cable()</span></code></a> you should also note, that it returns two objects which are helpful to access the values of interest using spatial indexing:</p>
+<p>You can use the function <code class="xref py py-func docutils literal notranslate"><span class="pre">cable_equation.passive_cable.simulate_passive_cable()</span></code> to implement this task. For the parameters not specified here (e.g. dentrite diameter) you can rely on the default values. Have a look at the documentation of <code class="xref py py-func docutils literal notranslate"><span class="pre">simulate_passive_cable()</span></code> and the source code of <code class="xref py py-func docutils literal notranslate"><span class="pre">passive_cable.getting_started()</span></code> to learn how to efficiently solve this exercise.
+From the specification of <code class="xref py py-func docutils literal notranslate"><span class="pre">simulate_passive_cable()</span></code> you should also note, that it returns two objects which are helpful to access the values of interest using spatial indexing:</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">voltage_monitor</span><span class="p">,</span> <span class="n">cable_model</span> <span class="o">=</span> <span class="n">passive_cable</span><span class="o">.</span><span class="n">simulate_passive_cable</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 <span class="n">probe_location</span> <span class="o">=</span> <span class="mf">0.123</span> <span class="o">*</span> <span class="n">b2</span><span class="o">.</span><span class="n">mm</span>
 <span class="n">v</span> <span class="o">=</span> <span class="n">voltage_monitor</span><span class="p">[</span><span class="n">cable_model</span><span class="o">.</span><span class="n">morphology</span><span class="p">[</span><span class="n">probe_location</span><span class="p">]]</span><span class="o">.</span><span class="n">v</span>
@@ -262,7 +262,7 @@ From the specification of <a class="reference internal" href="../modules/neurody
 </div>
 </dd>
 </dl>
-<p>Make use of the function <a class="reference internal" href="../modules/neurodynex3.tools.html#neurodynex3.tools.input_factory.get_spikes_current" title="neurodynex3.tools.input_factory.get_spikes_current"><code class="xref py py-func docutils literal notranslate"><span class="pre">input_factory.get_spikes_current()</span></code></a> to easily create such an input pattern:</p>
+<p>Make use of the function <code class="xref py py-func docutils literal notranslate"><span class="pre">input_factory.get_spikes_current()</span></code> to easily create such an input pattern:</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">t_spikes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
 <span class="n">l_spikes</span> <span class="o">=</span> <span class="p">[</span><span class="mf">100.</span> <span class="o">*</span> <span class="n">b2</span><span class="o">.</span><span class="n">um</span><span class="p">,</span> <span class="mf">200.</span> <span class="o">*</span> <span class="n">b2</span><span class="o">.</span><span class="n">um</span><span class="p">,</span> <span class="mf">300.</span> <span class="o">*</span> <span class="n">b2</span><span class="o">.</span><span class="n">um</span><span class="p">]</span>
 <span class="n">current</span> <span class="o">=</span> <span class="n">input_factory</span><span class="o">.</span><span class="n">get_spikes_current</span><span class="p">(</span><span class="n">t_spikes</span><span class="p">,</span> <span class="mi">100</span><span class="o">*</span><span class="n">b2</span><span class="o">.</span><span class="n">us</span><span class="p">,</span> <span class="mf">0.8</span><span class="o">*</span><span class="n">b2</span><span class="o">.</span><span class="n">namp</span><span class="p">,</span> <span class="n">append_zero</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -291,7 +291,7 @@ From the specification of <a class="reference internal" href="../modules/neurody
 </div>
 <div class="section" id="exercise-effect-of-cable-parameters">
 <h2>5.3. Exercise: Effect of cable parameters<a class="headerlink" href="#exercise-effect-of-cable-parameters" title="Permalink to this headline">¶</a></h2>
-<p>So far, you have called the function <a class="reference internal" href="../modules/neurodynex3.cable_equation.html#neurodynex3.cable_equation.passive_cable.simulate_passive_cable" title="neurodynex3.cable_equation.passive_cable.simulate_passive_cable"><code class="xref py py-func docutils literal notranslate"><span class="pre">simulate_passive_cable()</span></code></a> without specifying the cable parameters. That means, the model was run with the default values. Look at the documentation of <a class="reference internal" href="../modules/neurodynex3.cable_equation.html#neurodynex3.cable_equation.passive_cable.simulate_passive_cable" title="neurodynex3.cable_equation.passive_cable.simulate_passive_cable"><code class="xref py py-func docutils literal notranslate"><span class="pre">simulate_passive_cable()</span></code></a> to see which parameters you can change.</p>
+<p>So far, you have called the function <code class="xref py py-func docutils literal notranslate"><span class="pre">simulate_passive_cable()</span></code> without specifying the cable parameters. That means, the model was run with the default values. Look at the documentation of <code class="xref py py-func docutils literal notranslate"><span class="pre">simulate_passive_cable()</span></code> to see which parameters you can change.</p>
 <p>Keep in mind that our cable model is very simple compared to what happens in  dendrites or axons. But we can still observe the impact of a parameter change on the current flow. As an example, think of a myelinated fiber: it has a much <strong>lower</strong> membrane capacitance and <strong>higher</strong> membrane resistance. Let’s compare these two parameter-sets:</p>
 <div class="section" id="id2">
 <h3>5.3.1. Question<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>neurodynex3.exponential_integrate_fire package &mdash; Neuronaldynamics Exercises 0.0.5.dev60+gf1718ef.d20200212 documentation</title>
+  <title>neurodynex3.exponential_integrate_fire package &mdash; Neuronaldynamics Exercises 0.0.5.dev61+gfd12cb6.d20200212 documentation</title>
   
 
   
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                0.0.5.dev60+gf1718ef.d20200212
+                0.0.5.dev61+gfd12cb6.d20200212
               </div>
             
           
@@ -162,47 +162,8 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-neurodynex3.exponential_integrate_fire.exp_IF">
-<span id="neurodynex3-exponential-integrate-fire-exp-if-module"></span><h2>neurodynex3.exponential_integrate_fire.exp_IF module<a class="headerlink" href="#module-neurodynex3.exponential_integrate_fire.exp_IF" title="Permalink to this headline">¶</a></h2>
-<p>Exponential Integrate-and-Fire model.
-See Neuronal Dynamics, <a class="reference external" href="http://neuronaldynamics.epfl.ch/online/Ch5.S2.html">Chapter 5 Section 2</a></p>
-<dl class="function">
-<dt id="neurodynex3.exponential_integrate_fire.exp_IF.getting_started">
-<code class="descclassname">neurodynex3.exponential_integrate_fire.exp_IF.</code><code class="descname">getting_started</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#neurodynex3.exponential_integrate_fire.exp_IF.getting_started" title="Permalink to this definition">¶</a></dt>
-<dd><p>A simple example</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="neurodynex3.exponential_integrate_fire.exp_IF.simulate_exponential_IF_neuron">
-<code class="descclassname">neurodynex3.exponential_integrate_fire.exp_IF.</code><code class="descname">simulate_exponential_IF_neuron</code><span class="sig-paren">(</span><em>tau=12. * msecond</em>, <em>R=20. * Mohm</em>, <em>v_rest=-65. * mvolt</em>, <em>v_reset=-60. * mvolt</em>, <em>v_rheobase=-55. * mvolt</em>, <em>v_spike=-30. * mvolt</em>, <em>delta_T=2. * mvolt</em>, <em>I_stim=&lt;brian2.input.timedarray.TimedArray object&gt;</em>, <em>simulation_time=200. * msecond</em><span class="sig-paren">)</span><a class="headerlink" href="#neurodynex3.exponential_integrate_fire.exp_IF.simulate_exponential_IF_neuron" title="Permalink to this definition">¶</a></dt>
-<dd><p>Implements the dynamics of the exponential Integrate-and-fire model</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>tau</strong> (<em>Quantity</em>) – Membrane time constant</li>
-<li><strong>R</strong> (<em>Quantity</em>) – Membrane resistance</li>
-<li><strong>v_rest</strong> (<em>Quantity</em>) – Resting potential</li>
-<li><strong>v_reset</strong> (<em>Quantity</em>) – Reset value (vm after spike)</li>
-<li><strong>v_rheobase</strong> (<em>Quantity</em>) – Rheobase threshold</li>
-<li><strong>v_spike</strong> (<em>Quantity</em>) – voltage threshold for the spike condition</li>
-<li><strong>delta_T</strong> (<em>Quantity</em>) – Sharpness of the exponential term</li>
-<li><strong>I_stim</strong> (<em>TimedArray</em>) – Input current</li>
-<li><strong>simulation_time</strong> (<em>Quantity</em>) – Duration for which the model is simulated</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A b2.StateMonitor for the variable “v” and a b2.SpikeMonitor</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">(voltage_monitor, spike_monitor)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
+<div class="section" id="neurodynex3-exponential-integrate-fire-exp-if-module">
+<h2>neurodynex3.exponential_integrate_fire.exp_IF module<a class="headerlink" href="#neurodynex3-exponential-integrate-fire-exp-if-module" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="module-neurodynex3.exponential_integrate_fire">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-neurodynex3.exponential_integrate_fire" title="Permalink to this headline">¶</a></h2>

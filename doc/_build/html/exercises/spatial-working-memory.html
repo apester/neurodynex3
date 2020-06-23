@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>12. Spatial Working Memory (Compte et. al.) &mdash; Neuronaldynamics Exercises 0.0.5.dev60+gf1718ef.d20200212 documentation</title>
+  <title>12. Spatial Working Memory (Compte et. al.) &mdash; Neuronaldynamics Exercises 0.0.5.dev61+gfd12cb6.d20200212 documentation</title>
   
 
   
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                0.0.5.dev60+gf1718ef.d20200212
+                0.0.5.dev61+gfd12cb6.d20200212
               </div>
             
           
@@ -207,7 +207,7 @@
 <p>Read the introduction of chapter <a class="reference external" href="http://neuronaldynamics.epfl.ch/online/Ch18.html">18, Cortical field models for perceptions</a> and the chapters <a class="reference external" href="http://neuronaldynamics.epfl.ch/online/Ch18.S1.html">18.1</a>, <a class="reference external" href="http://neuronaldynamics.epfl.ch/online/Ch18.S2.html">18.2</a> and <a class="reference external" href="http://neuronaldynamics.epfl.ch/online/Ch18.S3.html">18.3</a> . Figure <a class="reference external" href="http://neuronaldynamics.epfl.ch/online/Ch18.S1.html">18.4</a> in chapter 18.1 shows the kind of ring model we are studying here.</p>
 <p>If you have access to a scientific library, you may also want to read the original publication [1].</p>
 <p><strong>Python classes</strong></p>
-<p>The module <a class="reference internal" href="../modules/neurodynex3.working_memory_network.html#module-neurodynex3.working_memory_network.wm_model" title="neurodynex3.working_memory_network.wm_model"><code class="xref py py-mod docutils literal notranslate"><span class="pre">working_memory_network.wm_model</span></code></a> implements a working memory circuit adapted from [1, 2]. To get started, call the function  <a class="reference internal" href="../modules/neurodynex3.working_memory_network.html#neurodynex3.working_memory_network.wm_model.getting_started" title="neurodynex3.working_memory_network.wm_model.getting_started"><code class="xref py py-func docutils literal notranslate"><span class="pre">working_memory_network.wm_model.getting_started()</span></code></a> or copy the following code into a Jupyter notebook.</p>
+<p>The module <code class="xref py py-mod docutils literal notranslate"><span class="pre">working_memory_network.wm_model</span></code> implements a working memory circuit adapted from [1, 2]. To get started, call the function  <code class="xref py py-func docutils literal notranslate"><span class="pre">working_memory_network.wm_model.getting_started()</span></code> or copy the following code into a Jupyter notebook.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
 <span class="kn">from</span> <span class="nn">neurodynex3.working_memory_network</span> <span class="kn">import</span> <span class="n">wm_model</span>
 <span class="kn">from</span> <span class="nn">neurodynex3.tools</span> <span class="kn">import</span> <span class="n">plot_tools</span>
@@ -225,12 +225,12 @@
 </div>
 <div class="section" id="question-external-poisson-population">
 <h3>12.1.1. Question: External poisson population<a class="headerlink" href="#question-external-poisson-population" title="Permalink to this headline">¶</a></h3>
-<p>Parameters that are not explicitly specified are set to default values. Read the documentation of the function <a class="reference internal" href="../modules/neurodynex3.working_memory_network.html#neurodynex3.working_memory_network.wm_model.simulate_wm" title="neurodynex3.working_memory_network.wm_model.simulate_wm"><code class="xref py py-func docutils literal notranslate"><span class="pre">working_memory_network.wm_model.simulate_wm()</span></code></a> to answer the following questions:</p>
+<p>Parameters that are not explicitly specified are set to default values. Read the documentation of the function <code class="xref py py-func docutils literal notranslate"><span class="pre">working_memory_network.wm_model.simulate_wm()</span></code> to answer the following questions:</p>
 <ul class="simple">
 <li>By default, how many neurons are in the external poisson population?</li>
 <li>Using the default parameters, what is the average number of spikes/second an excitatory neuron receives from the external population?</li>
 </ul>
-<p>From the documentation, follow the ‘source’ link to go to the implementation of <a class="reference internal" href="../modules/neurodynex3.working_memory_network.html#neurodynex3.working_memory_network.wm_model.simulate_wm" title="neurodynex3.working_memory_network.wm_model.simulate_wm"><code class="xref py py-func docutils literal notranslate"><span class="pre">simulate_wm()</span></code></a>. Answer the following questions about the external poisson population:</p>
+<p>From the documentation, follow the ‘source’ link to go to the implementation of <code class="xref py py-func docutils literal notranslate"><span class="pre">simulate_wm()</span></code>. Answer the following questions about the external poisson population:</p>
 <ul class="simple">
 <li>We use the <a class="reference external" href="http://brian2.readthedocs.io/en/stable/user/input.html">Brian2 PoissonInput</a> to implement the external population. Which post-synaptic variable is targeted by a presynaptic (poisson) spike?</li>
 <li>The dynamics of that variable are defined in the equations <code class="docutils literal notranslate"><span class="pre">excit_lif_dynamics</span></code> (still in the source code of simulate_wm). What is the time-scale of that variable (in milliseconds)?</li>
@@ -256,7 +256,7 @@
 </div>
 <div class="section" id="question-weight-profile">
 <h3>12.1.3. Question: Weight profile<a class="headerlink" href="#question-weight-profile" title="Permalink to this headline">¶</a></h3>
-<p>The function <a class="reference internal" href="../modules/neurodynex3.working_memory_network.html#neurodynex3.working_memory_network.wm_model.simulate_wm" title="neurodynex3.working_memory_network.wm_model.simulate_wm"><code class="xref py py-func docutils literal notranslate"><span class="pre">simulate_wm()</span></code></a> takes two parameters to define the weight profile: <code class="docutils literal notranslate"><span class="pre">sigma_weight_profile</span></code> and <code class="docutils literal notranslate"><span class="pre">Jpos_excit2excit</span></code>. After the simulation you can access the return value weight_profile_45. This array contains the synaptic weights between the one postsynaptic neuron whose preferred direction is 45deg and all other (presynaptic) neurons. Our choice of 45deg is arbitrary, the profile for other neurons are shifted versions of this one.</p>
+<p>The function <code class="xref py py-func docutils literal notranslate"><span class="pre">simulate_wm()</span></code> takes two parameters to define the weight profile: <code class="docutils literal notranslate"><span class="pre">sigma_weight_profile</span></code> and <code class="docutils literal notranslate"><span class="pre">Jpos_excit2excit</span></code>. After the simulation you can access the return value weight_profile_45. This array contains the synaptic weights between the one postsynaptic neuron whose preferred direction is 45deg and all other (presynaptic) neurons. Our choice of 45deg is arbitrary, the profile for other neurons are shifted versions of this one.</p>
 <ul class="simple">
 <li>Run the following code to simulate the network.</li>
 <li>Increase <code class="docutils literal notranslate"><span class="pre">Jpos_excit2excit</span></code>. How does the weight profile change (look at short and long ranges)?</li>
@@ -339,7 +339,7 @@
 <h3>12.3.2. Extracting spikes from the spike monitor<a class="headerlink" href="#extracting-spikes-from-the-spike-monitor" title="Permalink to this headline">¶</a></h3>
 <p>The population vector <code class="docutils literal notranslate"><span class="pre">theta</span></code> changes over time due to drift and diffusion which is why we are interested in <code class="docutils literal notranslate"><span class="pre">theta(t)</span></code>. As we are dealing with spikes (discrete point events), and a small number of neurons, we have to average the population activity over some time window around t, [t_min=t - t_window_width/2, t_max =t + t_window_width/2], to get an estimate of <code class="docutils literal notranslate"><span class="pre">theta(t)</span></code>.</p>
 <p>Write a function <code class="docutils literal notranslate"><span class="pre">get_spike_count(spike_monitor,</span> <span class="pre">spike_index_list,</span> <span class="pre">t_min,</span> <span class="pre">t_max)</span></code> which returns an array of spike counts (one value for each neuron in <code class="docutils literal notranslate"><span class="pre">spike_index_list</span></code>). Be careful about the indexing: <code class="docutils literal notranslate"><span class="pre">spike_index_list</span></code> is a list of <code class="docutils literal notranslate"><span class="pre">k</span></code> neuron indices in [0, N-1] while the returned array <code class="docutils literal notranslate"><span class="pre">spike_count_list</span></code> is of length <code class="docutils literal notranslate"><span class="pre">k</span></code>.</p>
-<p>The parameter <code class="docutils literal notranslate"><span class="pre">spike_monitor</span></code> is the spike_monitor_excit returned by the function <a class="reference internal" href="../modules/neurodynex3.working_memory_network.html#neurodynex3.working_memory_network.wm_model.simulate_wm" title="neurodynex3.working_memory_network.wm_model.simulate_wm"><code class="xref py py-func docutils literal notranslate"><span class="pre">simulate_wm()</span></code></a>. The following pseudo-code and fragments are useful to implement <code class="docutils literal notranslate"><span class="pre">get_spike_count</span></code>:</p>
+<p>The parameter <code class="docutils literal notranslate"><span class="pre">spike_monitor</span></code> is the spike_monitor_excit returned by the function <code class="xref py py-func docutils literal notranslate"><span class="pre">simulate_wm()</span></code>. The following pseudo-code and fragments are useful to implement <code class="docutils literal notranslate"><span class="pre">get_spike_count</span></code>:</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_spike_count</span><span class="p">(</span><span class="n">spike_monitor</span><span class="p">,</span> <span class="n">spike_index_list</span><span class="p">,</span> <span class="n">t_min</span><span class="p">,</span> <span class="n">t_max</span><span class="p">):</span>
     <span class="n">nr_neurons</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">spike_index_list</span><span class="p">)</span>
     <span class="n">spike_count_list</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">nr_neurons</span><span class="p">)</span>
@@ -414,7 +414,7 @@
 <p>The working memory circuit we study in this exercise combines three different receptors: NMDA and AMPA at excitatory synapses, and GABA at inhibitory synapses. A crucial element for this circuit is the slow dynamics of the NMDA receptor. Read the chapters <a class="reference external" href="http://neuronaldynamics.epfl.ch/online/Ch3.S1.html">3.1 Synapses</a> and look at Figure 3.2 to understand the dynamics of the receptors.</p>
 <div class="section" id="question">
 <h3>12.4.1. Question:<a class="headerlink" href="#question" title="Permalink to this headline">¶</a></h3>
-<p>The dynamics of the NMDA receptor are implemented in the function <a class="reference internal" href="../modules/neurodynex3.working_memory_network.html#neurodynex3.working_memory_network.wm_model.simulate_wm" title="neurodynex3.working_memory_network.wm_model.simulate_wm"><code class="xref py py-func docutils literal notranslate"><span class="pre">simulate_wm()</span></code></a>. Look for the equations <code class="docutils literal notranslate"><span class="pre">excit_lif_dynamics</span></code> in the source code.</p>
+<p>The dynamics of the NMDA receptor are implemented in the function <code class="xref py py-func docutils literal notranslate"><span class="pre">simulate_wm()</span></code>. Look for the equations <code class="docutils literal notranslate"><span class="pre">excit_lif_dynamics</span></code> in the source code.</p>
 <ul class="simple">
 <li>In the model used here, what is the timescale (in milliseconds) of the fast rise? What is the timescale of the slow decay?</li>
 </ul>

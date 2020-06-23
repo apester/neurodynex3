@@ -9,7 +9,6 @@ Some parts of this implementation are inspired by material from
 *Stanford University, BIOE 332: Large-Scale Neural Modeling, Kwabena Boahen & Tatiana Engel, 2013*,
 online available.
 
-Note: Most parameters differ from the original publication.
 """
 
 # This file is part of the exercise code repository accompanying
@@ -54,10 +53,10 @@ def simulate_wm(
         t_stimulus_start=0 * b2.ms, t_stimulus_duration=0 * b2.ms,
         distractor_center_deg=90, distractor_width_deg=40, distractor_strength=0.0 * b2.namp,
         t_distractor_start=0 * b2.ms, t_distractor_duration=0 * b2.ms,
-        G_inhib2inhib=.35 * 1.024 * b2.nS,
-        G_inhib2excit=.35 * 1.336 * b2.nS,
-        G_excit2excit=.35 * 0.381 * b2.nS,
-        G_excit2inhib=.35 * 1.2 * 0.292 * b2.nS,
+        G_inhib2inhib=1.024 * b2.nS,
+        G_inhib2excit=1.336 * b2.nS,
+        G_excit2excit=0.381 * b2.nS,
+        G_excit2inhib=0.292 * b2.nS,
         monitored_subset_size=1024, sim_time=800. * b2.ms):
     """
     Args:

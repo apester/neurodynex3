@@ -6,8 +6,10 @@ except ImportError: # for pip <= 9.0.3
     from pip.req import parse_requirements
 # get requirements from requirements.txt
 install_reqs = parse_requirements('requirements.txt', session=False)
-reqs = [str(ir.req) for ir in install_reqs]
-
+try:
+    reqs = [str(ir.req) for ir in install_reqs]
+except:
+    reqs = [str(ir.requirement) for ir in install_reqs]
 # find packages
 prefix = 'neurodynex3'
 packages = find_packages(where=prefix, exclude=[])
@@ -15,7 +17,7 @@ packages_pre = ["%s.%s" % (prefix, s) for s in packages]
 
 setup(
   name='neurodynex3',
-  version = '0.0.6',
+  version = '1.0.0',
   packages=find_packages(),
   package_data={
     'neurodynex3': ['data/*'],
