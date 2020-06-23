@@ -40,10 +40,12 @@ for mod_name in MOCK_MODULES:
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.linkcode',
     'sphinx.ext.napoleon',
-    'sphinx.ext.extlinks',
+    'sphinx.ext.todo',
+    'sphinx.ext.coverage',
+    'sphinx.ext.mathjax',
+    'sphinx.ext.viewcode',
+    'sphinx.ext.intersphinx',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -60,7 +62,7 @@ source_suffix = ['.rst', '.md']
 master_doc = 'index'
 
 # General information about the project.
-project = u'Neuronaldynamics Exercises'
+project = u'Neuronal Dynamics Exercises'
 copyright = u'2016, EPFL-LCN'
 author = u'EPFL-LCN'
 
@@ -114,7 +116,7 @@ pygments_style = 'sphinx'
 #keep_warnings = False
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
-todo_include_todos = False
+todo_include_todos = True
 
 
 # -- Options for HTML output ----------------------------------------------
@@ -300,54 +302,5 @@ intersphinx_mapping = {
   'python': ('http://docs.python.org/2', None),
   'numpy': ('http://docs.scipy.org/doc/numpy/', None),
   'scipy': ('http://docs.scipy.org/doc/scipy/reference/', None),
-  'matplotlib': ('https://matplotlib.org/', None)
+  'matplotlib': ('http://matplotlib.sourceforge.net/', None)
 }
-def linkcode_resolve(domain, info):
-    """
-    Determine the URL corresponding to Python object
-    """
-    if domain != 'py':
-        return None
-
-    modname = info['module']
-    fullname = info['fullname']
-
-    submod = sys.modules.get(modname)
-    if submod is None:
-        return None
-
-    obj = submod
-    for part in fullname.split('.'):
-        try:
-            obj = getattr(obj, part)
-        except:
-            return None
-
-    try:
-        fn = inspect.getsourcefile(obj)
-    except:
-        fn = None
-    if not fn:
-        try:
-            fn = inspect.getsourcefile(sys.modules[obj.__module__])
-        except:
-            fn = None
-    if not fn:
-        return None
-
-    try:
-        source, lineno = inspect.findsource(obj)
-    except:
-        lineno = None
-
-    if lineno:
-        linespec = "#L%d" % (lineno + 1)
-    else:
-        linespec = ""
-
-    fn = relpath(fn, start=dirname(bossdata.__file__))
-
-    # Could use version,release declared above here but for now we
-    # just link to the latest code on the master branch.
-    github = 'https://github.com/bossdata/bossdata'
-    return '%s/blob/master/dkirkby/%s%s' % (github,fn,linespec)

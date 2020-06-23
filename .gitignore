@@ -1,6 +1,8 @@
 neurodynex3/*/__pycache__/*
 neurodynex3/__pycache__/*
 neurodynex3/*.py~
+*.pyc
 *.egg-info
 dist/
 build/
+.DS_Store

@@ -159,7 +159,8 @@ Wrap the code you wrote so far by a loop, to calculate the eigenvalues for incre
 
 .. note::
 
-	You can start from this example loop:
+    You can start from this example loop:
+
     .. code-block:: py
 
         import numpy as np

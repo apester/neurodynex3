@@ -66,8 +66,8 @@ def simulate_AdEx_neuron(
 
     .. math::
 
-        \frac{dv}{dt} = (-(v-v_rest) +delta_T*exp((v-v_rheobase)/delta_T)+ R * I_stim(t,i) - R * w)/(tau_m) : volt \\
-        \frac{dw}{dt} = (a*(v-v_rest)-w)/tau_w : amp
+        \tau_m \frac{dv}{dt} = -(v-v_{rest}) + \Delta_T \cdot e^{\frac{v-v_{rheobase}}{\Delta_T}} + R I_{stim}(t,i) - R w \\
+        \tau_w \frac{dw}{dt} = a (v-v_{rest}) - w
 
     Args:
         tau_m (Quantity): membrane time scale
